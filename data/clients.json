@@ -71,5 +71,833 @@
         "url": "https://drive.google.com/drive/u/0/folders/1_cV7VYeUeaSWS9tQTuvLkDYw3eIJnHpb"
       }
     ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Broadway Smiles",
+    "contact_name": "Vijay sai Maddi",
+    "email": "admin@broadwaysmiles.com",
+    "website": "https://broadwaysmiles.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2025-02-12",
+    "id": "2752dd74-e028-427c-8718-8581e3a337c6",
+    "created_at": "2026-08-19T21:50:27.171Z",
+    "updated_at": "2026-08-19T21:52:16.797Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/15otGgRWguc4hOmJoH34OB1DgppxT0e0d"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Butler Dental",
+    "contact_name": "Derek Li Kwok Cheong",
+    "email": "derek.likwokcheong@gmail.com",
+    "website": "https://butlerdental.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2026-06-03",
+    "id": "3ef07eb7-77e5-4946-a4a0-1f1f5e437373",
+    "created_at": "2026-08-19T21:50:28.714Z",
+    "updated_at": "2026-08-19T21:52:18.088Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1697nmqvk2nCFhVb02L3Q1LGB-PvExICk"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Care Dental Camberwell",
+    "contact_name": "Ana Chau",
+    "email": "annachau712@gmail.com",
+    "website": "https://caredentalcamberwell.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2022-01-12",
+    "id": "1f1aa43d-b24e-4653-8019-8579f806da92",
+    "created_at": "2026-08-19T21:50:30.046Z",
+    "updated_at": "2026-08-19T21:52:19.499Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1NiPRCEYR-uhN4iA2FPgyVMJCPIS4OvMl"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Cranbourne West Dental",
+    "contact_name": "Gurpreet Sidhu",
+    "email": "garyk_1@hotmail.com",
+    "website": "https://cranbournewestdental.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2024-10-02",
+    "id": "033cbf91-8291-4fb3-a59b-797f031b8e6d",
+    "created_at": "2026-08-19T21:50:31.473Z",
+    "updated_at": "2026-08-19T21:52:20.753Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1Uq-9bJ9zsJ_8-wNKGb9MUDufOoJa2FQj"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "DDTA Dental",
+    "contact_name": "Dr Daniel Tan",
+    "email": "daniel@drdanieltan.com.au",
+    "website": "https://ddtadental.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": null,
+    "id": "1a023aa0-6c7b-4115-a4c1-4c9528abc8fe",
+    "created_at": "2026-08-19T21:50:33.820Z",
+    "updated_at": "2026-08-19T21:52:22.211Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1-WRmMx3M88drVu90yB0NsKx0stjRQU78"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Dental Care Mt Eliza",
+    "contact_name": "Danish Hassan",
+    "email": "danish@dentalcaremteliza.com.au",
+    "website": "https://dentalcaremteliza.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2024-09-04",
+    "id": "06066ac8-53b8-4ad9-8755-8453ee7df1c2",
+    "created_at": "2026-08-19T21:50:35.147Z",
+    "updated_at": "2026-08-19T21:52:23.930Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1EDFG-80MMYmmllX0M2CfrJuWusEQxeFm"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Dentist at Pymble",
+    "contact_name": "Dr William Pye",
+    "email": "willpye@icloud.com",
+    "website": "https://dentistsatpymble.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2022-08-01",
+    "id": "2ac1a38c-24a8-4505-b3ed-e8165472ce7f",
+    "created_at": "2026-08-19T21:50:36.629Z",
+    "updated_at": "2026-08-19T21:52:25.694Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1NqW11mS1Px0rWFQ2TGlgBttZ8HZjTaFj"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Dr Christopher Lim",
+    "contact_name": "TBD",
+    "email": "tbd@drchristopherlim.com.au",
+    "website": "https://drchristopherlim.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2026-04-22",
+    "id": "633e3200-7ea8-4387-bf21-af0444f79cad",
+    "created_at": "2026-08-19T21:50:37.929Z",
+    "updated_at": "2026-08-19T21:52:27.043Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/173u5y5JqximDAWenWTcTlbLGLz_DmdtU"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Eastern Creek Smileesz Dental",
+    "contact_name": "Rashmi Suryawanshi",
+    "email": "estelgeorge.rc@gmail.com",
+    "website": "https://easterncreeksmileszdental.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2026-01-06",
+    "id": "7b7fa054-0bfc-4eda-a1bb-96c8dd21f563",
+    "created_at": "2026-08-19T21:50:39.392Z",
+    "updated_at": "2026-08-19T21:52:28.386Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1qbtGr2Mquefs759oS8NTgty-3mlNZTF0"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Elegant Hotel Furniture Australia",
+    "contact_name": "TBD",
+    "email": "tbd@eleganthotelfurniture.com.au",
+    "website": "https://eleganthotelfurniture.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2025-08-08",
+    "id": "dee68acc-4b67-4879-98b5-c8a648bc1ccb",
+    "created_at": "2026-08-19T21:50:40.686Z",
+    "updated_at": "2026-08-19T21:52:29.735Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1v7BzNtSSfZxMgZvFSpiFNec9vmvMCfvD"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Endeavour Smiles Group",
+    "contact_name": "Darshan Thumar",
+    "email": "dr1darshan@yahoo.co.in",
+    "website": "https://endeavoursmilesgroup.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2022-04-01",
+    "id": "c5961d2e-2cbd-4fc8-a5a7-4038ec0f1636",
+    "created_at": "2026-08-19T21:50:42.155Z",
+    "updated_at": "2026-08-19T21:52:31.148Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1_2FDAucS4J_NJ5HFUnDYL2hBFo0WZ5sp"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Flash Dental Mt Eden",
+    "contact_name": "Rhiannon McArthur",
+    "email": "rhi@flashthedentist.com",
+    "website": "https://flashdental.co.nz",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2023-06-01",
+    "id": "e605f924-7492-4991-8b3c-76aba7848d52",
+    "created_at": "2026-08-19T21:50:43.603Z",
+    "updated_at": "2026-08-19T21:52:32.572Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1w_hbxLGX99bocinBbyveO-wgNHOEWXCo"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Garran Dental Woden",
+    "contact_name": "Shweta Goyal",
+    "email": "shweta_81@hotmail.com",
+    "website": "https://garrandentalwoden.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2019-07-11",
+    "id": "d1dfd181-28bd-4a99-9aee-397cd7e221e6",
+    "created_at": "2026-08-19T21:50:45.067Z",
+    "updated_at": "2026-08-19T21:52:37.260Z",
+    "resources": [
+      {
+        "label": "Google Drive/Sheets Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://docs.google.com/spreadsheets/d/1yDzhZu8CctAVR5hKxwYEEXtFQcR_tydUbE6QruZNYRI/edit"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Hills Dental Design",
+    "contact_name": "Dr. Poornima Srinivas",
+    "email": "poornima@hillsdentaldesign.com.au",
+    "website": "https://hillsdentalpennanthills.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2025-01-06",
+    "id": "4b6a26d7-5d20-4de1-94e2-3c8f7836aa7b",
+    "created_at": "2026-08-19T21:50:47.423Z",
+    "updated_at": "2026-08-19T21:52:40.223Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1EL0lvzzALPzd_czHfCMAlx6PtCALIbp0"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Launceston Dentistry",
+    "contact_name": "Dr Daniel Tan",
+    "email": "daniel@drdanieltan.com.au",
+    "website": "https://launcestondentistry.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2024-09-02",
+    "id": "524d9335-b3cb-409d-8655-1540f0a282bf",
+    "created_at": "2026-08-19T21:50:48.716Z",
+    "updated_at": "2026-08-19T21:52:41.525Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1Yg0SAvLLVTgYHS3eAyC9PUITpa08FxPR"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Lotus Medical Centre",
+    "contact_name": "TBD",
+    "email": "tbd@lotusmedicalcentre.com.au",
+    "website": "https://lotusmedicalcentre.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2021-01-04",
+    "id": "827d1c0a-ed46-4200-b1cc-e06d4285cf87",
+    "created_at": "2026-08-19T21:50:50.128Z",
+    "updated_at": "2026-08-19T21:52:43.476Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1G5BxBnSM2G7p8f-XSxz1buKY6YlDBZJQ"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Majestic Smiles",
+    "contact_name": "Ishmeet Singh",
+    "email": "tbd@majesticsmiles.com.au",
+    "website": "https://majesticsmiles.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": null,
+    "id": "a96b9404-dad4-4b4c-887e-1fff77c0417c",
+    "created_at": "2026-08-19T21:50:51.455Z",
+    "updated_at": "2026-08-19T21:52:44.823Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1FfPL_zIcsZGPncsnIlM1aXYOf5iA8z7N"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Medical Marketing Co",
+    "contact_name": "TBD",
+    "email": "tbd@medicalmarketingco.com.au",
+    "website": "https://medicalmarketingco.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2023-07-15",
+    "id": "1b76e208-66b5-4e67-a99a-59d461bd1a85",
+    "created_at": "2026-08-19T21:50:52.745Z",
+    "updated_at": "2026-08-19T21:52:46.170Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1SsOSlbWKIpli5iLTBCepbiKlFTfUl7TU"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Newport Dental Centre",
+    "contact_name": "Krupa Patel / Dhrupad Patel",
+    "email": "ornadentptyltd@gmail.com",
+    "website": "https://newportdentalcentre.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2022-07-01",
+    "id": "53e1fd29-9f25-431e-b60b-844e2a3e33a7",
+    "created_at": "2026-08-19T21:50:54.178Z",
+    "updated_at": "2026-08-19T21:52:47.646Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1TLOXbhw1VSh68w--zTYSi9DWtWFJj4kJ"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "QLD Family Dental Centres",
+    "contact_name": "Dr Anahita Kamaradder",
+    "email": "anna_reddy@hotmail.com",
+    "website": "https://qldfamilydentalcentres.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2025-03-28",
+    "id": "02d5a3f5-144b-446f-bc6b-f085637ba5b1",
+    "created_at": "2026-08-19T21:50:55.648Z",
+    "updated_at": "2026-08-19T21:52:49.069Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1WRLfUyb0Y1XUR4jAmH9A3ZdMlgVcloAl"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Redfern Dentist",
+    "contact_name": "TBD",
+    "email": "tbd@redferndentist.com.au",
+    "website": "https://redferndentist.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2024-06-14",
+    "id": "b06abe8e-98f1-485d-b462-cced04702e86",
+    "created_at": "2026-08-19T21:50:57.043Z",
+    "updated_at": "2026-08-19T21:52:50.429Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1apUVMvX2pD4Q8jENkZbP9Ft4hASdZYr7"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Robelle Dental Centre",
+    "contact_name": "Dr Bryan Dubbeldam",
+    "email": "bryan.dubbeldam@robelledental.com.au",
+    "website": "https://robelledental.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2022-06-22",
+    "id": "71a58a1d-0c67-4c7a-9f04-8f2e35c38551",
+    "created_at": "2026-08-19T21:50:58.422Z",
+    "updated_at": "2026-08-19T21:52:52.165Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1j-p_cydIaOBW0XMen2HJcM7J5lfXtvji"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Simply Dental Chatswood",
+    "contact_name": "Dr Sakshi Gupta",
+    "email": "tbd@simplydentalchatswood.com.au",
+    "website": "https://simplydentalchatswood.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2018-09-18",
+    "id": "4fe3b4b1-6ef6-4459-8ba9-e6e676580006",
+    "created_at": "2026-08-19T21:50:59.688Z",
+    "updated_at": "2026-08-19T21:52:53.460Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1gPhj8oumo62w72gDdU4acLl9_KK6q3dt"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Smile and Grow",
+    "contact_name": "Nitin Mediratta",
+    "email": "nitin@smileandgrow.com.au",
+    "website": "https://smileandgrow.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2019-02-01",
+    "id": "f90c6e62-9751-4753-9172-38be1f7b3ea2",
+    "created_at": "2026-08-19T21:51:01.175Z",
+    "updated_at": "2026-08-19T21:52:54.694Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1pjEnw99Rgx7vD5FqVDKqrKh0okX8d5PY"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "SmileWorks Dental Ballarat",
+    "contact_name": "Dr Ayesha Aijaz",
+    "email": "aa@smileworksdental.com.au",
+    "website": "https://smileworksdentalballarat.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2023-01-07",
+    "id": "25291718-48ab-418f-ab75-14595259fead",
+    "created_at": "2026-08-19T21:51:02.540Z",
+    "updated_at": "2026-08-19T21:52:56.051Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1GBXP6fhzDVSp12GL47DC5eOibzc6Lkuj"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "SmileWorks Dental Doreen",
+    "contact_name": "Dr Ayesha Aijaz",
+    "email": "aa@smileworksdental.com.au",
+    "website": "https://smileworksdentaldoreen.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2023-01-07",
+    "id": "4204af02-29b6-4866-b1c7-738ff4f3e5e6",
+    "created_at": "2026-08-19T21:51:03.996Z",
+    "updated_at": "2026-08-19T21:52:57.649Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1tQDpRzxnjOvW1hJ-Y_2ZJFZKd2HDwF2o"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "SmileWorks Dental Kensington",
+    "contact_name": "Dr Ayesha Aijaz",
+    "email": "aa@smileworksdental.com.au",
+    "website": "https://smileworksdentalkensington.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2023-01-07",
+    "id": "1df101c7-31dd-4c88-b883-fe99e802e321",
+    "created_at": "2026-08-19T21:51:05.494Z",
+    "updated_at": "2026-08-19T21:52:59.145Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1Bl5hMUU2biCYT6a73LoL3IAJtyulAUZ1"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Smileworx Dental Oakville",
+    "contact_name": "Dr Shilpesh Parekh",
+    "email": "drparekhshilpesh@gmail.com",
+    "website": "https://smileworxdentaloakville.ca",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2025-09-22",
+    "id": "40399df0-49f5-4213-a2cf-62746faac6aa",
+    "created_at": "2026-08-19T21:51:06.874Z",
+    "updated_at": "2026-08-19T21:53:00.693Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1RagwZh_sh3xfc5vaPtHZpNw-vTnOwzqz"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Soothe Dental Goulburn",
+    "contact_name": "Rachel Kiew",
+    "email": "drrachelkiew@gmail.com",
+    "website": "https://soothedentalgoulburn.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": null,
+    "id": "1fb5ffee-4f0b-439a-bd42-b34f544cc2a0",
+    "created_at": "2026-08-19T21:51:08.309Z",
+    "updated_at": "2026-08-19T21:53:04.180Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/12lCQ0MoqLp57VR1nKJKvPvkkGCvDdhUD"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "South Melbourne Dental Smiles",
+    "contact_name": "David",
+    "email": "sdsa8114@gmail.com",
+    "website": "https://southmelbournedentalsmiles.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2022-12-09",
+    "id": "a062f551-efa7-4d50-a9f5-84eec55b709d",
+    "created_at": "2026-08-19T21:51:09.571Z",
+    "updated_at": "2026-08-19T21:53:10.168Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1IMrEhHbv-cmf3cEs4IfOp2RXuJ1UeVcA"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Springvale Dental Smiles",
+    "contact_name": "Dr David Nguyen",
+    "email": "sdsa8114@gmail.com",
+    "website": "https://springvaledentalsmiles.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2020-06-16",
+    "id": "f40dd38d-ec36-42b0-9d11-0bcd27dd1fb9",
+    "created_at": "2026-08-19T21:51:11.002Z",
+    "updated_at": "2026-08-19T21:53:11.375Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1vAE5vmJWImt5NOl4S3YMp5fvkzGvSqYq"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Sutherland Dental",
+    "contact_name": "TBD",
+    "email": "tbd@sutherlanddental.com.au",
+    "website": "https://sutherlanddental.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2019-01-04",
+    "id": "1c02a364-2a11-487a-9cbd-ae3504d8a31e",
+    "created_at": "2026-08-19T21:51:12.225Z",
+    "updated_at": "2026-08-19T21:53:12.743Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1qDUfrIOSGuOEofLSe3wY4GZfvqU53nHi"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Sweet Smile Dental Clinic",
+    "contact_name": "Ishmeet Singh",
+    "email": "ishmeet.singh@sweetsmiledental.com.au",
+    "website": "https://sweetsmiledental.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2026-02-26",
+    "id": "facb6b13-6f28-4e42-a76d-4e471af6460f",
+    "created_at": "2026-08-19T21:51:13.735Z",
+    "updated_at": "2026-08-19T21:53:18.549Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1o5TDCuFD6NMWrdET5YhzfzA6h9P5wYsE"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "The Dental Studio Williamstown",
+    "contact_name": "Alex Luu",
+    "email": "aluu1989@gmail.com",
+    "website": "https://thedentalstudiowilliamstown.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2025-04-24",
+    "id": "081df55c-d4dc-4f10-bb2b-957d0251d4e8",
+    "created_at": "2026-08-19T21:51:15.075Z",
+    "updated_at": "2026-08-19T21:53:19.943Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1GN6NtlcnwXtkrWzfQ6tFa9i2k8nmgs0F"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "The Foot Studio",
+    "contact_name": "TBD",
+    "email": "tbd@thefootstudio.com.au",
+    "website": "https://thefootstudio.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": null,
+    "id": "af462ff1-54c6-4157-83da-439293ef90c2",
+    "created_at": "2026-08-19T21:51:16.588Z",
+    "updated_at": "2026-08-19T21:51:16.588Z"
+  },
+  {
+    "lead_id": null,
+    "company_name": "Wahroonga Dental Group",
+    "contact_name": "TBD",
+    "email": "tbd@wahroongadentalgroup.com.au",
+    "website": "https://wahroongadentalgroup.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2018-11-25",
+    "id": "cf3ac2b8-02a2-4f91-b13d-e884f11fe445",
+    "created_at": "2026-08-19T21:51:18.158Z",
+    "updated_at": "2026-08-19T21:53:21.342Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1GI231QNOZSmcY_Za9s7TbM8ptccMD-K0"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Western Sydney Smiles",
+    "contact_name": "TBD",
+    "email": "tbd@westernsydneysmiles.com.au",
+    "website": "https://westernsydneysmiles.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2021-08-03",
+    "id": "646190fd-6bd4-4156-a2c0-3f4023b6c477",
+    "created_at": "2026-08-19T21:51:19.472Z",
+    "updated_at": "2026-08-19T21:53:22.745Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1BOr-Ql-No-TXq-4oBDiU7zo4PnKTZa2y"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Wollongong Dentist 4 U",
+    "contact_name": "Sydney (need to confirm)",
+    "email": "d4u.gong@gmail.com",
+    "website": "https://wollongongdentist4u.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2020-08-01",
+    "id": "06261f8e-0428-4b8d-92e4-80772647201a",
+    "created_at": "2026-08-19T21:51:21.157Z",
+    "updated_at": "2026-08-19T21:53:24.045Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1npjkyq04QQTZHDTRqQV0hA1tFj1j789w"
+      }
+    ]
   }
 ]
