@@ -1,0 +1,64 @@
+{{!-- Backlink Profile Slide --}}
+<div class="ey">Links</div>
+<div class="slide-title">Backlink Profile</div>
+<div class="slide-src">{{client_domain}} vs. Competitors — Link Analysis</div>
+
+<div class="card" style="flex:1;padding:16px;display:flex;flex-direction:column;">
+  <div class="card-h">Backlink Comparison</div>
+  <table class="backlink-comp" style="flex:1;">
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th class="you">{{client_name}}</th>
+        {{#each competitors}}
+        <th>{{name}}</th>
+        {{/each}}
+        <th>Market Avg</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Referring Domains</td>
+        <td class="you" style="font-family:'Figtree',sans-serif;font-weight:700;">{{client_ref_domains}}</td>
+        {{#each competitors}}
+        <td>{{ref_domains}}</td>
+        {{/each}}
+        <td>{{market_ref_domains}}</td>
+      </tr>
+      <tr>
+        <td>Total Backlinks</td>
+        <td class="you" style="font-family:'Figtree',sans-serif;font-weight:700;">{{client_backlinks}}</td>
+        {{#each competitors}}
+        <td>{{backlinks}}</td>
+        {{/each}}
+        <td>{{market_backlinks}}</td>
+      </tr>
+      <tr>
+        <td>Domain Rating</td>
+        <td class="you" style="font-family:'Figtree',sans-serif;font-weight:700;">{{client_dr}}</td>
+        {{#each competitors}}
+        <td>{{dr}}</td>
+        {{/each}}
+        <td>{{market_dr}}</td>
+      </tr>
+      <tr>
+        <td>Follow / Nofollow</td>
+        <td class="you">{{client_follow_ratio}}</td>
+        {{#each competitors}}
+        <td>{{follow_ratio}}</td>
+        {{/each}}
+        <td>{{market_follow_ratio}}</td>
+      </tr>
+      <tr>
+        <td>Link Velocity (30d)</td>
+        <td class="you" style="font-family:'Figtree',sans-serif;font-weight:700;{{#if (gte client_velocity 0)}}color:#16a34a{{else}}color:#ef4444{{/if}};">
+          {{#if (gte client_velocity 0)}}+{{/if}}{{client_velocity}}
+        </td>
+        {{#each competitors}}
+        <td style="{{#if (gte velocity 0)}}color:#16a34a{{else}}color:#ef4444{{/if}};">{{#if (gte velocity 0)}}+{{/if}}{{velocity}}</td>
+        {{/each}}
+        <td>{{market_velocity}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

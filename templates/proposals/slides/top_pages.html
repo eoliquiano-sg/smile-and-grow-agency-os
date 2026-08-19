@@ -1,0 +1,32 @@
+{{!-- Top Pages Slide --}}
+<div class="ey">Content</div>
+<div class="slide-title">Top Performing Pages</div>
+<div class="slide-src">{{client_domain}} — Pages Driving Organic Traffic</div>
+
+<div class="card" style="flex:1;padding:16px;overflow:hidden;">
+  <table class="comp-t" style="width:100%;">
+    <thead>
+      <tr>
+        <th style="width:45%;">Page</th>
+        <th style="width:15%;">Traffic</th>
+        <th style="width:15%;">Value</th>
+        <th style="width:12%;">Keywords</th>
+        <th style="width:13%;">Top Keyword</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each pages}}
+      <tr>
+        <td style="font-size:14px;">
+          <div style="font-weight:600;color:#1a1a1f;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;">{{title}}</div>
+          <div style="font-size:12px;color:#8a8892;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;">{{url}}</div>
+        </td>
+        <td style="font-family:'Figtree',sans-serif;font-weight:700;color:#1a1a1f;">{{traffic}}</td>
+        <td style="color:#16a34a;font-weight:600;">${{value}}</td>
+        <td>{{keyword_count}}</td>
+        <td style="font-size:13px;">{{top_keyword}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

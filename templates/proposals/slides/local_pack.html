@@ -1,0 +1,50 @@
+{{!-- Local Pack Slide --}}
+<div class="ey">Local SEO</div>
+<div class="slide-title">Local Pack Rankings — {{location_name}}</div>
+<div class="slide-src">"{{keyword}}" — {{scan_date}}</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;">
+  {{!-- Left: 5x5 Grid --}}
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;">
+    <div class="card-h">Grid Scan Results</div>
+    <div style="flex:1;display:flex;align-items:center;justify-content:center;">
+      <div class="lv-grid" style="width:100%;max-width:280px;">
+        {{#each grid}}
+        <div class="lv-cell {{#if (eq rank 1)}}lv-1{{else if (lte rank 3)}}lv-2{{else if (lte rank 10)}}lv-310{{else if (lte rank 20)}}lv-1120{{else}}lv-none{{/if}}">
+          {{#if rank}}{{rank}}{{else}}—{{/if}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:16px;margin-top:12px;font-size:12px;color:#8a8892;">
+      <span><span class="lv-cell lv-1" style="display:inline-flex;width:16px;height:16px;font-size:10px;margin-right:4px;">1</span> #1</span>
+      <span><span class="lv-cell lv-2" style="display:inline-flex;width:16px;height:16px;font-size:10px;margin-right:4px;">2</span> #2-3</span>
+      <span><span class="lv-cell lv-310" style="display:inline-flex;width:16px;height:16px;font-size:10px;margin-right:4px;">5</span> #4-10</span>
+      <span><span class="lv-cell lv-1120" style="display:inline-flex;width:16px;height:16px;font-size:10px;margin-right:4px;">15</span> #11-20</span>
+    </div>
+  </div>
+
+  {{!-- Right: Stats & Competitors --}}
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div class="kpi-row" style="grid-template-columns:1fr 1fr;">
+      <div class="kpi kpi-gold">
+        <div class="kpi-l">Avg. Rank</div>
+        <div class="kpi-v" style="font-size:36px;">{{avg_rank}}</div>
+      </div>
+      <div class="kpi {{#if (lte top_3_pct 30)}}kpi-red{{else if (lte top_3_pct 60)}}kpi-purple{{else}}kpi-green{{/if}}">
+        <div class="kpi-l">Top 3 Coverage</div>
+        <div class="kpi-v" style="font-size:36px;">{{top_3_pct}}%</div>
+      </div>
+    </div>
+    <div class="card" style="padding:16px;flex:1;">
+      <div class="card-h">Top Competitors</div>
+      {{#each competitors}}
+      <div style="display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.04);">
+        <div style="font-size:14px;font-weight:600;color:#8a8892;width:24px;">{{position}}</div>
+        <div style="flex:1;font-size:15px;color:#1a1a1f;">{{name}}</div>
+        <div style="font-size:14px;color:#16a34a;font-weight:600;">{{frequency}}%</div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

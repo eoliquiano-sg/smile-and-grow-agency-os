@@ -1,0 +1,49 @@
+{{!-- Executive Summary Slide --}}
+<div class="ey">Overview</div>
+<div class="slide-title">Executive Summary</div>
+<div class="slide-src">{{client_name}} — Current State & Opportunities</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;">
+  {{!-- Left: Current State --}}
+  <div class="card" style="padding:20px;display:flex;flex-direction:column;">
+    <div class="card-h">Current State</div>
+    <div class="kpi-row" style="grid-template-columns:1fr 1fr;margin-bottom:16px;">
+      <div class="kpi kpi-gold">
+        <div class="kpi-l">Monthly Traffic</div>
+        <div class="kpi-v" style="font-size:32px;">{{current_traffic}}</div>
+        {{#if traffic_change}}<div class="kpi-m {{#if traffic_declining}}dn{{else}}up{{/if}}">{{traffic_change}}</div>{{/if}}
+      </div>
+      <div class="kpi kpi-blue">
+        <div class="kpi-l">Domain Rating</div>
+        <div class="kpi-v" style="font-size:32px;">{{domain_rating}}</div>
+      </div>
+    </div>
+    <div class="card-h">Challenges & Opportunities</div>
+    <div class="challenges-text" style="flex:1;">
+      {{#each challenges}}
+      <p style="margin-bottom:10px;">• {{this}}</p>
+      {{/each}}
+    </div>
+  </div>
+
+  {{!-- Right: Key Metrics --}}
+  <div class="card" style="padding:20px;display:flex;flex-direction:column;">
+    <div class="card-h">Key Metrics</div>
+    <div class="kpi-row" style="grid-template-columns:1fr 1fr;margin-bottom:16px;">
+      <div class="kpi kpi-purple">
+        <div class="kpi-l">Ranking Keywords</div>
+        <div class="kpi-v" style="font-size:32px;">{{ranking_keywords}}</div>
+      </div>
+      <div class="kpi kpi-green">
+        <div class="kpi-l">Top 10 Keywords</div>
+        <div class="kpi-v" style="font-size:32px;">{{top_10_keywords}}</div>
+      </div>
+    </div>
+    <div class="card-h">Opportunities</div>
+    <div class="challenges-text" style="flex:1;">
+      {{#each opportunities}}
+      <p style="margin-bottom:10px;">• {{this}}</p>
+      {{/each}}
+    </div>
+  </div>
+</div>

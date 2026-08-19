@@ -1,0 +1,47 @@
+{{!-- Location Pages Slide --}}
+<div class="ey">Local SEO</div>
+<div class="slide-title">Location Pages Analysis</div>
+<div class="slide-src">{{client_domain}} — Service Area Coverage</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;">
+  {{!-- Left: Current Pages --}}
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;">
+    <div class="card-h">Current Location Pages</div>
+    <div style="flex:1;overflow:auto;">
+      {{#each existing_pages}}
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.04);">
+        <div style="width:8px;height:8px;border-radius:50%;background:{{#if has_page}}#16a34a{{else}}#ef4444{{/if}};"></div>
+        <div style="flex:1;">
+          <div style="font-weight:600;color:#1a1a1f;font-size:14px;">{{location}}</div>
+          {{#if url}}<div style="font-size:12px;color:#8a8892;">{{url}}</div>{{/if}}
+        </div>
+        <div style="font-size:13px;color:{{#if has_page}}#16a34a{{else}}#ef4444{{/if}};font-weight:600;">
+          {{#if has_page}}Active{{else}}Missing{{/if}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  {{!-- Right: Recommendations --}}
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div class="kpi-row" style="grid-template-columns:1fr 1fr;">
+      <div class="kpi kpi-green">
+        <div class="kpi-l">Active Pages</div>
+        <div class="kpi-v" style="font-size:36px;">{{active_count}}</div>
+      </div>
+      <div class="kpi kpi-red">
+        <div class="kpi-l">Missing Pages</div>
+        <div class="kpi-v" style="font-size:36px;">{{missing_count}}</div>
+      </div>
+    </div>
+    <div class="card" style="padding:16px;flex:1;">
+      <div class="card-h">Recommendations</div>
+      <div style="font-size:15px;color:#5a5862;line-height:1.6;">
+        {{#each recommendations}}
+        <p style="margin-bottom:10px;">• {{this}}</p>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+[
+  {
+    "lead_id": null,
+    "company_name": "Beacon Cove Dental",
+    "contact_name": "TBD",
+    "email": "tbd@beaconcovedental.com.au",
+    "website": "https://beaconcovedental.com.au/",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2026-07-01",
+    "id": "76b3bb1b-1d7b-4c68-9778-98f3bc9a70d9",
+    "created_at": "2026-08-10T22:00:46.737Z",
+    "updated_at": "2026-08-10T22:10:55.454Z",
+    "resources": [
+      {
+        "type": "drive_folder",
+        "label": "Google Drive Client Folder",
+        "url": "https://drive.google.com/drive/folders/1RdadCHyaNTY9GSqvIZhOIJF3hKCU2Xwu",
+        "source": "manual",
+        "created_at": "2026-08-10T22:10:55.453Z"
+      }
+    ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "All About Dental",
+    "contact_name": "Prasanthi Ganga",
+    "email": "mahesh.katragadda@gmail.com",
+    "website": "https://allaboutdental.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2022-05-01",
+    "id": "0822a02b-3354-40c8-bbf2-c2d07b77fc9d",
+    "created_at": "2026-08-17T07:35:24.497Z",
+    "updated_at": "2026-08-17T07:35:53.859Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1uDUgKunaXh6n22hz34PE9S48QyONmMqv"
+      },
+      {
+        "label": "Client Assets",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/folders/1oNcnEvs_foDHZA2wekpYwUm53GNzCPrc"
+      }
+    ]
+  }
+]

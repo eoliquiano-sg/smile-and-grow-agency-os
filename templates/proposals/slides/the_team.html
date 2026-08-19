@@ -1,0 +1,25 @@
+{{!-- The Team Slide --}}
+<div class="ey">About Us</div>
+<div class="slide-title">Meet Your Team</div>
+<div class="slide-src">{{agency_name}} — Your Dedicated Specialists</div>
+
+<div class="team-grid">
+  {{#each members}}
+  <div class="team-card">
+    {{#if photo}}
+    <img src="{{photo}}" alt="{{name}}" class="team-avatar">
+    {{else}}
+    <div class="team-avatar-placeholder">{{initials name}}</div>
+    {{/if}}
+    <div class="team-name">{{name}}</div>
+    <div class="team-role">{{role}}</div>
+    {{#if bio}}<div class="team-bio">{{bio}}</div>{{/if}}
+  </div>
+  {{/each}}
+</div>
+
+{{#if tagline}}
+<div style="margin-top:auto;text-align:center;padding-top:20px;">
+  <div style="font-family:'Figtree',sans-serif;font-size:20px;font-weight:600;color:#1a1a1f;">{{tagline}}</div>
+</div>
+{{/if}}

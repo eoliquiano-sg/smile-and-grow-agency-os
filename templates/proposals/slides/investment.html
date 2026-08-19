@@ -1,0 +1,55 @@
+{{!-- Investment Slide --}}
+<div class="ey">Pricing</div>
+<div class="slide-title">Investment</div>
+<div class="slide-src">{{client_name}} — 6 Month Engagement</div>
+
+<div class="card" style="padding:16px;margin-bottom:12px;">
+  <table class="invest-table">
+    <thead>
+      <tr>
+        <th>Deliverable</th>
+        {{#each months}}
+        <th>{{this}}</th>
+        {{/each}}
+      </tr>
+    </thead>
+    <tbody>
+      {{#each deliverables}}
+      <tr>
+        <td>{{name}}</td>
+        {{#each schedule}}
+        <td>{{#if this}}✓{{else}}—{{/if}}</td>
+        {{/each}}
+      </tr>
+      {{/each}}
+      <tr style="background:rgba(0,0,0,.02);">
+        <td style="font-weight:700;">Monthly Investment</td>
+        {{#each monthly_totals}}
+        <td class="month-total">${{this}}</td>
+        {{/each}}
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="invest-tiles">
+  <div class="invest-tile">
+    <div class="invest-tile-icon">📅</div>
+    <div class="invest-tile-txt">Month-to-Month</div>
+  </div>
+  <div class="invest-tile">
+    <div class="invest-tile-icon">🚫</div>
+    <div class="invest-tile-txt">Cancel Anytime</div>
+  </div>
+  <div class="invest-tile">
+    <div class="invest-tile-icon">💳</div>
+    <div class="invest-tile-txt">{{payment_terms}}</div>
+  </div>
+</div>
+
+{{#if total_value}}
+<div style="margin-top:16px;text-align:center;">
+  <div style="font-size:14px;color:#8a8892;margin-bottom:4px;">Total 6-Month Investment</div>
+  <div style="font-family:'Figtree',sans-serif;font-size:48px;font-weight:800;color:var(--brand-primary, #9e7c2e);">${{total_value}}</div>
+</div>
+{{/if}}

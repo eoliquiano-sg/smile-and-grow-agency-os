@@ -1,0 +1,226 @@
+/**
+ * Agency OS Proposal CSS
+ * Font: Figtree (replacing Space Grotesk + Inter per improvement plan)
+ * Slide dimensions: 1280x720
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap');
+
+/* Reset & Base */
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#1a1a1f;font-family:'Figtree',sans-serif;padding:24px 0;}
+
+/* Slide Structure */
+.slide-wrap{width:100%;display:flex;justify-content:center;margin-bottom:16px;}
+.slide{width:1280px;height:720px;background:#f8f7f4;background-image:linear-gradient(rgba(158,124,46,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(158,124,46,.03) 1px,transparent 1px);background-size:64px 64px;position:relative;overflow:hidden;flex-shrink:0;transform-origin:top center;border-radius:6px;box-shadow:0 8px 40px rgba(0,0,0,.35);}
+
+/* Accent Bar (top) */
+.ab{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--brand-primary, #9e7c2e),var(--brand-primary-light, #c8a44e));z-index:20;}
+
+/* Footer */
+.ft{position:absolute;bottom:0;left:0;right:0;height:38px;background:rgba(248,247,244,.92);border-top:1px solid rgba(0,0,0,.06);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:0 44px;z-index:20;}
+.ft-logo{font-family:'Figtree',sans-serif;font-size:15px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#1a1a1f;}
+.ft-logo span{color:var(--brand-primary, #9e7c2e);}
+.ft-c{font-size:14px;color:#8a8892;letter-spacing:.04em;position:absolute;left:50%;transform:translateX(-50%);}
+.ft-r{font-size:14px;color:#8a8892;}
+
+/* Slide Inner */
+.si{padding:28px 44px 52px;height:100%;display:flex;flex-direction:column;}
+
+/* Typography */
+.sg{font-family:'Figtree',sans-serif;font-weight:700;}
+.ey{font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--brand-primary, #9e7c2e);margin-bottom:5px;}
+.slide-title{font-family:'Figtree',sans-serif;font-size:30px;font-weight:700;color:#1a1a1f;line-height:1.1;margin-bottom:3px;}
+.slide-src{font-size:16px;color:#8a8892;letter-spacing:.01em;margin-bottom:14px;}
+
+/* Cards */
+.card{background:#ffffff;border:1px solid rgba(0,0,0,.08);border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.04);}
+.card-h{font-size:14px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#8a8892;margin-bottom:8px;flex-shrink:0;}
+
+/* KPI Row */
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;flex-shrink:0;}
+.kpi{border-radius:12px;padding:14px 18px;position:relative;}
+.kpi-l{font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#8a8892;margin-bottom:5px;}
+.kpi-v{font-family:'Figtree',sans-serif;font-size:44px;font-weight:800;color:#1a1a1f;line-height:1;}
+.kpi-m{font-size:15px;color:#8a8892;margin-top:4px;}
+
+/* KPI Colors */
+.kpi-gold{background:linear-gradient(135deg,rgba(158,124,46,.1),rgba(158,124,46,.04));border:1px solid rgba(158,124,46,.2);}
+.kpi-blue{background:linear-gradient(135deg,rgba(59,130,246,.09),rgba(59,130,246,.03));border:1px solid rgba(59,130,246,.18);}
+.kpi-green{background:linear-gradient(135deg,rgba(22,163,74,.09),rgba(22,163,74,.03));border:1px solid rgba(22,163,74,.18);}
+.kpi-purple{background:linear-gradient(135deg,rgba(139,92,246,.09),rgba(139,92,246,.03));border:1px solid rgba(139,92,246,.18);}
+.kpi-red{background:linear-gradient(135deg,rgba(239,68,68,.09),rgba(239,68,68,.03));border:1px solid rgba(239,68,68,.18);}
+
+/* Status Colors */
+.dn{color:#ef4444;font-weight:600;}
+.up{color:#16a34a;font-weight:600;}
+
+/* Comparison Table */
+.comp-t{width:100%;border-collapse:collapse;}
+.comp-t th{padding:9px 14px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a8892;text-align:left;border-bottom:1px solid rgba(0,0,0,.08);background:rgba(0,0,0,.02);white-space:nowrap;}
+.comp-t th.you{background:rgba(158,124,46,.07);color:var(--brand-primary, #9e7c2e);border-bottom:1px solid rgba(158,124,46,.2);}
+.comp-t td{padding:8px 14px;font-size:16px;color:#5a5862;border-bottom:1px solid rgba(0,0,0,.04);vertical-align:middle;}
+.comp-t td.you{background:rgba(158,124,46,.04);color:#1a1a1f;}
+.comp-t tbody tr:last-child td{border-bottom:none;}
+.win{color:#16a34a;font-weight:700;}
+.gap-n{font-size:12px;color:#8a8892;display:block;margin-top:1px;font-weight:400;}
+
+/* Chips */
+.chip{display:inline-flex;align-items:center;justify-content:center;padding:3px 9px;border-radius:20px;font-size:14px;font-weight:700;}
+.ch-z{background:rgba(0,0,0,.06);color:#8a8892;}
+.ch-s{background:rgba(158,124,46,.12);color:var(--brand-primary, #9e7c2e);}
+.ch-g{background:rgba(22,163,74,.12);color:#16a34a;}
+.ch-r{background:rgba(239,68,68,.12);color:#ef4444;}
+
+/* Metric Stats */
+.ms-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;flex-shrink:0;}
+.ms{background:linear-gradient(135deg,rgba(22,163,74,.08),rgba(22,163,74,.03));border:1px solid rgba(22,163,74,.2);border-radius:10px;padding:10px 14px;}
+.ms-l{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8a8892;margin-bottom:4px;}
+.ms-v{font-family:'Figtree',sans-serif;font-size:22px;font-weight:800;color:#16a34a;}
+.ms-s{font-size:13px;color:#8a8892;margin-top:2px;}
+.ms-red{background:linear-gradient(135deg,rgba(239,68,68,.08),rgba(239,68,68,.03));border:1px solid rgba(239,68,68,.2);}
+.ms-red .ms-v{color:#ef4444;}
+.ms-amber{background:linear-gradient(135deg,rgba(217,119,6,.08),rgba(217,119,6,.03));border:1px solid rgba(217,119,6,.2);}
+.ms-amber .ms-v{color:#d97706;}
+
+/* GEO Layout */
+.geo-layout{display:grid;grid-template-columns:56% 44%;gap:12px;flex:1;min-height:0;}
+.mx-card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.04);padding:14px 16px;display:flex;flex-direction:column;}
+.mx-t{width:100%;border-collapse:collapse;}
+.mx-t th{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a8892;padding:7px 10px;text-align:center;border-bottom:1px solid rgba(0,0,0,.08);white-space:nowrap;}
+.mx-t th:first-child{text-align:left;}
+.mx-t th.myou{color:var(--brand-primary, #9e7c2e);background:rgba(158,124,46,.07);border-bottom:1px solid rgba(158,124,46,.2);}
+.mx-t td{padding:8px 10px;text-align:center;font-size:15px;border-bottom:1px solid rgba(0,0,0,.04);}
+.mx-t td:first-child{text-align:left;font-size:14px;color:#1a1a1f;font-weight:600;}
+.mx-t td.myou{background:rgba(158,124,46,.03);}
+.mx-t tr:last-child td{border-bottom:none;}
+
+/* GEO Values */
+.mz{color:#ef4444;font-family:'Figtree',sans-serif;font-weight:700;font-size:17px;}
+.mg{color:#16a34a;font-family:'Figtree',sans-serif;font-weight:700;}
+.mb{color:#7c3aed;font-family:'Figtree',sans-serif;font-weight:700;font-size:20px;}
+.mm{color:var(--brand-primary, #9e7c2e);font-family:'Figtree',sans-serif;font-weight:700;}
+.mp{color:#8a8892;font-family:'Figtree',sans-serif;font-weight:600;font-size:15px;font-style:italic;}
+
+/* GEO Right Panel */
+.geo-right{display:flex;flex-direction:column;gap:10px;}
+.geo-hero{background:linear-gradient(135deg,rgba(239,68,68,.08),rgba(239,68,68,.03));border:1px solid rgba(239,68,68,.2);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:16px;flex-shrink:0;}
+.gh-num{font-family:'Figtree',sans-serif;font-size:80px;font-weight:800;color:#ef4444;line-height:1;flex-shrink:0;}
+.gh-title{font-family:'Figtree',sans-serif;font-size:17px;font-weight:700;color:#1a1a1f;margin-bottom:5px;}
+.gh-sub{font-size:14px;color:#5a5862;line-height:1.6;}
+.geo-opp{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.04);padding:14px 16px;flex:1;}
+.go-title{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-primary, #9e7c2e);margin-bottom:10px;}
+.go-row{display:flex;align-items:flex-start;gap:9px;margin-bottom:8px;font-size:14px;color:#5a5862;line-height:1.5;}
+.go-row:last-child{margin-bottom:0;}
+.go-dot{width:18px;height:18px;border-radius:50%;background:rgba(158,124,46,.1);border:1px solid rgba(158,124,46,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.go-dot span{font-size:11px;font-weight:700;color:var(--brand-primary, #9e7c2e);}
+.go-kw{font-weight:600;color:#1a1a1f;display:block;margin-bottom:1px;}
+.geo-note{font-size:12px;color:rgba(109,40,217,.55);font-style:italic;margin-top:8px;padding-top:8px;border-top:1px dashed rgba(139,92,246,.2);}
+
+/* Local Grid */
+.lv-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;}
+.lv-cell{border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Figtree',sans-serif;font-weight:700;font-size:14px;height:32px;}
+.lv-1{background:#16a34a;color:#fff;}
+.lv-2{background:#22c55e;color:#fff;}
+.lv-310{background:#d97706;color:#fff;}
+.lv-1120{background:#ef4444;color:#fff;}
+.lv-none{background:rgba(0,0,0,.06);color:#c0bdb8;}
+
+/* Observation Cards */
+.obs-card{background:#ffffff;border:1px solid rgba(0,0,0,.08);border-left:4px solid var(--brand-primary, #9e7c2e);border-radius:0 10px 10px 0;padding:10px 13px;box-shadow:0 2px 6px rgba(0,0,0,.04);display:flex;gap:9px;align-items:flex-start;}
+.obs-card.obs-purple{border-left-color:#8b5cf6;}
+.obs-card.obs-red{border-left-color:#ef4444;}
+.obs-num{width:22px;height:22px;border-radius:50%;background:var(--brand-primary, #9e7c2e);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.obs-num.obs-purple{background:#8b5cf6;}
+.obs-num.obs-red{background:#ef4444;}
+.obs-num span{font-size:13px;font-weight:800;color:#fff;}
+.obs-title{font-size:15px;font-weight:700;color:#1a1a1f;font-family:'Figtree',sans-serif;margin-bottom:3px;}
+.obs-body{font-size:13px;color:#5a5862;line-height:1.45;}
+
+/* Executive Summary - Challenges text (increased font per plan) */
+.challenges-text{font-size:21px;line-height:1.6;color:#5a5862;}
+
+/* Strategic Reads - Market slide (increased font per plan) */
+.strategic-reads{font-size:21px;line-height:1.6;color:#5a5862;}
+
+/* Takeaways text (increased font per plan) */
+.kt-txt{font-size:18px;line-height:1.55;color:#5a5862;}
+
+/* Marketing Funnel Layout */
+.funnel-layout{display:grid;grid-template-columns:45% 55%;gap:16px;flex:1;min-height:0;}
+.funnel-svg{display:flex;align-items:center;justify-content:center;}
+.funnel-boxes{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;}
+.funnel-box{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;}
+.funnel-box-h{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8a8892;margin-bottom:6px;}
+.funnel-box-pct{font-family:'Figtree',sans-serif;font-size:36px;font-weight:800;margin-bottom:4px;}
+.funnel-box-kws{font-size:13px;color:#5a5862;line-height:1.4;}
+
+/* Team Grid */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px;}
+.team-card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:20px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.04);}
+.team-avatar{width:80px;height:80px;border-radius:50%;margin:0 auto 12px;object-fit:cover;border:3px solid rgba(158,124,46,.2);}
+.team-avatar-placeholder{width:80px;height:80px;border-radius:50%;margin:0 auto 12px;background:linear-gradient(135deg,rgba(158,124,46,.15),rgba(158,124,46,.05));border:3px solid rgba(158,124,46,.2);display:flex;align-items:center;justify-content:center;font-family:'Figtree',sans-serif;font-size:28px;font-weight:700;color:var(--brand-primary, #9e7c2e);}
+.team-name{font-family:'Figtree',sans-serif;font-size:18px;font-weight:700;color:#1a1a1f;margin-bottom:4px;}
+.team-role{font-size:14px;color:var(--brand-primary, #9e7c2e);font-weight:600;margin-bottom:8px;}
+.team-bio{font-size:13px;color:#5a5862;line-height:1.5;}
+
+/* Investment Table */
+.invest-table{width:100%;border-collapse:collapse;margin-top:12px;}
+.invest-table th{padding:10px 14px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a8892;text-align:center;border-bottom:2px solid rgba(0,0,0,.08);background:rgba(0,0,0,.02);}
+.invest-table th:first-child{text-align:left;}
+.invest-table td{padding:10px 14px;font-size:14px;color:#5a5862;text-align:center;border-bottom:1px solid rgba(0,0,0,.04);}
+.invest-table td:first-child{text-align:left;font-weight:600;color:#1a1a1f;}
+.invest-table .month-total{font-family:'Figtree',sans-serif;font-size:16px;font-weight:700;color:var(--brand-primary, #9e7c2e);}
+.invest-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;}
+.invest-tile{background:linear-gradient(135deg,rgba(158,124,46,.08),rgba(158,124,46,.03));border:1px solid rgba(158,124,46,.2);border-radius:10px;padding:14px 18px;text-align:center;}
+.invest-tile-icon{font-size:24px;margin-bottom:6px;}
+.invest-tile-txt{font-size:14px;font-weight:600;color:#1a1a1f;}
+
+/* Traffic Chart */
+.traffic-chart-wrap{flex:1;min-height:0;display:flex;flex-direction:column;}
+.traffic-chart-wrap canvas{flex:1;}
+
+/* Backlink Comparison Table */
+.backlink-comp{width:100%;border-collapse:collapse;}
+.backlink-comp th{padding:10px 14px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a8892;text-align:center;border-bottom:1px solid rgba(0,0,0,.08);background:rgba(0,0,0,.02);}
+.backlink-comp th:first-child{text-align:left;}
+.backlink-comp th.you{background:rgba(158,124,46,.07);color:var(--brand-primary, #9e7c2e);}
+.backlink-comp td{padding:10px 14px;font-size:16px;color:#5a5862;text-align:center;border-bottom:1px solid rgba(0,0,0,.04);}
+.backlink-comp td:first-child{text-align:left;font-weight:600;color:#1a1a1f;}
+.backlink-comp td.you{background:rgba(158,124,46,.04);}
+
+/* Technical Audit Table */
+.audit-table{width:100%;border-collapse:collapse;}
+.audit-table th{padding:10px 14px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a8892;text-align:left;border-bottom:1px solid rgba(0,0,0,.08);background:rgba(0,0,0,.02);}
+.audit-table td{padding:10px 14px;font-size:14px;color:#5a5862;border-bottom:1px solid rgba(0,0,0,.04);}
+.audit-table .status-pass{color:#16a34a;font-weight:600;}
+.audit-table .status-warn{color:#d97706;font-weight:600;}
+.audit-table .status-fail{color:#ef4444;font-weight:600;}
+
+/* Action Plan Timeline */
+.action-timeline{display:flex;gap:12px;margin-top:16px;flex:1;}
+.action-phase{flex:1;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:16px;display:flex;flex-direction:column;}
+.action-phase-h{font-family:'Figtree',sans-serif;font-size:14px;font-weight:700;color:#fff;padding:8px 12px;border-radius:8px;margin-bottom:12px;text-align:center;}
+.action-phase-period{font-size:12px;color:#8a8892;text-align:center;margin-bottom:12px;}
+.action-phase-items{list-style:none;padding:0;margin:0;}
+.action-phase-items li{font-size:13px;color:#5a5862;padding:6px 0;border-bottom:1px dashed rgba(0,0,0,.06);display:flex;align-items:flex-start;gap:8px;}
+.action-phase-items li:last-child{border-bottom:none;}
+.action-phase-items li::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;margin-top:6px;}
+
+/* Traffic Projection */
+.proj-layout{display:grid;grid-template-columns:60% 40%;gap:16px;flex:1;min-height:0;}
+.proj-chart{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:16px;display:flex;flex-direction:column;}
+.proj-metrics{display:flex;flex-direction:column;gap:12px;}
+.proj-metric{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:16px;text-align:center;}
+.proj-metric-l{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8a8892;margin-bottom:6px;}
+.proj-metric-v{font-family:'Figtree',sans-serif;font-size:32px;font-weight:800;color:#1a1a1f;}
+.proj-metric-v.up{color:#16a34a;}
+
+/* Print Styles */
+@media print{
+  body{background:#fff;padding:0;}
+  @page{size:1280px 720px;margin:0;}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .slide-wrap{display:block!important;page-break-after:always!important;width:1280px!important;height:720px!important;margin:0!important;}
+  .slide{width:1280px!important;height:720px!important;transform:none!important;border-radius:0!important;box-shadow:none!important;}
+}

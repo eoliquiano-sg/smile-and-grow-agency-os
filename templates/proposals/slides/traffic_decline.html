@@ -1,0 +1,44 @@
+{{!-- Traffic Decline Analysis Slide --}}
+<div class="ey">Analysis</div>
+<div class="slide-title">Why Has Traffic Fallen?</div>
+<div class="slide-src">{{client_domain}} — Root Cause Analysis</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;">
+  {{!-- Left: Key Factors --}}
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    {{#each factors}}
+    <div class="obs-card {{#if (eq type 'critical')}}obs-red{{else if (eq type 'warning')}}obs-purple{{/if}}">
+      <div class="obs-num {{#if (eq type 'critical')}}obs-red{{else if (eq type 'warning')}}obs-purple{{/if}}">
+        <span>{{@index}}</span>
+      </div>
+      <div>
+        <div class="obs-title">{{title}}</div>
+        <div class="obs-body">{{description}}</div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+  {{!-- Right: Impact Metrics --}}
+  <div class="card" style="padding:20px;display:flex;flex-direction:column;">
+    <div class="card-h">Impact Summary</div>
+    <div class="kpi-row" style="grid-template-columns:1fr 1fr;margin-bottom:16px;">
+      <div class="kpi kpi-red">
+        <div class="kpi-l">Traffic Lost</div>
+        <div class="kpi-v" style="font-size:28px;color:#ef4444;">{{traffic_lost}}</div>
+        <div class="kpi-m">{{traffic_lost_pct}} decline</div>
+      </div>
+      <div class="kpi kpi-red">
+        <div class="kpi-l">Value Lost</div>
+        <div class="kpi-v" style="font-size:28px;color:#ef4444;">${{value_lost}}</div>
+        <div class="kpi-m">/month</div>
+      </div>
+    </div>
+    <div class="card-h">Recovery Potential</div>
+    <div style="flex:1;">
+      {{#each recovery_points}}
+      <p style="margin-bottom:10px;font-size:15px;color:#5a5862;">• {{this}}</p>
+      {{/each}}
+    </div>
+  </div>
+</div>

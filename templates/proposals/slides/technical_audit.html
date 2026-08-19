@@ -1,0 +1,49 @@
+{{!-- Technical Audit Slide --}}
+<div class="ey">Technical</div>
+<div class="slide-title">Technical SEO Audit</div>
+<div class="slide-src">{{client_domain}} — Site Health Overview</div>
+
+<div class="card" style="flex:1;padding:16px;display:flex;flex-direction:column;">
+  <div class="card-h">Audit Results</div>
+  <table class="audit-table" style="flex:1;">
+    <thead>
+      <tr>
+        <th style="width:20%;">Category</th>
+        <th style="width:12%;">Status</th>
+        <th style="width:40%;">Finding</th>
+        <th style="width:28%;">Key Metrics</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each categories}}
+      <tr>
+        <td style="font-weight:600;">{{name}}</td>
+        <td class="{{#if (eq status 'pass')}}status-pass{{else if (eq status 'warning')}}status-warn{{else}}status-fail{{/if}}">
+          {{#if (eq status 'pass')}}Pass{{else if (eq status 'warning')}}Warning{{else}}Fail{{/if}}
+        </td>
+        <td>{{finding}}</td>
+        <td style="font-size:13px;">{{metrics}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<div class="ms-grid" style="margin-top:12px;">
+  <div class="ms {{#if (eq health_score_status 'good')}}{{else if (eq health_score_status 'warning')}}ms-amber{{else}}ms-red{{/if}}">
+    <div class="ms-l">Health Score</div>
+    <div class="ms-v">{{health_score}}%</div>
+  </div>
+  <div class="ms {{#if (eq issues_status 'good')}}{{else if (eq issues_status 'warning')}}ms-amber{{else}}ms-red{{/if}}">
+    <div class="ms-l">Issues Found</div>
+    <div class="ms-v">{{issues_count}}</div>
+  </div>
+  <div class="ms">
+    <div class="ms-l">Pages Crawled</div>
+    <div class="ms-v">{{pages_crawled}}</div>
+  </div>
+  <div class="ms {{#if (eq cwv_status 'good')}}{{else if (eq cwv_status 'warning')}}ms-amber{{else}}ms-red{{/if}}">
+    <div class="ms-l">Core Web Vitals</div>
+    <div class="ms-v">{{cwv_score}}</div>
+  </div>
+</div>

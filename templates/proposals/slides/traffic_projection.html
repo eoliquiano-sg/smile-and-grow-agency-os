@@ -1,0 +1,38 @@
+{{!-- Traffic Projection Slide --}}
+<div class="ey">Forecast</div>
+<div class="slide-title">Traffic Projection</div>
+<div class="slide-src">{{client_name}} — 12 Month Growth Forecast</div>
+
+<div class="proj-layout">
+  {{!-- Left: Chart --}}
+  <div class="proj-chart">
+    <div class="card-h">Projected Traffic Growth</div>
+    <div style="flex:1;min-height:0;">
+      <canvas id="projection-chart"></canvas>
+    </div>
+  </div>
+
+  {{!-- Right: Metrics --}}
+  <div class="proj-metrics">
+    <div class="proj-metric">
+      <div class="proj-metric-l">Current Traffic</div>
+      <div class="proj-metric-v">{{current_traffic}}</div>
+    </div>
+    <div class="proj-metric">
+      <div class="proj-metric-l">Projected Traffic (12mo)</div>
+      <div class="proj-metric-v up">{{projected_traffic}}</div>
+    </div>
+    <div class="proj-metric">
+      <div class="proj-metric-l">Growth</div>
+      <div class="proj-metric-v up">+{{growth_pct}}%</div>
+    </div>
+    <div class="proj-metric">
+      <div class="proj-metric-l">Projected Value</div>
+      <div class="proj-metric-v up">${{projected_value}}</div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:12px;padding:12px 16px;background:rgba(158,124,46,.06);border:1px solid rgba(158,124,46,.15);border-radius:8px;font-size:13px;color:#5a5862;">
+  <strong style="color:var(--brand-primary, #9e7c2e);">Assumptions:</strong> {{assumptions}}
+</div>

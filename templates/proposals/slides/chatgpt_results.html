@@ -1,0 +1,48 @@
+{{!-- ChatGPT Results Slide --}}
+<div class="ey">AI Search</div>
+<div class="slide-title">ChatGPT Search Results</div>
+<div class="slide-src">{{query}} — {{location}}</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;">
+  {{!-- Left: Results List --}}
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;">
+    <div class="card-h">Search Results</div>
+    <div style="flex:1;overflow:auto;">
+      {{#each results}}
+      <div style="padding:10px 0;border-bottom:1px solid rgba(0,0,0,.06);display:flex;gap:12px;align-items:flex-start;">
+        <div style="width:28px;height:28px;border-radius:50%;background:{{#if is_client}}var(--brand-primary, #9e7c2e){{else}}#e5e5e5{{/if}};display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="font-size:13px;font-weight:700;color:{{#if is_client}}#fff{{else}}#8a8892{{/if}};">{{position}}</span>
+        </div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-weight:600;color:#1a1a1f;margin-bottom:2px;">{{name}}{{#if is_client}} <span class="chip ch-s" style="font-size:10px;padding:2px 6px;">YOU</span>{{/if}}</div>
+          <div style="font-size:13px;color:#8a8892;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{url}}</div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  {{!-- Right: Analysis --}}
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div class="card" style="padding:16px;">
+      <div class="card-h">Your Position</div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <div style="font-family:'Figtree',sans-serif;font-size:64px;font-weight:800;color:{{#if client_cited}}#16a34a{{else}}#ef4444{{/if}};">
+          {{#if client_position}}#{{client_position}}{{else}}—{{/if}}
+        </div>
+        <div>
+          <div style="font-size:16px;font-weight:600;color:#1a1a1f;">{{#if client_cited}}Cited in response{{else}}Not cited{{/if}}</div>
+          <div style="font-size:14px;color:#8a8892;">{{client_summary}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="padding:16px;flex:1;">
+      <div class="card-h">Observations</div>
+      <div style="font-size:15px;color:#5a5862;line-height:1.6;">
+        {{#each observations}}
+        <p style="margin-bottom:8px;">• {{this}}</p>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

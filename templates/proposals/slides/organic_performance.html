@@ -1,0 +1,33 @@
+{{!-- Organic Performance Slide --}}
+<div class="ey">Performance</div>
+<div class="slide-title">Organic Performance</div>
+<div class="slide-src">{{client_domain}} — Data as of {{data_date}}</div>
+
+<div class="kpi-row">
+  <div class="kpi kpi-gold">
+    <div class="kpi-l">Monthly Traffic</div>
+    <div class="kpi-v">{{monthly_traffic}}</div>
+    {{#if traffic_change}}<div class="kpi-m {{#if traffic_declining}}dn{{else}}up{{/if}}">{{traffic_change}} YoY</div>{{/if}}
+  </div>
+  <div class="kpi kpi-blue">
+    <div class="kpi-l">Traffic Value</div>
+    <div class="kpi-v">${{traffic_value}}</div>
+    <div class="kpi-m">/month</div>
+  </div>
+  <div class="kpi kpi-purple">
+    <div class="kpi-l">Ranking Keywords</div>
+    <div class="kpi-v">{{ranking_keywords}}</div>
+    {{#if keywords_change}}<div class="kpi-m {{#if keywords_declining}}dn{{else}}up{{/if}}">{{keywords_change}} YoY</div>{{/if}}
+  </div>
+  <div class="kpi kpi-green">
+    <div class="kpi-l">Domain Rating</div>
+    <div class="kpi-v">{{domain_rating}}</div>
+  </div>
+</div>
+
+<div class="card" style="flex:1;min-height:0;padding:14px 18px 12px;">
+  <div class="card-h">Organic Traffic Trend — {{client_name}} — 5 Year History</div>
+  <div class="traffic-chart-wrap">
+    <canvas id="traffic-chart"></canvas>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+{{!-- Content Performance Slide --}}
+<div class="ey">Content</div>
+<div class="slide-title">Content Performance</div>
+<div class="slide-src">{{client_domain}} — Traffic by Content Section</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;">
+  {{!-- Left: Chart --}}
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;">
+    <div class="card-h">Traffic by Section — 24 Month Trend</div>
+    <div style="flex:1;min-height:0;">
+      <canvas id="content-perf-chart"></canvas>
+    </div>
+  </div>
+
+  {{!-- Right: Section Breakdown --}}
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;">
+    <div class="card-h">Section Performance</div>
+    <div style="flex:1;overflow:auto;">
+      {{#each sections}}
+      <div style="padding:10px 0;border-bottom:1px solid rgba(0,0,0,.04);">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+          <div style="font-weight:600;color:#1a1a1f;font-size:15px;">{{name}}</div>
+          <div style="font-size:14px;font-weight:600;color:{{#if (gte change 0)}}#16a34a{{else}}#ef4444{{/if}};">
+            {{#if (gte change 0)}}+{{/if}}{{change}}%
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="flex:1;height:8px;background:rgba(0,0,0,.06);border-radius:4px;overflow:hidden;">
+            <div style="width:{{pct}}%;height:100%;background:linear-gradient(90deg,var(--brand-primary, #9e7c2e),var(--brand-primary-light, #c8a44e));border-radius:4px;"></div>
+          </div>
+          <div style="font-size:13px;color:#8a8892;width:60px;text-align:right;">{{traffic}}</div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

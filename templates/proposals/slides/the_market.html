@@ -1,0 +1,59 @@
+{{!-- The Market Slide --}}
+<div class="ey">Market Analysis</div>
+<div class="slide-title">The Market</div>
+<div class="slide-src">{{client_name}} — Competitive Landscape</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;">
+  {{!-- Left: Market Overview --}}
+  <div class="card" style="padding:20px;display:flex;flex-direction:column;">
+    <div class="card-h">Market Overview</div>
+    <div class="kpi-row" style="grid-template-columns:1fr 1fr;margin-bottom:16px;">
+      <div class="kpi kpi-gold">
+        <div class="kpi-l">Total Search Volume</div>
+        <div class="kpi-v" style="font-size:28px;">{{total_search_volume}}</div>
+        <div class="kpi-m">/month</div>
+      </div>
+      <div class="kpi kpi-blue">
+        <div class="kpi-l">Avg. Competition</div>
+        <div class="kpi-v" style="font-size:28px;">{{avg_competition}}</div>
+      </div>
+    </div>
+    <div class="card-h">Strategic Reads</div>
+    <div class="strategic-reads" style="flex:1;">
+      {{#each strategic_reads}}
+      <p style="margin-bottom:10px;">• {{this}}</p>
+      {{/each}}
+    </div>
+  </div>
+
+  {{!-- Right: Competitor Comparison --}}
+  <div class="card" style="padding:20px;display:flex;flex-direction:column;">
+    <div class="card-h">Competitor Comparison</div>
+    <table class="comp-t" style="flex:1;">
+      <thead>
+        <tr>
+          <th>Domain</th>
+          <th class="you">Traffic</th>
+          <th>DR</th>
+          <th>Keywords</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="you">{{client_domain}} <span class="chip ch-s" style="font-size:10px;padding:2px 6px;margin-left:6px;">YOU</span></td>
+          <td class="you">{{client_traffic}}</td>
+          <td>{{client_dr}}</td>
+          <td>{{client_keywords}}</td>
+        </tr>
+        {{#each competitors}}
+        <tr>
+          <td>{{domain}}</td>
+          <td>{{traffic}}</td>
+          <td>{{dr}}</td>
+          <td>{{keywords}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

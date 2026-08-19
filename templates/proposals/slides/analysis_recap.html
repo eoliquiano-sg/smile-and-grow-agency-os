@@ -1,0 +1,36 @@
+{{!-- Analysis Recap Slide --}}
+<div class="ey">Summary</div>
+<div class="slide-title">Analysis Recap</div>
+<div class="slide-src">{{client_name}} — Key Takeaways</div>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;flex:1;min-height:0;">
+  {{!-- Strengths --}}
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;border-top:4px solid #16a34a;">
+    <div class="card-h" style="color:#16a34a;">Strengths</div>
+    <div class="kt-txt" style="flex:1;">
+      {{#each strengths}}
+      <p style="margin-bottom:10px;">• {{this}}</p>
+      {{/each}}
+    </div>
+  </div>
+
+  {{!-- Weaknesses --}}
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;border-top:4px solid #ef4444;">
+    <div class="card-h" style="color:#ef4444;">Weaknesses</div>
+    <div class="kt-txt" style="flex:1;">
+      {{#each weaknesses}}
+      <p style="margin-bottom:10px;">• {{this}}</p>
+      {{/each}}
+    </div>
+  </div>
+
+  {{!-- Opportunities --}}
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;border-top:4px solid var(--brand-primary, #9e7c2e);">
+    <div class="card-h" style="color:var(--brand-primary, #9e7c2e);">Opportunities</div>
+    <div class="kt-txt" style="flex:1;">
+      {{#each opportunities}}
+      <p style="margin-bottom:10px;">• {{this}}</p>
+      {{/each}}
+    </div>
+  </div>
+</div>

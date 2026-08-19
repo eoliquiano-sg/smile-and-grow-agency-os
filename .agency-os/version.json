@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.5.0",
+  "installedAt": "2026-08-06T23:43:36.470Z",
+  "lastUpdated": "2026-08-06T23:43:36.470Z",
+  "migrationsRun": [
+    "1.0.0-initial",
+    "1.1.0-templates-skills",
+    "1.4.0-pm-release",
+    "1.5.0-local-seo"
+  ]
+}

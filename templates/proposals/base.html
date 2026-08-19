@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{client_name}} — SEO & GEO Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+{{#if theme_overrides}}
+<style>
+:root {
+  --brand-primary: {{brand_primary}};
+  --brand-primary-dark: {{brand_primary_dark}};
+  --brand-secondary: {{brand_secondary}};
+  --brand-primary-light: {{brand_primary}};
+}
+</style>
+{{/if}}
+<style>
+{{{styles}}}
+</style>
+</head>
+<body class="{{theme_class}}">
+
+{{#each slides}}
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    {{{content}}}
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      {{#if ../agency_logo}}
+      <img src="{{../agency_logo}}" alt="{{../agency_name}}" style="height:20px;">
+      {{else}}
+      {{../agency_initials}}
+      {{/if}}
+    </div>
+    <div class="ft-c">{{../client_name}}</div>
+    <div class="ft-r">{{@index}} / {{../total_slides}}</div>
+  </div>
+</div></div>
+{{/each}}
+
+<script>
+// Chart.js defaults
+Chart.defaults.font.family = "'Figtree', sans-serif";
+Chart.defaults.color = '#8a8892';
+
+// Helper: Format large numbers
+function fmtNum(n) {
+  if (n >= 1000000) return (n/1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n/1000).toFixed(1) + 'K';
+  return n.toString();
+}
+
+// Helper: Get color for rank
+function rankColor(rank) {
+  if (rank === 1) return '#16a34a';
+  if (rank <= 3) return '#22c55e';
+  if (rank <= 10) return '#d97706';
+  if (rank <= 20) return '#ef4444';
+  return '#c0bdb8';
+}
+
+// Chart: Traffic History (organic_performance slide)
+function initTrafficChart(canvasId, data) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: data.labels,
+      datasets: [{
+        label: 'Organic Traffic',
+        data: data.traffic,
+        borderColor: '#9e7c2e',
+        backgroundColor: 'rgba(158,124,46,0.1)',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 0,
+        pointHoverRadius: 6,
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { intersect: false, mode: 'index' },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(ctx) { return fmtNum(ctx.raw) + ' visits'; }
+          }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { maxTicksLimit: 12 } },
+        y: {
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: { callback: function(v) { return fmtNum(v); } }
+        }
+      }
+    }
+  });
+}
+
+// Chart: Traffic Projection (traffic_projection slide)
+function initProjectionChart(canvasId, data) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: data.labels,
+      datasets: [
+        {
+          label: 'Current Trajectory',
+          data: data.current,
+          borderColor: '#8a8892',
+          borderDash: [5, 5],
+          tension: 0.3,
+          pointRadius: 0,
+          borderWidth: 2
+        },
+        {
+          label: 'Projected Growth',
+          data: data.projected,
+          borderColor: '#16a34a',
+          backgroundColor: 'rgba(22,163,74,0.1)',
+          fill: true,
+          tension: 0.3,
+          pointRadius: 0,
+          borderWidth: 2
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { intersect: false, mode: 'index' },
+      plugins: {
+        legend: { position: 'bottom' }
+      },
+      scales: {
+        x: { grid: { display: false } },
+        y: {
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: { callback: function(v) { return fmtNum(v); } }
+        }
+      }
+    }
+  });
+}
+
+// Chart: Comparison Bar Chart (backlink_profile slide)
+function initComparisonBarChart(canvasId, data) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+
+  const colors = data.values.map((_, i) =>
+    i === data.highlightIndex ? '#9e7c2e' : 'rgba(138,136,146,0.3)'
+  );
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: data.labels,
+      datasets: [{
+        label: data.label,
+        data: data.values,
+        backgroundColor: colors,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { display: false } },
+        y: {
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: { callback: function(v) { return fmtNum(v); } }
+        }
+      }
+    }
+  });
+}
+
+// Chart: DR Distribution (backlink_profile slide)
+function initDRDistributionChart(canvasId, data) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: data.labels,
+      datasets: [{
+        data: data.values,
+        backgroundColor: ['#16a34a', '#22c55e', '#d97706', '#ef4444', '#8a8892'],
+        borderWidth: 0
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'right', labels: { boxWidth: 12 } }
+      }
+    }
+  });
+}
+
+// Chart: Content Performance (content_performance slide)
+function initContentPerfChart(canvasId, data) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: data.labels,
+      datasets: data.sections.map((section, i) => ({
+        label: section.name,
+        data: section.data,
+        backgroundColor: ['#6366f1', '#3b82f6', '#22c55e', '#9e7c2e', '#8b5cf6'][i % 5],
+        borderRadius: 2
+      }))
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom' } },
+      scales: {
+        x: { stacked: true, grid: { display: false } },
+        y: {
+          stacked: true,
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: { callback: function(v) { return fmtNum(v); } }
+        }
+      }
+    }
+  });
+}
+
+// Initialize charts after DOM load
+document.addEventListener('DOMContentLoaded', function() {
+  {{{chart_scripts}}}
+});
+</script>
+</body>
+</html>

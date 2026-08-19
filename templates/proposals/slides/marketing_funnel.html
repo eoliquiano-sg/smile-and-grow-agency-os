@@ -1,0 +1,66 @@
+{{!-- Marketing Funnel Slide --}}
+<div class="ey">Strategy</div>
+<div class="slide-title">Marketing Funnel</div>
+<div class="slide-src">{{client_domain}} — Keyword Distribution by Intent</div>
+
+<div class="funnel-layout">
+  {{!-- Left: Funnel SVG --}}
+  <div class="funnel-svg">
+    <svg width="380" height="520" viewBox="0 0 380 520">
+      {{!-- Top of Funnel (TOFU) --}}
+      <path d="M10,10 L370,10 L340,130 L40,130 Z" fill="rgba(99,102,241,0.15)" stroke="rgba(99,102,241,0.4)" stroke-width="2"/>
+      <text x="190" y="55" text-anchor="middle" font-family="Figtree" font-size="14" font-weight="600" fill="#6366f1">AWARENESS</text>
+      <text x="190" y="80" text-anchor="middle" font-family="Figtree" font-size="24" font-weight="800" fill="#6366f1">{{tofu_pct}}%</text>
+      <text x="190" y="105" text-anchor="middle" font-family="Figtree" font-size="12" fill="#8a8892">{{tofu_count}} keywords</text>
+
+      {{!-- Middle of Funnel (MOFU) --}}
+      <path d="M40,140 L340,140 L310,260 L70,260 Z" fill="rgba(59,130,246,0.15)" stroke="rgba(59,130,246,0.4)" stroke-width="2"/>
+      <text x="190" y="185" text-anchor="middle" font-family="Figtree" font-size="14" font-weight="600" fill="#3b82f6">CONSIDERATION</text>
+      <text x="190" y="210" text-anchor="middle" font-family="Figtree" font-size="24" font-weight="800" fill="#3b82f6">{{mofu_pct}}%</text>
+      <text x="190" y="235" text-anchor="middle" font-family="Figtree" font-size="12" fill="#8a8892">{{mofu_count}} keywords</text>
+
+      {{!-- Bottom of Funnel (BOFU) --}}
+      <path d="M70,270 L310,270 L270,390 L110,390 Z" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="2"/>
+      <text x="190" y="315" text-anchor="middle" font-family="Figtree" font-size="14" font-weight="600" fill="#22c55e">DECISION</text>
+      <text x="190" y="340" text-anchor="middle" font-family="Figtree" font-size="24" font-weight="800" fill="#22c55e">{{bofu_pct}}%</text>
+      <text x="190" y="365" text-anchor="middle" font-family="Figtree" font-size="12" fill="#8a8892">{{bofu_count}} keywords</text>
+
+      {{!-- Branded (Bottom of Funnel) --}}
+      <path d="M110,400 L270,400 L220,500 L160,500 Z" fill="rgba(139,92,246,0.15)" stroke="rgba(139,92,246,0.4)" stroke-width="2"/>
+      <text x="190" y="440" text-anchor="middle" font-family="Figtree" font-size="14" font-weight="600" fill="#8b5cf6">BRANDED</text>
+      <text x="190" y="465" text-anchor="middle" font-family="Figtree" font-size="18" font-weight="800" fill="#8b5cf6">{{branded_pct}}%</text>
+    </svg>
+  </div>
+
+  {{!-- Right: Funnel Boxes --}}
+  <div class="funnel-boxes">
+    <div class="funnel-box">
+      <div class="funnel-box-h" style="color:#6366f1;">Awareness (TOFU)</div>
+      <div class="funnel-box-pct" style="color:#6366f1;">{{tofu_pct}}%</div>
+      <div class="funnel-box-kws">
+        {{#each tofu_keywords}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+      </div>
+    </div>
+    <div class="funnel-box">
+      <div class="funnel-box-h" style="color:#3b82f6;">Consideration (MOFU)</div>
+      <div class="funnel-box-pct" style="color:#3b82f6;">{{mofu_pct}}%</div>
+      <div class="funnel-box-kws">
+        {{#each mofu_keywords}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+      </div>
+    </div>
+    <div class="funnel-box">
+      <div class="funnel-box-h" style="color:#22c55e;">Decision (BOFU)</div>
+      <div class="funnel-box-pct" style="color:#22c55e;">{{bofu_pct}}%</div>
+      <div class="funnel-box-kws">
+        {{#each bofu_keywords}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+      </div>
+    </div>
+    <div class="funnel-box">
+      <div class="funnel-box-h" style="color:#8b5cf6;">Branded</div>
+      <div class="funnel-box-pct" style="color:#8b5cf6;">{{branded_pct}}%</div>
+      <div class="funnel-box-kws">
+        {{#each branded_keywords}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+      </div>
+    </div>
+  </div>
+</div>

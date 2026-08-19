@@ -1,0 +1,278 @@
+{
+  "id": "seo-sprint",
+  "name": "SEO Sprint Project Plan",
+  "description": "Standard 6-month SEO engagement with phased sprints",
+  "service_type": "seo_sprint",
+  "version": "1.0",
+  "total_duration_weeks": 24,
+  "sprints": [
+    {
+      "sprint_number": 1,
+      "sprint_type": "onboarding",
+      "name": "Onboarding",
+      "duration_days": 3,
+      "deliverables": [
+        {
+          "name": "Access Collection",
+          "description": "Collect GA4, GSC, CMS access from client",
+          "deliverable_type": "setup",
+          "estimated_hours": 1,
+          "day_offset": 1
+        },
+        {
+          "name": "Kickoff Strategy Call",
+          "description": "Initial strategy discussion with client - review goals, timeline, expectations",
+          "deliverable_type": "meeting",
+          "estimated_hours": 1,
+          "day_offset": 2
+        },
+        {
+          "name": "Project Timeline Document",
+          "description": "Create project timeline and expectations document for client",
+          "deliverable_type": "document",
+          "estimated_hours": 2,
+          "day_offset": 3
+        }
+      ]
+    },
+    {
+      "sprint_number": 2,
+      "sprint_type": "foundational",
+      "name": "Foundational Sprint",
+      "duration_days": 14,
+      "deliverables": [
+        {
+          "name": "Site Crawl",
+          "description": "Run comprehensive site crawl (Screaming Frog or similar)",
+          "deliverable_type": "analysis",
+          "estimated_hours": 2,
+          "day_offset": 1
+        },
+        {
+          "name": "Technical Audit",
+          "description": "Identify technical SEO issues: indexing, site speed, mobile, structured data",
+          "deliverable_type": "analysis",
+          "estimated_hours": 4,
+          "day_offset": 3
+        },
+        {
+          "name": "Content Inventory",
+          "description": "Categorize all pages by type, quality, and traffic performance",
+          "deliverable_type": "analysis",
+          "estimated_hours": 4,
+          "day_offset": 5
+        },
+        {
+          "name": "Backlink Analysis",
+          "description": "Analyze backlink profile using Ahrefs - identify gaps and opportunities",
+          "deliverable_type": "analysis",
+          "estimated_hours": 2,
+          "day_offset": 6
+        },
+        {
+          "name": "Competitor Analysis",
+          "description": "Benchmark against top 3 competitors - DR, traffic, content gaps",
+          "deliverable_type": "analysis",
+          "estimated_hours": 3,
+          "day_offset": 7
+        },
+        {
+          "name": "Website Quality Audit Report",
+          "description": "Compile findings into comprehensive WQA report with action items",
+          "deliverable_type": "report",
+          "estimated_hours": 6,
+          "day_offset": 10
+        },
+        {
+          "name": "WQA Presentation",
+          "description": "Present WQA findings to client and align on priorities",
+          "deliverable_type": "meeting",
+          "estimated_hours": 1,
+          "day_offset": 12
+        },
+        {
+          "name": "Technical Fixes Implementation",
+          "description": "Implement priority technical fixes from audit",
+          "deliverable_type": "implementation",
+          "estimated_hours": 8,
+          "day_offset": 14
+        }
+      ]
+    },
+    {
+      "sprint_number": 3,
+      "sprint_type": "content",
+      "name": "Content Sprint",
+      "duration_days": 28,
+      "recurring": true,
+      "deliverables": [
+        {
+          "name": "Keyword Research",
+          "description": "Research target keywords based on WQA findings and business goals",
+          "deliverable_type": "analysis",
+          "estimated_hours": 4,
+          "day_offset": 1
+        },
+        {
+          "name": "Content Brief #1",
+          "description": "Create detailed content brief for first article",
+          "deliverable_type": "document",
+          "estimated_hours": 2,
+          "day_offset": 3
+        },
+        {
+          "name": "Content Brief #2",
+          "description": "Create detailed content brief for second article",
+          "deliverable_type": "document",
+          "estimated_hours": 2,
+          "day_offset": 5
+        },
+        {
+          "name": "Article Draft #1",
+          "description": "Write first article based on brief",
+          "deliverable_type": "content",
+          "estimated_hours": 4,
+          "day_offset": 10
+        },
+        {
+          "name": "Article Draft #2",
+          "description": "Write second article based on brief",
+          "deliverable_type": "content",
+          "estimated_hours": 4,
+          "day_offset": 14
+        },
+        {
+          "name": "Client Review",
+          "description": "Client reviews and approves content",
+          "deliverable_type": "review",
+          "estimated_hours": 1,
+          "day_offset": 18
+        },
+        {
+          "name": "Content Publishing",
+          "description": "Publish approved content with on-page optimization",
+          "deliverable_type": "implementation",
+          "estimated_hours": 2,
+          "day_offset": 21
+        },
+        {
+          "name": "Internal Linking Update",
+          "description": "Update internal links to support new content",
+          "deliverable_type": "implementation",
+          "estimated_hours": 2,
+          "day_offset": 24
+        }
+      ]
+    },
+    {
+      "sprint_number": 4,
+      "sprint_type": "link",
+      "name": "Link Building Sprint",
+      "duration_days": 28,
+      "recurring": true,
+      "deliverables": [
+        {
+          "name": "Link Prospect Research",
+          "description": "Identify 50+ link prospects in client's niche",
+          "deliverable_type": "analysis",
+          "estimated_hours": 4,
+          "day_offset": 1
+        },
+        {
+          "name": "Outreach Email Templates",
+          "description": "Create personalized outreach templates",
+          "deliverable_type": "document",
+          "estimated_hours": 2,
+          "day_offset": 3
+        },
+        {
+          "name": "Outreach Campaign Launch",
+          "description": "Begin outreach to link prospects",
+          "deliverable_type": "implementation",
+          "estimated_hours": 6,
+          "day_offset": 5
+        },
+        {
+          "name": "Follow-up Outreach",
+          "description": "Follow up with non-responders",
+          "deliverable_type": "implementation",
+          "estimated_hours": 3,
+          "day_offset": 12
+        },
+        {
+          "name": "Link Placement Tracking",
+          "description": "Track secured links and update backlink inventory",
+          "deliverable_type": "analysis",
+          "estimated_hours": 2,
+          "day_offset": 21
+        },
+        {
+          "name": "Link Building Report",
+          "description": "Monthly link building progress report",
+          "deliverable_type": "report",
+          "estimated_hours": 2,
+          "day_offset": 28
+        }
+      ]
+    },
+    {
+      "sprint_number": 5,
+      "sprint_type": "reporting",
+      "name": "Monthly Reporting",
+      "duration_days": 7,
+      "recurring": true,
+      "deliverables": [
+        {
+          "name": "Data Pull",
+          "description": "Pull GA4, GSC, Ahrefs data for reporting period",
+          "deliverable_type": "analysis",
+          "estimated_hours": 1,
+          "day_offset": 1
+        },
+        {
+          "name": "Performance Report",
+          "description": "Compile monthly performance report with KPI tracking",
+          "deliverable_type": "report",
+          "estimated_hours": 3,
+          "day_offset": 3
+        },
+        {
+          "name": "Strategy Review Call",
+          "description": "Monthly call to review performance and adjust strategy",
+          "deliverable_type": "meeting",
+          "estimated_hours": 1,
+          "day_offset": 5
+        },
+        {
+          "name": "Next Month Planning",
+          "description": "Plan priorities for upcoming month",
+          "deliverable_type": "document",
+          "estimated_hours": 2,
+          "day_offset": 7
+        }
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "name": "Onboarding Complete",
+      "trigger": "sprint_1_complete",
+      "target_day": 3
+    },
+    {
+      "name": "WQA Delivered",
+      "trigger": "deliverable:Website Quality Audit Report",
+      "target_day": 17
+    },
+    {
+      "name": "First Content Published",
+      "trigger": "deliverable:Content Publishing",
+      "target_day": 45
+    },
+    {
+      "name": "First Links Secured",
+      "trigger": "deliverable:Link Placement Tracking",
+      "target_day": 60
+    }
+  ]
+}

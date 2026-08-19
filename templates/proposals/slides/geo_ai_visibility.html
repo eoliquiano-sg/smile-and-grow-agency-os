@@ -1,0 +1,75 @@
+{{!-- GEO/AI Visibility Slide --}}
+<div class="ey">AI Search</div>
+<div class="slide-title">GEO/AI Visibility</div>
+<div class="slide-src">{{client_domain}} vs. Competitors — AI Platform Citations</div>
+
+<div class="geo-layout">
+  {{!-- Left: Comparison Table --}}
+  <div class="mx-card">
+    <div class="card-h">AI Platform Visibility</div>
+    <table class="mx-t" style="flex:1;">
+      <thead>
+        <tr>
+          <th>Platform</th>
+          <th class="myou">{{client_name}}</th>
+          {{#each competitors}}
+          <th>{{name}}</th>
+          {{/each}}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ChatGPT</td>
+          <td class="myou">{{#if client_chatgpt}}<span class="mg">{{client_chatgpt}}</span>{{else}}<span class="mz">Not cited</span>{{/if}}</td>
+          {{#each competitors}}
+          <td>{{#if chatgpt}}<span class="mg">{{chatgpt}}</span>{{else}}<span class="mp">—</span>{{/if}}</td>
+          {{/each}}
+        </tr>
+        <tr>
+          <td>Perplexity</td>
+          <td class="myou">{{#if client_perplexity}}<span class="mg">{{client_perplexity}}</span>{{else}}<span class="mz">Not cited</span>{{/if}}</td>
+          {{#each competitors}}
+          <td>{{#if perplexity}}<span class="mg">{{perplexity}}</span>{{else}}<span class="mp">—</span>{{/if}}</td>
+          {{/each}}
+        </tr>
+        <tr>
+          <td>Gemini</td>
+          <td class="myou">{{#if client_gemini}}<span class="mg">{{client_gemini}}</span>{{else}}<span class="mz">Not cited</span>{{/if}}</td>
+          {{#each competitors}}
+          <td>{{#if gemini}}<span class="mg">{{gemini}}</span>{{else}}<span class="mp">—</span>{{/if}}</td>
+          {{/each}}
+        </tr>
+        <tr>
+          <td>AI Overviews</td>
+          <td class="myou">{{#if client_aio}}<span class="mg">{{client_aio}}</span>{{else}}<span class="mz">Not cited</span>{{/if}}</td>
+          {{#each competitors}}
+          <td>{{#if aio}}<span class="mg">{{aio}}</span>{{else}}<span class="mp">—</span>{{/if}}</td>
+          {{/each}}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  {{!-- Right: Summary & Opportunities --}}
+  <div class="geo-right">
+    <div class="geo-hero">
+      <div class="gh-num">{{visibility_score}}</div>
+      <div>
+        <div class="gh-title">GEO Visibility Score</div>
+        <div class="gh-sub">{{visibility_summary}}</div>
+      </div>
+    </div>
+    <div class="geo-opp">
+      <div class="go-title">Opportunities</div>
+      {{#each opportunities}}
+      <div class="go-row">
+        <div class="go-dot"><span>{{@index}}</span></div>
+        <div>
+          <span class="go-kw">{{keyword}}</span>
+          {{description}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

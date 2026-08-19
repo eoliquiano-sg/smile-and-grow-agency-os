@@ -1,0 +1,34 @@
+{{!-- Local Competitors Slide --}}
+<div class="ey">Local SEO</div>
+<div class="slide-title">Local Competitors</div>
+<div class="slide-src">{{client_name}} — Competitive Analysis</div>
+
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;flex:1;min-height:0;">
+  {{#each competitors}}
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+      <div style="width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,rgba(158,124,46,.15),rgba(158,124,46,.05));display:flex;align-items:center;justify-content:center;">
+        <span style="font-family:'Figtree',sans-serif;font-size:16px;font-weight:700;color:var(--brand-primary, #9e7c2e);">{{@index}}</span>
+      </div>
+      <div>
+        <div style="font-family:'Figtree',sans-serif;font-size:16px;font-weight:700;color:#1a1a1f;">{{name}}</div>
+        <div style="font-size:13px;color:#8a8892;">{{domain}}</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+      <div class="kpi kpi-gold" style="padding:10px;">
+        <div class="kpi-l" style="font-size:10px;">Reviews</div>
+        <div class="kpi-v" style="font-size:24px;">{{review_count}}</div>
+        <div class="kpi-m" style="font-size:12px;">{{review_rating}} avg</div>
+      </div>
+      <div class="kpi kpi-blue" style="padding:10px;">
+        <div class="kpi-l" style="font-size:10px;">Avg. Rank</div>
+        <div class="kpi-v" style="font-size:24px;">{{avg_rank}}</div>
+      </div>
+    </div>
+    <div style="font-size:13px;color:#5a5862;flex:1;">
+      <strong>Strengths:</strong> {{strengths}}
+    </div>
+  </div>
+  {{/each}}
+</div>

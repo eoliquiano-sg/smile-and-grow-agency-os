@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Dame",
+    "email": "dame@smileandgrow.com.au",
+    "role": "member",
+    "title": "SEO Strategist",
+    "skills": [
+      "Technical SEO",
+      "Link Building",
+      "Strategy"
+    ],
+    "calendar_link": null,
+    "active": true,
+    "id": "81d3bd2e-b930-42f5-9018-6246c50069f0",
+    "created_at": "2026-08-10T23:06:08.965Z",
+    "updated_at": "2026-08-10T23:07:57.249Z"
+  },
+  {
+    "name": "Cassy",
+    "email": "cassy@smileandgrow.com.au",
+    "role": "member",
+    "title": "Content Lead",
+    "skills": [
+      "Content Writing",
+      "Copywriting",
+      "Content Strategy"
+    ],
+    "calendar_link": null,
+    "active": true,
+    "id": "c6943bbc-2305-47b5-b829-31454623a95a",
+    "created_at": "2026-08-10T23:06:12.094Z",
+    "updated_at": "2026-08-10T23:08:38.678Z"
+  },
+  {
+    "name": "Jackie",
+    "email": "jackie@smileandgrow.com.au",
+    "role": "member",
+    "title": "Local SEO",
+    "skills": [
+      "Local SEO"
+    ],
+    "calendar_link": null,
+    "active": true,
+    "id": "9dff5aef-9544-4084-94f7-6b381f4ec923",
+    "created_at": "2026-08-10T23:06:14.213Z",
+    "updated_at": "2026-08-10T23:06:14.213Z"
+  },
+  {
+    "name": "Ed",
+    "email": "eoliquiano@smileandgrow.com.au",
+    "role": "owner",
+    "title": "Delivery Lead",
+    "skills": [
+      "PM"
+    ],
+    "calendar_link": null,
+    "active": true,
+    "id": "4d2163b1-b7fa-4e1f-8777-1ee820227f48",
+    "created_at": "2026-08-10T23:06:15.954Z",
+    "updated_at": "2026-08-10T23:06:15.954Z"
+  }
+]

@@ -1,0 +1,1266 @@
+{
+  "client_id": "76b3bb1b-1d7b-4c68-9778-98f3bc9a70d9",
+  "client_slug": "beacon-cove-dental",
+  "source_audit_id": "1aa8dc67-814e-4153-95d6-88af31a489f6",
+  "source_approvals_path": "clients/beacon-cove-dental/wqa/audits/1aa8dc67-814e-4153-95d6-88af31a489f6/beacon-cove-dental-approvals.json",
+  "project": {
+    "client_id": "76b3bb1b-1d7b-4c68-9778-98f3bc9a70d9",
+    "name": "WQA Implementation \u2014 August 2026",
+    "project_type": "seo_sprint",
+    "primary_goal": "Kickoff (WQA + report + plan, M1), technical fixes (M1), analytics setup (M1), content production (M3+), link building (M4+), monthly reporting throughout.",
+    "start_date": "2026-08-17",
+    "target_end_date": "2027-07-31"
+  },
+  "sprints": [
+    {
+      "sprint_number": 1,
+      "sprint_type": "onboarding",
+      "name": "Sprint 1 (Kickoff)",
+      "scheduled_start": "2026-08-17",
+      "scheduled_end": "2026-08-29",
+      "status": "active",
+      "lead_email": "dame@smileandgrow.com.au",
+      "notes": "Kickoff phase: WQA \u2192 WQA Report \u2192 Project Plan. Auto-tracked deliverables flip to completed as each artifact lands."
+    },
+    {
+      "sprint_number": 2,
+      "sprint_type": "foundational",
+      "name": "Sprint 2 (Technical)",
+      "scheduled_start": "2026-08-18",
+      "scheduled_end": "2026-08-31",
+      "status": "active",
+      "lead_email": "dame@smileandgrow.com.au",
+      "notes": "Technical fixes \u2014 404s, redirects, indexability. Month 1. Grouped by action type."
+    },
+    {
+      "sprint_number": 3,
+      "sprint_type": "foundational",
+      "name": "Sprint 3 (Local SEO)",
+      "scheduled_start": "2026-09-01",
+      "scheduled_end": "2026-09-30",
+      "status": "pending",
+      "lead_email": "dame@smileandgrow.com.au",
+      "notes": "Local SEO foundation \u2014 GBP audit, citation cleanup, review velocity. Month 2 placeholders; expand on deep-dive."
+    },
+    {
+      "sprint_number": 4,
+      "sprint_type": "content",
+      "name": "Sprint 4 (Content)",
+      "scheduled_start": "2026-10-01",
+      "scheduled_end": "2027-07-31",
+      "status": "pending",
+      "lead_email": "cassy@smileandgrow.com.au",
+      "notes": "Content production Months 3+. Strategy/gap analysis first, then grouped metadata work + batched heavy rewrites by priority."
+    },
+    {
+      "sprint_number": 5,
+      "sprint_type": "link",
+      "name": "Sprint 5 (Links)",
+      "scheduled_start": "2026-09-01",
+      "scheduled_end": "2027-07-31",
+      "status": "pending",
+      "lead_email": "dame@smileandgrow.com.au",
+      "notes": "Link building. Month 3 = strategy + plan. Months 4+ = monthly batches (URLs in description)."
+    },
+    {
+      "sprint_number": 6,
+      "sprint_type": "reporting",
+      "name": "Sprint 6 (Reporting)",
+      "scheduled_start": "2026-08-17",
+      "scheduled_end": "2027-07-31",
+      "status": "pending",
+      "lead_email": "dame@smileandgrow.com.au",
+      "notes": "Recurring monthly performance report sent to client at the end of each month. Serves as visual month-break in the Tasks view."
+    }
+  ],
+  "deliverables": [
+    {
+      "sprint_number": 1,
+      "name": "WQA \u2014 Website Quality Audit",
+      "description": "Strategic audit of the website covering technical SEO, content quality, and link foundation.\n  \u00b7 Run Screaming Frog crawl + Ahrefs site explorer pull\n  \u00b7 Classify every page (Keep / Improve / Consolidate / Remove)\n  \u00b7 Tag specific actions per page (Fix 404 / Rewrite / etc.)\n  \u00b7 Capture target pages + their backlink gaps\n  \u00b7 Strategist approval pass on every recommendation\nTwo outputs (same work stream):\n  1. {slug}-wqa-data.xlsx \u2014 audit spreadsheet (4 tabs)\n  2. {slug}-wqa-report.html \u2014 client-facing HTML deck (5 sections)\nAuto-completes when BOTH the approvals JSON + HTML report exist on disk.",
+      "deliverable_type": "Kickoff",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-08-17",
+      "due_date": "2026-08-28",
+      "scheduled_month": 1,
+      "ai_assisted": true,
+      "auto_tracked": true,
+      "auto_complete_artifacts": [
+        "beacon-cove-dental-approvals.json",
+        "beacon-cove-dental-wqa-report.html"
+      ],
+      "status": "pending",
+      "completed_at": null,
+      "source": {
+        "category": "Kickoff",
+        "action_type": "WQA",
+        "notes": "Outputs xlsx audit spreadsheet + HTML client report."
+      }
+    },
+    {
+      "sprint_number": 1,
+      "name": "Project Plan (12-month engagement)",
+      "description": "Build the structured project plan from the WQA approvals + target pages. Generates sprints + monthly deliverable schedule for the full engagement.\n  \u00b7 Sprints 2-6 (Technical / Local / Content / Links / Reporting)\n  \u00b7 Monthly batches + client check-ins\n  \u00b7 Per-deliverable owners, due dates, priorities\nOutput: {slug}-project-plan.json (exportable to ClickUp/Asana/Monday via export_project_plan.py). Auto-completed by build_project_plan.py.",
+      "deliverable_type": "Kickoff",
+      "priority": "P1",
+      "assigned_to_email": "eoliquiano@smileandgrow.com.au",
+      "start_date": "2026-08-28",
+      "due_date": "2026-08-29",
+      "scheduled_month": 1,
+      "ai_assisted": true,
+      "auto_tracked": true,
+      "auto_complete_artifact": "beacon-cove-dental-project-plan.json",
+      "status": "completed",
+      "source": {
+        "category": "Kickoff",
+        "action_type": "Project Plan",
+        "notes": "Auto-completed by build_project_plan.py on every regeneration."
+      }
+    },
+    {
+      "sprint_number": 2,
+      "name": "Noindex \u2014 3 URLs",
+      "description": "Technical action: Noindex\nURLs (3):\n    1. [P2] /category/cosmetic-dentistry \u2014 WP auto-generated archive/feed page with no meaningful content. Add noindex to remove from crawl waste.\n    2. [P2] /category/dental-care \u2014 WP auto-generated archive/feed page with no meaningful content. Add noindex to remove from crawl waste.\n    3. [P2] /tag/tmd \u2014 WP auto-generated archive/feed page with no meaningful content. Add noindex to remove from crawl waste.",
+      "deliverable_type": "Technical",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-08-28",
+      "due_date": "2026-08-31",
+      "scheduled_month": 1,
+      "ai_assisted": false,
+      "source": {
+        "category": "Technical",
+        "action_type": "Noindex",
+        "grouped_count": 3,
+        "approvals_rows": [
+          128,
+          129,
+          130
+        ],
+        "urls": [
+          "https://beaconcovedental.com.au/category/cosmetic-dentistry",
+          "https://beaconcovedental.com.au/category/dental-care",
+          "https://beaconcovedental.com.au/tag/tmd"
+        ]
+      }
+    },
+    {
+      "sprint_number": 2,
+      "name": "Add schema \u2014 2 URLs",
+      "description": "Technical action: Add schema\nURLs (2):\n    1. [P1] / \u2014 Enforce www -> non-www canonicalisation. GSC shows www.beaconcovedental.com.au URLs still indexed and earning impression\n    2. [P2] /delaying-dental-treatment-consequences-port-melbourne \u2014 Update content to improve topical relevance, keyword optimization, headings, readability, and search intent.",
+      "deliverable_type": "Technical",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-08-28",
+      "due_date": "2026-08-31",
+      "scheduled_month": 1,
+      "ai_assisted": false,
+      "source": {
+        "category": "Technical",
+        "action_type": "Add schema",
+        "grouped_count": 2,
+        "approvals_rows": [
+          81,
+          82
+        ],
+        "urls": [
+          "https://beaconcovedental.com.au/",
+          "https://beaconcovedental.com.au/delaying-dental-treatment-consequences-port-melbourne"
+        ]
+      }
+    },
+    {
+      "sprint_number": 3,
+      "name": "Local SEO Audit (workbook)",
+      "description": "Full Local SEO + GEO audit via /bpt-local-seo-audit \u2014 one workbook:\n  \u00b7 NAP Info (all verified locations)\n  \u00b7 Competitive research + baseline (Maps pack, competitors)\n  \u00b7 Keyword Performance (volume + organic + Maps rank)\n  \u00b7 GBP Optimization change-set + Products + practice-area graphics\n  \u00b7 Aggregator Optimization set + Citations tracker\nBasis for every execution deliverable below.",
+      "deliverable_type": "Local",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-09-01",
+      "due_date": "2026-09-08",
+      "scheduled_month": 2,
+      "ai_assisted": true,
+      "is_placeholder": false,
+      "source": {
+        "category": "Local",
+        "action_type": "Local SEO process step",
+        "notes": "Produced by /bpt-local-seo-audit. Source of truth for the manual execution steps below."
+      }
+    },
+    {
+      "sprint_number": 3,
+      "name": "Update GBP listings (all locations)",
+      "description": "MANUAL \u2014 apply the GBP Optimization change-set per office:\n  \u00b7 Localized keyword+GEO descriptions, primary/secondary categories\n  \u00b7 Services, attributes, hours, service areas\n  \u00b7 FIX: true local NAP phone (not CallRail tracking), localized Posts\nApply in business.google.com from the Local SEO Audit workbook.",
+      "deliverable_type": "Local",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-09-01",
+      "due_date": "2026-09-08",
+      "scheduled_month": 2,
+      "ai_assisted": false,
+      "is_placeholder": false,
+      "source": {
+        "category": "Local",
+        "action_type": "Local SEO process step (manual execution)",
+        "notes": "MANUAL \u2014 apply from the Local SEO Audit workbook; not live until updated by a person or a service (Loganix recommended)."
+      }
+    },
+    {
+      "sprint_number": 3,
+      "name": "GBP Products + practice-area graphics",
+      "description": "MANUAL \u2014 add GBP Products (one per practice area, full descriptions) and\nupload the branded practice-area graphics + office/team photos per office.\nSource: Products (GBP) tab + gbp-images/ in the Local SEO Audit workbook.",
+      "deliverable_type": "Local",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-09-01",
+      "due_date": "2026-09-08",
+      "scheduled_month": 2,
+      "ai_assisted": false,
+      "is_placeholder": false,
+      "source": {
+        "category": "Local",
+        "action_type": "Local SEO process step (manual execution)",
+        "notes": "MANUAL \u2014 apply from the Local SEO Audit workbook; not live until updated by a person or a service (Loganix recommended)."
+      }
+    },
+    {
+      "sprint_number": 3,
+      "name": "Aggregator profile optimization",
+      "description": "MANUAL \u2014 claim + build out the niche-aligned aggregator profiles\n(universal core: Apple, Bing, Yelp, BBB, Facebook, LinkedIn, etc. + vertical add-ons).\nFix any NAP mismatches on live profiles; load description/services/photos/links.\nSource: Aggregator Optimization tab. Recommend Loganix if outsourcing.",
+      "deliverable_type": "Local",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-09-01",
+      "due_date": "2026-09-08",
+      "scheduled_month": 2,
+      "ai_assisted": false,
+      "is_placeholder": false,
+      "source": {
+        "category": "Local",
+        "action_type": "Local SEO process step (manual execution)",
+        "notes": "MANUAL \u2014 apply from the Local SEO Audit workbook; not live until updated by a person or a service (Loganix recommended)."
+      }
+    },
+    {
+      "sprint_number": 3,
+      "name": "Citation cleanup + building",
+      "description": "MANUAL \u2014 work the full Citations tracker (fix-first \u2192 claim Tier-1 free \u2192\ndata aggregators (Data Axle/Neustar/Foursquare) \u2192 build the rest), NAP identical everywhere.\nTrack status per directory. Recommend Loganix / WhiteSpark for the volume.",
+      "deliverable_type": "Local",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-09-01",
+      "due_date": "2026-09-08",
+      "scheduled_month": 2,
+      "ai_assisted": false,
+      "is_placeholder": false,
+      "source": {
+        "category": "Local",
+        "action_type": "Local SEO process step (manual execution)",
+        "notes": "MANUAL \u2014 apply from the Local SEO Audit workbook; not live until updated by a person or a service (Loganix recommended)."
+      }
+    },
+    {
+      "sprint_number": 3,
+      "name": "Review generation + response system",
+      "description": "MANUAL \u2014 stand up the review engine:\n  \u00b7 NPS/review automation (happy \u2192 public Google review, unhappy \u2192 private feedback)\n  \u00b7 Compliant SMS/messaging registration; human-reviewed response templates\n  \u00b7 Ongoing weekly review monitoring + responses",
+      "deliverable_type": "Local",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-09-01",
+      "due_date": "2026-09-08",
+      "scheduled_month": 2,
+      "ai_assisted": false,
+      "is_placeholder": false,
+      "source": {
+        "category": "Local",
+        "action_type": "Local SEO process step (manual execution)",
+        "notes": "MANUAL \u2014 apply from the Local SEO Audit workbook; not live until updated by a person or a service (Loganix recommended)."
+      }
+    },
+    {
+      "sprint_number": 4,
+      "name": "Content Strategy + gap analysis",
+      "description": "Sprint 4 strategic foundation. Locks in the content roadmap that every subsequent monthly batch consumes:\n  \u00b7 Review the full list of content actions tagged in the WQA\n  \u00b7 Categorize by content silo (service pages, blog topics, hub pages)\n  \u00b7 Identify content gaps (topics we should cover but don't)\n  \u00b7 Split queue into Refresh/Rewrite (existing) vs Create New (greenfield)\n  \u00b7 Lock in priority order for batched rewrites + new pages Months 3+\n  \u00b7 Populate the client's content workbook with the queue\nAll subsequent content batches depend on the priority order set here.",
+      "deliverable_type": "Content",
+      "content_subtype": "strategy",
+      "priority": "P1",
+      "assigned_to_email": "cassy@smileandgrow.com.au",
+      "start_date": "2026-09-01",
+      "due_date": "2026-09-08",
+      "scheduled_month": 2,
+      "ai_assisted": false,
+      "is_strategy": true,
+      "source": {
+        "category": "Content",
+        "action_type": "Content Strategy",
+        "notes": "Core deliverable, not a placeholder. Runs Month 2, content batches start Month 3."
+      }
+    },
+    {
+      "sprint_number": 4,
+      "name": "Rewrite/refresh 8 pages \u2014 Month 3",
+      "description": "Rewrite/refresh batch \u2014 Month 3 (8 pages, priority order):\nActions in this batch: Refresh content / Rewrite\n\n    1. [P1] /carbon-neutral-dentistry-100-greenpowered \u2014 Thin money page (347w). Expand to 1,000w+ with conversion content, social proof, FAQs.\n    2. [P1] /emergency-dentistry \u2014 Thin money page (492w). Expand to 1,000w+ with conversion content, social proof, FAQs.\n    3. [P1] /poor-oral-hygiene-is-linked-to-alzheimers \u2014 Thin money page (564w). Expand to 1,000w+ with conversion content, social proof, FAQs.\n    4. [P1] /porcelain-onlays \u2014 Thin money page (431w). Expand to 1,000w+ with conversion content, social proof, FAQs.\n    5. [P1] /sleep-dentistry-service \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n    6. [P1] /veneers \u2014 Thin money page (615w). Expand to 1,000w+ with conversion content, social proof, FAQs.\n    7. [P1] /zoom-whitening-2011-special \u2014 Thin money page (272w). Expand to 1,000w+ with conversion content, social proof, FAQs.\n    8. [P2] /news/page/2 \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n\nCapacity assumption: ~8 pages/month. Claude drafts \u2192 team reviews + publishes. Specific next steps are on each page row in the WQA approvals.",
+      "deliverable_type": "Content",
+      "content_subtype": "updated",
+      "priority": "P1",
+      "assigned_to_email": "cassy@smileandgrow.com.au",
+      "start_date": "2026-10-01",
+      "due_date": "2026-10-31",
+      "scheduled_month": 3,
+      "ai_assisted": true,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Content",
+        "action_type": "Content batch",
+        "content_subtype": "updated",
+        "actions_in_batch": [
+          "Refresh content",
+          "Rewrite"
+        ],
+        "grouped_count": 8,
+        "approvals_rows": [
+          131,
+          132,
+          133,
+          134,
+          25,
+          135,
+          136,
+          166
+        ],
+        "urls": [
+          "https://beaconcovedental.com.au/carbon-neutral-dentistry-100-greenpowered",
+          "https://beaconcovedental.com.au/emergency-dentistry",
+          "https://beaconcovedental.com.au/poor-oral-hygiene-is-linked-to-alzheimers",
+          "https://beaconcovedental.com.au/porcelain-onlays",
+          "https://beaconcovedental.com.au/sleep-dentistry-service",
+          "https://beaconcovedental.com.au/veneers",
+          "https://beaconcovedental.com.au/zoom-whitening-2011-special",
+          "https://beaconcovedental.com.au/news/page/2"
+        ]
+      }
+    },
+    {
+      "sprint_number": 4,
+      "name": "Rewrite/refresh 8 pages \u2014 Month 4",
+      "description": "Rewrite/refresh batch \u2014 Month 4 (8 pages, priority order):\nActions in this batch: Expand content / Refresh content\n\n    1. [P2] /news/page/3 \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n    2. [P2] /news/page/4 \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n    3. [P3] / \u2014 Thin content (351w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    4. [P3] /10-top-tips-finding-a-great-dentist \u2014 Thin content (364w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    5. [P3] /booking \u2014 Thin content (590w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    6. [P3] /dental-cleanup \u2014 Thin content (173w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    7. [P3] /dr-fern-white-in-bite-magazine \u2014 Thin content (492w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    8. [P3] /eco-responsibility-you-and-your-dentist-can-make-a-difference \u2014 Thin content (512w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n\nCapacity assumption: ~8 pages/month. Claude drafts \u2192 team reviews + publishes. Specific next steps are on each page row in the WQA approvals.",
+      "deliverable_type": "Content",
+      "content_subtype": "updated",
+      "priority": "P2",
+      "assigned_to_email": "cassy@smileandgrow.com.au",
+      "start_date": "2026-11-01",
+      "due_date": "2026-11-30",
+      "scheduled_month": 4,
+      "ai_assisted": true,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Content",
+        "action_type": "Content batch",
+        "content_subtype": "updated",
+        "actions_in_batch": [
+          "Expand content",
+          "Refresh content"
+        ],
+        "grouped_count": 8,
+        "approvals_rows": [
+          167,
+          168,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112
+        ],
+        "urls": [
+          "https://beaconcovedental.com.au/news/page/3",
+          "https://beaconcovedental.com.au/news/page/4",
+          "https://beaconcovedental.com.au",
+          "https://beaconcovedental.com.au/10-top-tips-finding-a-great-dentist",
+          "https://beaconcovedental.com.au/booking",
+          "https://beaconcovedental.com.au/dental-cleanup",
+          "https://beaconcovedental.com.au/dr-fern-white-in-bite-magazine",
+          "https://beaconcovedental.com.au/eco-responsibility-you-and-your-dentist-can-make-a-difference"
+        ]
+      }
+    },
+    {
+      "sprint_number": 4,
+      "name": "Rewrite/refresh 8 pages \u2014 Month 5",
+      "description": "Rewrite/refresh batch \u2014 Month 5 (8 pages, priority order):\nActions in this batch: Expand content\n\n    1. [P3] /faq \u2014 Thin content (305w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    2. [P3] /first-visit \u2014 Thin content (612w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    3. [P3] /green-cityswitch-victoria-rmit-university \u2014 Thin content (445w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    4. [P3] /healthy-teeth \u2014 Thin content (210w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    5. [P3] /how-to-floss \u2014 Thin content (255w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    6. [P3] /invisible-braces \u2014 Thin content (287w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    7. [P3] /look-after-your-gums-to-prevent-heart-disease \u2014 Thin content (518w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    8. [P3] /new-green-initiatives \u2014 Thin content (359w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n\nCapacity assumption: ~8 pages/month. Claude drafts \u2192 team reviews + publishes. Specific next steps are on each page row in the WQA approvals.",
+      "deliverable_type": "Content",
+      "content_subtype": "updated",
+      "priority": "P3",
+      "assigned_to_email": "cassy@smileandgrow.com.au",
+      "start_date": "2026-12-01",
+      "due_date": "2026-12-31",
+      "scheduled_month": 5,
+      "ai_assisted": true,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Content",
+        "action_type": "Content batch",
+        "content_subtype": "updated",
+        "actions_in_batch": [
+          "Expand content"
+        ],
+        "grouped_count": 8,
+        "approvals_rows": [
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ],
+        "urls": [
+          "https://beaconcovedental.com.au/faq",
+          "https://beaconcovedental.com.au/first-visit",
+          "https://beaconcovedental.com.au/green-cityswitch-victoria-rmit-university",
+          "https://beaconcovedental.com.au/healthy-teeth",
+          "https://beaconcovedental.com.au/how-to-floss",
+          "https://beaconcovedental.com.au/invisible-braces",
+          "https://beaconcovedental.com.au/look-after-your-gums-to-prevent-heart-disease",
+          "https://beaconcovedental.com.au/new-green-initiatives"
+        ]
+      }
+    },
+    {
+      "sprint_number": 4,
+      "name": "Rewrite/refresh 7 pages \u2014 Month 6",
+      "description": "Rewrite/refresh batch \u2014 Month 6 (7 pages, priority order):\nActions in this batch: Expand content\n\n    1. [P3] /news \u2014 Thin content (415w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    2. [P3] /our-work \u2014 Thin content (19w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    3. [P3] /paymentoptions \u2014 Thin content (477w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    4. [P3] /root-canal-treatment \u2014 Thin content (560w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    5. [P3] /south-melbourne-dentist-albert-park-middle-park-dentist \u2014 Thin content (341w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    6. [P3] /treatment \u2014 Thin content (548w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n    7. [P3] /why-being-green-matters \u2014 Thin content (496w). Expand to 1,000w+ OR consolidate/noindex if low-value.\n\nCapacity assumption: ~8 pages/month. Claude drafts \u2192 team reviews + publishes. Specific next steps are on each page row in the WQA approvals.",
+      "deliverable_type": "Content",
+      "content_subtype": "updated",
+      "priority": "P3",
+      "assigned_to_email": "cassy@smileandgrow.com.au",
+      "start_date": "2027-01-01",
+      "due_date": "2027-01-31",
+      "scheduled_month": 6,
+      "ai_assisted": true,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Content",
+        "action_type": "Content batch",
+        "content_subtype": "updated",
+        "actions_in_batch": [
+          "Expand content"
+        ],
+        "grouped_count": 7,
+        "approvals_rows": [
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127
+        ],
+        "urls": [
+          "https://beaconcovedental.com.au/news",
+          "https://beaconcovedental.com.au/our-work",
+          "https://beaconcovedental.com.au/paymentoptions",
+          "https://beaconcovedental.com.au/root-canal-treatment",
+          "https://beaconcovedental.com.au/south-melbourne-dentist-albert-park-middle-park-dentist",
+          "https://beaconcovedental.com.au/treatment",
+          "https://beaconcovedental.com.au/why-being-green-matters"
+        ]
+      }
+    },
+    {
+      "sprint_number": 4,
+      "name": "Update titles + metas \u2014 56 URLs",
+      "description": "Bulk metadata work \u2014 Rewrite title/meta across 56 URLs.\nQuick wins; batch in Month 3 then sweep the next month for tail items.\n\n    1. [P2] / \u2014 High impressions (1,679) but low CTR (0.9%) at pos 35.4. Rewrite title/meta to match intent + add a hook.\n    2. [P2] / \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n    3. [P2] /10-top-tips-finding-a-great-dentist \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n    4. [P2] /5-key-things-know-teeth-grinding \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n    5. [P2] /affordable-dental-care-port-melbourne-payment-plans \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n    6. [P2] /booking \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n    7. [P2] /confused-about-dental-treatment-options-port-melbourne \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n    8. [P2] /delaying-dental-treatment-consequences-port-melbourne \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n    9. [P2] /dental-cleanup \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   10. [P2] /dental-cleanup-thankyou \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   11. [P2] /dr-fern-white-in-bite-magazine \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   12. [P2] /eco-responsibility-you-and-your-dentist-can-make-a-difference \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   13. [P2] /embarrassed-about-teeth-hiding-your-smile \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   14. [P2] /fast-track-call-now \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   15. [P2] /first-visit \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   16. [P2] /general-anaesthetic \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   17. [P2] /green-cityswitch-victoria-rmit-university \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   18. [P2] /grinding-clenching-and-headaches \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   19. [P2] /healthy-teeth \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   20. [P2] /holiday-dental-tips \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   21. [P2] /how-long-does-a-filling-last \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   22. [P2] /how-to-find-the-best-dentist-in-port-melbourne-your-ultimate-guide \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   23. [P2] /how-to-floss \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   24. [P2] /invisible-braces \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   25. [P2] /look-after-your-gums-to-prevent-heart-disease \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   26. [P2] /nervous-long-dental-appointments-port-melbourne \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   27. [P2] /new-green-initiatives \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   28. [P2] /news \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   29. [P2] /oral-health-whole-body-health-connection-port-melbourne \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   30. [P2] /our-team \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   31. [P2] /our-work \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   32. [P2] /paymentoptions \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   33. [P2] /renovate-teeth-retirement-dental-health-longevity-port-melbourne \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   34. [P2] /resources/are-your-teeth-showing-signs-of-erosion \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   35. [P2] /resources/fillings-leaking \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   36. [P2] /resources/how-can-early-detections-of-tooth-cracks \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   37. [P2] /resources/the-5-mistakes-to-avoid-when-getting-crowns-and-veneers \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   38. [P2] /resources/the-silent-killer-gum-and-bone-disease \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   39. [P2] /resources/tooth-sensitivity-after-filling \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   40. [P2] /resources/what-is-tmj-disorder \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   41. [P2] /root-canal-treatment \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   42. [P2] /sleep-dentistry-support \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   43. [P2] /south-melbourne-dentist-albert-park-middle-park-dentist \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   44. [P2] /south-melbourne-market-shopping-for-your-teeth \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   45. [P2] /teeth-straightening-braces \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   46. [P2] /teeth-whitening \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   47. [P2] /tmd-tmj-clenching-grinding-headache-melbourne \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   48. [P2] /tooth-decay-prevention-tips \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   49. [P2] /tooth-pain-after-filling \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   50. [P2] /tooth-sensitivity-hot-cold-food-port-melbourne-dentist \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   51. [P2] /treatment \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   52. [P2] /what-are-the-symptoms-of-tmd \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   53. [P2] /why-being-green-matters \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   54. [P2] /why-prevent-decay \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   55. [P2] /youre-not-broken-for-being-afraid-of-the-dentist \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n   56. [P3] /contact-bcd \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.",
+      "deliverable_type": "Content",
+      "priority": "P2",
+      "assigned_to_email": "cassy@smileandgrow.com.au",
+      "start_date": "2026-10-01",
+      "due_date": "2026-10-08",
+      "scheduled_month": 3,
+      "ai_assisted": true,
+      "source": {
+        "category": "Content",
+        "action_type": "Rewrite title/meta",
+        "grouped_count": 56,
+        "approvals_rows": [
+          137,
+          192,
+          141,
+          142,
+          178,
+          181,
+          159,
+          160,
+          138,
+          140,
+          143,
+          144,
+          161,
+          158,
+          156,
+          162,
+          145,
+          193,
+          146,
+          163,
+          164,
+          165,
+          147,
+          148,
+          149,
+          176,
+          150,
+          182,
+          169,
+          139,
+          151,
+          183,
+          170,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191,
+          152,
+          194,
+          153,
+          171,
+          172,
+          195,
+          196,
+          173,
+          179,
+          174,
+          154,
+          180,
+          155,
+          177,
+          175,
+          157
+        ],
+        "urls": [
+          "https://beaconcovedental.com.au",
+          "https://beaconcovedental.com.au",
+          "https://beaconcovedental.com.au/10-top-tips-finding-a-great-dentist",
+          "https://beaconcovedental.com.au/5-key-things-know-teeth-grinding",
+          "https://beaconcovedental.com.au/affordable-dental-care-port-melbourne-payment-plans",
+          "https://beaconcovedental.com.au/booking",
+          "https://beaconcovedental.com.au/confused-about-dental-treatment-options-port-melbourne",
+          "https://beaconcovedental.com.au/delaying-dental-treatment-consequences-port-melbourne",
+          "https://beaconcovedental.com.au/dental-cleanup",
+          "https://beaconcovedental.com.au/dental-cleanup-thankyou",
+          "https://beaconcovedental.com.au/dr-fern-white-in-bite-magazine",
+          "https://beaconcovedental.com.au/eco-responsibility-you-and-your-dentist-can-make-a-difference",
+          "https://beaconcovedental.com.au/embarrassed-about-teeth-hiding-your-smile",
+          "https://beaconcovedental.com.au/fast-track-call-now",
+          "https://beaconcovedental.com.au/first-visit",
+          "https://beaconcovedental.com.au/general-anaesthetic",
+          "https://beaconcovedental.com.au/green-cityswitch-victoria-rmit-university",
+          "https://beaconcovedental.com.au/grinding-clenching-and-headaches",
+          "https://beaconcovedental.com.au/healthy-teeth",
+          "https://beaconcovedental.com.au/holiday-dental-tips",
+          "https://beaconcovedental.com.au/how-long-does-a-filling-last",
+          "https://beaconcovedental.com.au/how-to-find-the-best-dentist-in-port-melbourne-your-ultimate-guide",
+          "https://beaconcovedental.com.au/how-to-floss",
+          "https://beaconcovedental.com.au/invisible-braces",
+          "https://beaconcovedental.com.au/look-after-your-gums-to-prevent-heart-disease",
+          "https://beaconcovedental.com.au/nervous-long-dental-appointments-port-melbourne",
+          "https://beaconcovedental.com.au/new-green-initiatives",
+          "https://beaconcovedental.com.au/news",
+          "https://beaconcovedental.com.au/oral-health-whole-body-health-connection-port-melbourne",
+          "https://beaconcovedental.com.au/our-team",
+          "https://beaconcovedental.com.au/our-work",
+          "https://beaconcovedental.com.au/paymentoptions",
+          "https://beaconcovedental.com.au/renovate-teeth-retirement-dental-health-longevity-port-melbourne",
+          "https://beaconcovedental.com.au/resources/are-your-teeth-showing-signs-of-erosion",
+          "https://beaconcovedental.com.au/resources/fillings-leaking",
+          "https://beaconcovedental.com.au/resources/how-can-early-detections-of-tooth-cracks",
+          "https://beaconcovedental.com.au/resources/the-5-mistakes-to-avoid-when-getting-crowns-and-veneers",
+          "https://beaconcovedental.com.au/resources/the-silent-killer-gum-and-bone-disease",
+          "https://beaconcovedental.com.au/resources/tooth-sensitivity-after-filling",
+          "https://beaconcovedental.com.au/resources/what-is-tmj-disorder",
+          "https://beaconcovedental.com.au/root-canal-treatment",
+          "https://beaconcovedental.com.au/sleep-dentistry-support",
+          "https://beaconcovedental.com.au/south-melbourne-dentist-albert-park-middle-park-dentist",
+          "https://beaconcovedental.com.au/south-melbourne-market-shopping-for-your-teeth",
+          "https://beaconcovedental.com.au/teeth-straightening-braces",
+          "https://beaconcovedental.com.au/teeth-whitening",
+          "https://beaconcovedental.com.au/tmd-tmj-clenching-grinding-headache-melbourne",
+          "https://beaconcovedental.com.au/tooth-decay-prevention-tips",
+          "https://beaconcovedental.com.au/tooth-pain-after-filling",
+          "https://beaconcovedental.com.au/tooth-sensitivity-hot-cold-food-port-melbourne-dentist",
+          "https://beaconcovedental.com.au/treatment",
+          "https://beaconcovedental.com.au/what-are-the-symptoms-of-tmd",
+          "https://beaconcovedental.com.au/why-being-green-matters",
+          "https://beaconcovedental.com.au/why-prevent-decay",
+          "https://beaconcovedental.com.au/youre-not-broken-for-being-afraid-of-the-dentist",
+          "https://beaconcovedental.com.au/contact-bcd"
+        ]
+      }
+    },
+    {
+      "sprint_number": 4,
+      "name": "Update onpage elements \u2014 6 URLs",
+      "description": "Bulk metadata work \u2014 Update onpage across 6 URLs.\nQuick wins; batch in Month 3 then sweep the next month for tail items.\n\n    1. [P2] /emergency-dentistry \u2014 Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.\n    2. [P2] /faq \u2014 Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.\n    3. [P2] /news \u2014 Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.\n    4. [P2] /paymentoptions \u2014 Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.\n    5. [P2] /sitemap \u2014 Missing meta description. Add a 140-160 char description with target keyword + CTA.\n    6. [P2] /tooth-pain-after-filling \u2014 Striking distance \u2014 pos 12.0 with 549 imp. Refresh content + add internal links to push into top 5.",
+      "deliverable_type": "Content",
+      "priority": "P2",
+      "assigned_to_email": "cassy@smileandgrow.com.au",
+      "start_date": "2026-10-01",
+      "due_date": "2026-10-08",
+      "scheduled_month": 3,
+      "ai_assisted": true,
+      "source": {
+        "category": "Content",
+        "action_type": "Update onpage",
+        "grouped_count": 6,
+        "approvals_rows": [
+          197,
+          199,
+          200,
+          201,
+          184,
+          198
+        ],
+        "urls": [
+          "https://beaconcovedental.com.au/emergency-dentistry",
+          "https://beaconcovedental.com.au/faq",
+          "https://beaconcovedental.com.au/news",
+          "https://beaconcovedental.com.au/paymentoptions",
+          "https://beaconcovedental.com.au/sitemap",
+          "https://beaconcovedental.com.au/tooth-pain-after-filling"
+        ]
+      }
+    },
+    {
+      "sprint_number": 4,
+      "name": "Strategist eval \u2014 14 URLs",
+      "description": "Bulk metadata work \u2014 Evaluate across 14 URLs.\nQuick wins; batch in Month 3 then sweep the next month for tail items.\n\n    1. [P1] /cosmetic-dentistry \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n    2. [P1] /hygiene-maintenance \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n    3. [P1] /our-services-treatments/childrens-dentistry \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n    4. [P1] /our-services-treatments/pregnancy-dental-treatment \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n    5. [P1] /our-services-treatments/snoring-and-sleep-assisting-devices \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n    6. [P1] /our-services-treatments/surgical-extractions-wisdom-teeth \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n    7. [P1] /our-services-treatments/teeth-straightening-braces/6-month-braces \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n    8. [P2] /2013/03/grinding-clenching-and-headaches \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n    9. [P2] /2015/11/look-after-your-gums-to-prevent-heart-disease \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n   10. [P2] /2017/09/5-key-things-know-teeth-grinding \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n   11. [P2] /blog \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n   12. [P2] /prevention-service/what-should-you-expect \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.\n   13. [P3] /cdn-cgi/l/email-protection \u2014 Block non-essential pages from crawling using the robots.txt file or robots meta directives.\n   14. [P3] /snoring-and-sleep-assisting-devices \u2014 Add 301 redirects for deleted or moved pages to preserve SEO value.",
+      "deliverable_type": "Content",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-10-01",
+      "due_date": "2026-10-08",
+      "scheduled_month": 3,
+      "ai_assisted": true,
+      "source": {
+        "category": "Content",
+        "action_type": "Evaluate",
+        "grouped_count": 14,
+        "approvals_rows": [
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          12,
+          13,
+          14,
+          16,
+          17,
+          80,
+          15
+        ],
+        "urls": [
+          "https://beaconcovedental.com.au/cosmetic-dentistry",
+          "https://beaconcovedental.com.au/hygiene-maintenance",
+          "https://beaconcovedental.com.au/our-services-treatments/childrens-dentistry",
+          "https://beaconcovedental.com.au/our-services-treatments/pregnancy-dental-treatment",
+          "https://beaconcovedental.com.au/our-services-treatments/snoring-and-sleep-assisting-devices",
+          "https://beaconcovedental.com.au/our-services-treatments/surgical-extractions-wisdom-teeth",
+          "https://beaconcovedental.com.au/our-services-treatments/teeth-straightening-braces/6-month-braces",
+          "https://beaconcovedental.com.au/2013/03/grinding-clenching-and-headaches",
+          "https://beaconcovedental.com.au/2015/11/look-after-your-gums-to-prevent-heart-disease",
+          "https://beaconcovedental.com.au/2017/09/5-key-things-know-teeth-grinding",
+          "https://beaconcovedental.com.au/blog",
+          "https://beaconcovedental.com.au/prevention-service/what-should-you-expect",
+          "https://beaconcovedental.com.au/cdn-cgi/l/email-protection",
+          "https://beaconcovedental.com.au/snoring-and-sleep-assisting-devices"
+        ]
+      }
+    },
+    {
+      "sprint_number": 5,
+      "name": "Link Strategy",
+      "description": "Sprint 5 strategic foundation. Locks in how we acquire links:\n  \u00b7 Target DR range for prospect domains\n  \u00b7 Mix of link types (guest post / sponsored / NOBS / resource / relationship / podcast)\n  \u00b7 Monthly velocity assumption\n  \u00b7 Niche relevance bar\n  \u00b7 Outreach platform (email, LinkedIn, partnerships)\n  \u00b7 Budget per link tier",
+      "deliverable_type": "Link",
+      "link_subtype": "strategy",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-10-01",
+      "due_date": "2026-10-08",
+      "scheduled_month": 3,
+      "ai_assisted": false,
+      "is_strategy": true,
+      "source": {
+        "category": "Link",
+        "action_type": "Link Strategy",
+        "link_subtype": "strategy",
+        "notes": "Core deliverable. Month 3 strategy + plan, monthly link batches start Month 4."
+      }
+    },
+    {
+      "sprint_number": 5,
+      "name": "Link plan + initial prospecting",
+      "description": "Translate strategy into an initial target list.\n  \u00b7 Seed 30-50 prospect domains aligned with strategy\n  \u00b7 Score by DR, relevance, traffic, ease-of-acquisition\n  \u00b7 Distribute target pages across the prospects\n  \u00b7 Populate the central link DB with initial 'Reply Pending' rows\n  \u00b7 Hand off to Months 4+ for outreach + acquisition",
+      "deliverable_type": "Link",
+      "link_subtype": "prospecting",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-10-01",
+      "due_date": "2026-10-08",
+      "scheduled_month": 3,
+      "ai_assisted": false,
+      "is_strategy": true,
+      "source": {
+        "category": "Link",
+        "action_type": "Link Strategy",
+        "link_subtype": "prospecting",
+        "notes": "Core deliverable. Month 3 strategy + plan, monthly link batches start Month 4."
+      }
+    },
+    {
+      "sprint_number": 5,
+      "name": "Build 6 links \u2014 Month 4",
+      "description": "Acquire 6 links this month, distributed across target pages:\n\n  1. /jaw-pain-headaches-teeth-grinding-port-melbourne  \u00b7  'teeth grinding treatment melbourne' (pos 5.7143, 0 ref domains)\n  2. /jaw-pain-headaches-teeth-grinding-port-melbourne  \u00b7  'teeth grinding treatment melbourne' (pos 5.7143, 0 ref domains)\n  3. /jaw-pain-headaches-teeth-grinding-port-melbourne  \u00b7  'teeth grinding treatment melbourne' (pos 5.7143, 0 ref domains)\n  4. /dental-implants-missing-teeth-port-melbourne  \u00b7  'dental implants port melbourne' (pos 19.2105, 0 ref domains)\n  5. /dental-implants-missing-teeth-port-melbourne  \u00b7  'dental implants port melbourne' (pos 19.2105, 0 ref domains)\n  6. /dental-implants-missing-teeth-port-melbourne  \u00b7  'dental implants port melbourne' (pos 19.2105, 0 ref domains)\n\nTactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",
+      "deliverable_type": "Link",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-11-01",
+      "due_date": "2026-11-30",
+      "scheduled_month": 4,
+      "ai_assisted": false,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Link",
+        "action_type": "Link batch",
+        "grouped_count": 6,
+        "target_pages": [
+          "https://beaconcovedental.com.au/jaw-pain-headaches-teeth-grinding-port-melbourne",
+          "https://beaconcovedental.com.au/jaw-pain-headaches-teeth-grinding-port-melbourne",
+          "https://beaconcovedental.com.au/jaw-pain-headaches-teeth-grinding-port-melbourne",
+          "https://beaconcovedental.com.au/dental-implants-missing-teeth-port-melbourne",
+          "https://beaconcovedental.com.au/dental-implants-missing-teeth-port-melbourne",
+          "https://beaconcovedental.com.au/dental-implants-missing-teeth-port-melbourne"
+        ],
+        "month_index": 1
+      }
+    },
+    {
+      "sprint_number": 5,
+      "name": "Build 6 links \u2014 Month 5",
+      "description": "Acquire 6 links this month, distributed across target pages:\n\n  1. /grinding-clenching-and-headaches  \u00b7  'teeth clenching treatment melbourne' (pos 17.1837, 0 ref domains)\n  2. /grinding-clenching-and-headaches  \u00b7  'teeth clenching treatment melbourne' (pos 17.1837, 0 ref domains)\n  3. /grinding-clenching-and-headaches  \u00b7  'teeth clenching treatment melbourne' (pos 17.1837, 0 ref domains)\n  4. /hygiene  \u00b7  'dental hygiene port melbourne' (pos 22.7938, 0 ref domains)\n  5. /hygiene  \u00b7  'dental hygiene port melbourne' (pos 22.7938, 0 ref domains)\n  6. /hygiene  \u00b7  'dental hygiene port melbourne' (pos 22.7938, 0 ref domains)\n\nTactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",
+      "deliverable_type": "Link",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-12-01",
+      "due_date": "2026-12-31",
+      "scheduled_month": 5,
+      "ai_assisted": false,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Link",
+        "action_type": "Link batch",
+        "grouped_count": 6,
+        "target_pages": [
+          "https://beaconcovedental.com.au/grinding-clenching-and-headaches",
+          "https://beaconcovedental.com.au/grinding-clenching-and-headaches",
+          "https://beaconcovedental.com.au/grinding-clenching-and-headaches",
+          "https://beaconcovedental.com.au/hygiene",
+          "https://beaconcovedental.com.au/hygiene",
+          "https://beaconcovedental.com.au/hygiene"
+        ],
+        "month_index": 2
+      }
+    },
+    {
+      "sprint_number": 5,
+      "name": "Build 6 links \u2014 Month 6",
+      "description": "Acquire 6 links this month, distributed across target pages:\n\n  1. /myofunctional-therapy  \u00b7  'myofunctional therapy melbourne' (pos 20.6916, 0 ref domains)\n  2. /myofunctional-therapy  \u00b7  'myofunctional therapy melbourne' (pos 20.6916, 0 ref domains)\n  3. /myofunctional-therapy  \u00b7  'myofunctional therapy melbourne' (pos 20.6916, 0 ref domains)\n  4. /natural-looking-cosmetic-dentistry-port-melbourne-veneers-ageing  \u00b7  'cosmetic dentist port melbourne' (pos 16.8571, 0 ref domains)\n  5. /natural-looking-cosmetic-dentistry-port-melbourne-veneers-ageing  \u00b7  'cosmetic dentist port melbourne' (pos 16.8571, 0 ref domains)\n  6. /natural-looking-cosmetic-dentistry-port-melbourne-veneers-ageing  \u00b7  'cosmetic dentist port melbourne' (pos 16.8571, 0 ref domains)\n\nTactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",
+      "deliverable_type": "Link",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-01-01",
+      "due_date": "2027-01-31",
+      "scheduled_month": 6,
+      "ai_assisted": false,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Link",
+        "action_type": "Link batch",
+        "grouped_count": 6,
+        "target_pages": [
+          "https://beaconcovedental.com.au/myofunctional-therapy",
+          "https://beaconcovedental.com.au/myofunctional-therapy",
+          "https://beaconcovedental.com.au/myofunctional-therapy",
+          "https://beaconcovedental.com.au/natural-looking-cosmetic-dentistry-port-melbourne-veneers-ageing",
+          "https://beaconcovedental.com.au/natural-looking-cosmetic-dentistry-port-melbourne-veneers-ageing",
+          "https://beaconcovedental.com.au/natural-looking-cosmetic-dentistry-port-melbourne-veneers-ageing"
+        ],
+        "month_index": 3
+      }
+    },
+    {
+      "sprint_number": 5,
+      "name": "Build 6 links \u2014 Month 7",
+      "description": "Acquire 6 links this month, distributed across target pages:\n\n  1. /poor-oral-hygiene-is-linked-to-alzheimers  \u00b7  'oral health and dementia' (pos 10.1337, 0 ref domains)\n  2. /poor-oral-hygiene-is-linked-to-alzheimers  \u00b7  'oral health and dementia' (pos 10.1337, 0 ref domains)\n  3. /poor-oral-hygiene-is-linked-to-alzheimers  \u00b7  'oral health and dementia' (pos 10.1337, 0 ref domains)\n  4. /carbon-neutral-dentistry-100-greenpowered  \u00b7  'eco friendly dentist melbourne' (pos ?, 0 ref domains)\n  5. /carbon-neutral-dentistry-100-greenpowered  \u00b7  'eco friendly dentist melbourne' (pos ?, 0 ref domains)\n  6. /carbon-neutral-dentistry-100-greenpowered  \u00b7  'eco friendly dentist melbourne' (pos ?, 0 ref domains)\n\nTactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",
+      "deliverable_type": "Link",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-02-01",
+      "due_date": "2027-02-28",
+      "scheduled_month": 7,
+      "ai_assisted": false,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Link",
+        "action_type": "Link batch",
+        "grouped_count": 6,
+        "target_pages": [
+          "https://beaconcovedental.com.au/poor-oral-hygiene-is-linked-to-alzheimers",
+          "https://beaconcovedental.com.au/poor-oral-hygiene-is-linked-to-alzheimers",
+          "https://beaconcovedental.com.au/poor-oral-hygiene-is-linked-to-alzheimers",
+          "https://beaconcovedental.com.au/carbon-neutral-dentistry-100-greenpowered",
+          "https://beaconcovedental.com.au/carbon-neutral-dentistry-100-greenpowered",
+          "https://beaconcovedental.com.au/carbon-neutral-dentistry-100-greenpowered"
+        ],
+        "month_index": 4
+      }
+    },
+    {
+      "sprint_number": 5,
+      "name": "Build 6 links \u2014 Month 8",
+      "description": "Acquire 6 links this month, distributed across target pages:\n\n  1. /crowns  \u00b7  'dental crowns port melbourne' (pos 46.2928, 0 ref domains)\n  2. /crowns  \u00b7  'dental crowns port melbourne' (pos 46.2928, 0 ref domains)\n  3. /crowns  \u00b7  'dental crowns port melbourne' (pos 46.2928, 0 ref domains)\n  4. /emergency-dentistry  \u00b7  'emergency dentist port melbourne' (pos 41.4386, 0 ref domains)\n  5. /emergency-dentistry  \u00b7  'emergency dentist port melbourne' (pos 41.4386, 0 ref domains)\n  6. /emergency-dentistry  \u00b7  'emergency dentist port melbourne' (pos 41.4386, 0 ref domains)\n\nTactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",
+      "deliverable_type": "Link",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-03-01",
+      "due_date": "2027-03-31",
+      "scheduled_month": 8,
+      "ai_assisted": false,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Link",
+        "action_type": "Link batch",
+        "grouped_count": 6,
+        "target_pages": [
+          "https://beaconcovedental.com.au/crowns",
+          "https://beaconcovedental.com.au/crowns",
+          "https://beaconcovedental.com.au/crowns",
+          "https://beaconcovedental.com.au/emergency-dentistry",
+          "https://beaconcovedental.com.au/emergency-dentistry",
+          "https://beaconcovedental.com.au/emergency-dentistry"
+        ],
+        "month_index": 5
+      }
+    },
+    {
+      "sprint_number": 5,
+      "name": "Build 6 links \u2014 Month 9",
+      "description": "Acquire 6 links this month, distributed across target pages:\n\n  1. /fillings-and-restorations  \u00b7  'dental fillings port melbourne' (pos ?, 0 ref domains)\n  2. /fillings-and-restorations  \u00b7  'dental fillings port melbourne' (pos ?, 0 ref domains)\n  3. /fillings-and-restorations  \u00b7  'dental fillings port melbourne' (pos ?, 0 ref domains)\n  4. /implants  \u00b7  'dental implants melbourne' (pos 58.6667, 0 ref domains)\n  5. /implants  \u00b7  'dental implants melbourne' (pos 58.6667, 0 ref domains)\n  6. /implants  \u00b7  'dental implants melbourne' (pos 58.6667, 0 ref domains)\n\nTactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",
+      "deliverable_type": "Link",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-04-01",
+      "due_date": "2027-04-30",
+      "scheduled_month": 9,
+      "ai_assisted": false,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Link",
+        "action_type": "Link batch",
+        "grouped_count": 6,
+        "target_pages": [
+          "https://beaconcovedental.com.au/fillings-and-restorations",
+          "https://beaconcovedental.com.au/fillings-and-restorations",
+          "https://beaconcovedental.com.au/fillings-and-restorations",
+          "https://beaconcovedental.com.au/implants",
+          "https://beaconcovedental.com.au/implants",
+          "https://beaconcovedental.com.au/implants"
+        ],
+        "month_index": 6
+      }
+    },
+    {
+      "sprint_number": 5,
+      "name": "Build 6 links \u2014 Month 10",
+      "description": "Acquire 6 links this month, distributed across target pages:\n\n  1. /porcelain-onlays  \u00b7  'porcelain onlays melbourne' (pos ?, 0 ref domains)\n  2. /porcelain-onlays  \u00b7  'porcelain onlays melbourne' (pos ?, 0 ref domains)\n  3. /porcelain-onlays  \u00b7  'porcelain onlays melbourne' (pos ?, 0 ref domains)\n  4. /sleep-dentistry-support  \u00b7  'sleep dentistry melbourne' (pos ?, 0 ref domains)\n  5. /sleep-dentistry-support  \u00b7  'sleep dentistry melbourne' (pos ?, 0 ref domains)\n  6. /sleep-dentistry-support  \u00b7  'sleep dentistry melbourne' (pos ?, 0 ref domains)\n\nTactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",
+      "deliverable_type": "Link",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-05-01",
+      "due_date": "2027-05-31",
+      "scheduled_month": 10,
+      "ai_assisted": false,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Link",
+        "action_type": "Link batch",
+        "grouped_count": 6,
+        "target_pages": [
+          "https://beaconcovedental.com.au/porcelain-onlays",
+          "https://beaconcovedental.com.au/porcelain-onlays",
+          "https://beaconcovedental.com.au/porcelain-onlays",
+          "https://beaconcovedental.com.au/sleep-dentistry-support",
+          "https://beaconcovedental.com.au/sleep-dentistry-support",
+          "https://beaconcovedental.com.au/sleep-dentistry-support"
+        ],
+        "month_index": 7
+      }
+    },
+    {
+      "sprint_number": 5,
+      "name": "Build 6 links \u2014 Month 11",
+      "description": "Acquire 6 links this month, distributed across target pages:\n\n  1. /teeth-whitening  \u00b7  'teeth whitening port melbourne' (pos ?, 0 ref domains)\n  2. /teeth-whitening  \u00b7  'teeth whitening port melbourne' (pos ?, 0 ref domains)\n  3. /tmd-tmj-clenching-grinding-headache-melbourne  \u00b7  'tmj treatment melbourne' (pos 31.2857, 0 ref domains)\n  4. /tmd-tmj-clenching-grinding-headache-melbourne  \u00b7  'tmj treatment melbourne' (pos 31.2857, 0 ref domains)\n  5. /veneers  \u00b7  'veneers port melbourne' (pos 45.329, 0 ref domains)\n  6. /veneers  \u00b7  'veneers port melbourne' (pos 45.329, 0 ref domains)\n\nTactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",
+      "deliverable_type": "Link",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-06-01",
+      "due_date": "2027-06-30",
+      "scheduled_month": 11,
+      "ai_assisted": false,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Link",
+        "action_type": "Link batch",
+        "grouped_count": 6,
+        "target_pages": [
+          "https://beaconcovedental.com.au/teeth-whitening",
+          "https://beaconcovedental.com.au/teeth-whitening",
+          "https://beaconcovedental.com.au/tmd-tmj-clenching-grinding-headache-melbourne",
+          "https://beaconcovedental.com.au/tmd-tmj-clenching-grinding-headache-melbourne",
+          "https://beaconcovedental.com.au/veneers",
+          "https://beaconcovedental.com.au/veneers"
+        ],
+        "month_index": 8
+      }
+    },
+    {
+      "sprint_number": 5,
+      "name": "Build 6 links \u2014 Month 12",
+      "description": "Acquire 6 links this month, distributed across target pages:\n\n  1. /zoom-whitening-2011-special  \u00b7  'zoom teeth whitening melbourne' (pos 43.4091, 0 ref domains)\n  2. /zoom-whitening-2011-special  \u00b7  'zoom teeth whitening melbourne' (pos 43.4091, 0 ref domains)\n  3. /our-team  \u00b7  'dentist port melbourne' (pos 23.527, 0 ref domains)\n  4. /our-team  \u00b7  'dentist port melbourne' (pos 23.527, 0 ref domains)\n  5. /tooth-pain-after-filling  \u00b7  'pain after filling' (pos 7.0, 0 ref domains)\n  6. /tooth-pain-after-filling  \u00b7  'pain after filling' (pos 7.0, 0 ref domains)\n\nTactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",
+      "deliverable_type": "Link",
+      "priority": "P2",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-07-01",
+      "due_date": "2027-07-31",
+      "scheduled_month": 12,
+      "ai_assisted": false,
+      "is_heavy_batch": true,
+      "source": {
+        "category": "Link",
+        "action_type": "Link batch",
+        "grouped_count": 6,
+        "target_pages": [
+          "https://beaconcovedental.com.au/zoom-whitening-2011-special",
+          "https://beaconcovedental.com.au/zoom-whitening-2011-special",
+          "https://beaconcovedental.com.au/our-team",
+          "https://beaconcovedental.com.au/our-team",
+          "https://beaconcovedental.com.au/tooth-pain-after-filling",
+          "https://beaconcovedental.com.au/tooth-pain-after-filling"
+        ],
+        "month_index": 9
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "Analytics Audit \u2014 conversion tracking + measurement setup",
+      "description": "Foundational analytics audit \u2014 verify the measurement layer is trustworthy before any monthly reporting is meaningful. Focus on conversion plumbing:\n  \u00b7 GA4 conversion events \u2014 firing reliably, flagged as conversions\n  \u00b7 Call-tracking integrations (WhatConverts / CallRail): DNI, attribution, event push-through\n  \u00b7 Form tracking \u2014 submission events, lead source attribution\n  \u00b7 CRM integration (HubSpot / Salesforce / Pipedrive) \u2014 sources tagged correctly\n  \u00b7 GA4 \u2194 GSC link active\n  \u00b7 Cross-domain / subdomain tracking gaps\n  \u00b7 GBP Insights accessibility\n  \u00b7 Note any tracking holes that would invalidate monthly reports.\n\nOutput: short Loom + written summary of what's wired, what's broken, and what needs fixing before Month 1 reporting.",
+      "deliverable_type": "Reporting",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-08-28",
+      "due_date": "2026-09-07",
+      "scheduled_month": 1,
+      "ai_assisted": false,
+      "is_analytics_audit": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "Analytics Audit",
+        "notes": "Runs Month 1 right after the WQA. 10-day duration."
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "WQA Refresh \u2014 Mid-engagement Audit (Month 6)",
+      "description": "Re-run a mini-WQA to recalibrate the plan at Month 6.\n  \u00b7 Fresh SF crawl + Ahrefs pull\n  \u00b7 Compare current performance vs the initial WQA baseline\n  \u00b7 Score what's working (content/links/technical) and what's not\n  \u00b7 Update the next-6-months roadmap (or close-out report at M12)\n  \u00b7 Strategist-approval pass on any new recommendations\nOutput: WQA Refresh deck + revised plan (mid) or final close-out (end).",
+      "deliverable_type": "Reporting",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-01-01",
+      "due_date": "2027-01-31",
+      "scheduled_month": 6,
+      "ai_assisted": true,
+      "is_wqa_refresh": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "WQA Refresh",
+        "month": 6
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "WQA Refresh \u2014 End-of-engagement Audit (Month 12)",
+      "description": "Re-run a mini-WQA to recalibrate the plan at Month 12.\n  \u00b7 Fresh SF crawl + Ahrefs pull\n  \u00b7 Compare current performance vs the initial WQA baseline\n  \u00b7 Score what's working (content/links/technical) and what's not\n  \u00b7 Update the next-6-months roadmap (or close-out report at M12)\n  \u00b7 Strategist-approval pass on any new recommendations\nOutput: WQA Refresh deck + revised plan (mid) or final close-out (end).",
+      "deliverable_type": "Reporting",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-07-01",
+      "due_date": "2027-07-31",
+      "scheduled_month": 12,
+      "ai_assisted": true,
+      "is_wqa_refresh": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "WQA Refresh",
+        "month": 12
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "Client Check-in \u2014 Month 2 (covers Month 1 performance)",
+      "description": "Monthly check-in with the client. Three components:\n\n  1. Monthly Report (covering Month 1): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.\n  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.\n  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.\n\nScheduled the first 7 days of Month 2 so the prior month's data has settled.",
+      "deliverable_type": "Client Check-in",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-09-01",
+      "due_date": "2026-09-07",
+      "scheduled_month": 2,
+      "ai_assisted": true,
+      "is_monthly_report": true,
+      "is_client_checkin": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "Client Check-in",
+        "covers_month": 1
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "Client Check-in \u2014 Month 3 (covers Month 2 performance)",
+      "description": "Monthly check-in with the client. Three components:\n\n  1. Monthly Report (covering Month 2): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.\n  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.\n  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.\n\nScheduled the first 7 days of Month 3 so the prior month's data has settled.",
+      "deliverable_type": "Client Check-in",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-10-01",
+      "due_date": "2026-10-07",
+      "scheduled_month": 3,
+      "ai_assisted": true,
+      "is_monthly_report": true,
+      "is_client_checkin": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "Client Check-in",
+        "covers_month": 2
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "Client Check-in \u2014 Month 4 (covers Month 3 performance)",
+      "description": "Monthly check-in with the client. Three components:\n\n  1. Monthly Report (covering Month 3): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.\n  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.\n  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.\n\nScheduled the first 7 days of Month 4 so the prior month's data has settled.",
+      "deliverable_type": "Client Check-in",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-11-01",
+      "due_date": "2026-11-07",
+      "scheduled_month": 4,
+      "ai_assisted": true,
+      "is_monthly_report": true,
+      "is_client_checkin": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "Client Check-in",
+        "covers_month": 3
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "Client Check-in \u2014 Month 5 (covers Month 4 performance)",
+      "description": "Monthly check-in with the client. Three components:\n\n  1. Monthly Report (covering Month 4): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.\n  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.\n  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.\n\nScheduled the first 7 days of Month 5 so the prior month's data has settled.",
+      "deliverable_type": "Client Check-in",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2026-12-01",
+      "due_date": "2026-12-07",
+      "scheduled_month": 5,
+      "ai_assisted": true,
+      "is_monthly_report": true,
+      "is_client_checkin": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "Client Check-in",
+        "covers_month": 4
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "Client Check-in \u2014 Month 6 (covers Month 5 performance)",
+      "description": "Monthly check-in with the client. Three components:\n\n  1. Monthly Report (covering Month 5): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.\n  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.\n  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.\n\nScheduled the first 7 days of Month 6 so the prior month's data has settled.",
+      "deliverable_type": "Client Check-in",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-01-01",
+      "due_date": "2027-01-07",
+      "scheduled_month": 6,
+      "ai_assisted": true,
+      "is_monthly_report": true,
+      "is_client_checkin": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "Client Check-in",
+        "covers_month": 5
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "Client Check-in \u2014 Month 7 (covers Month 6 performance)",
+      "description": "Monthly check-in with the client. Three components:\n\n  1. Monthly Report (covering Month 6): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.\n  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.\n  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.\n\nScheduled the first 7 days of Month 7 so the prior month's data has settled.",
+      "deliverable_type": "Client Check-in",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-02-01",
+      "due_date": "2027-02-07",
+      "scheduled_month": 7,
+      "ai_assisted": true,
+      "is_monthly_report": true,
+      "is_client_checkin": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "Client Check-in",
+        "covers_month": 6
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "Client Check-in \u2014 Month 8 (covers Month 7 performance)",
+      "description": "Monthly check-in with the client. Three components:\n\n  1. Monthly Report (covering Month 7): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.\n  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.\n  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.\n\nScheduled the first 7 days of Month 8 so the prior month's data has settled.",
+      "deliverable_type": "Client Check-in",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-03-01",
+      "due_date": "2027-03-07",
+      "scheduled_month": 8,
+      "ai_assisted": true,
+      "is_monthly_report": true,
+      "is_client_checkin": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "Client Check-in",
+        "covers_month": 7
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "Client Check-in \u2014 Month 9 (covers Month 8 performance)",
+      "description": "Monthly check-in with the client. Three components:\n\n  1. Monthly Report (covering Month 8): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.\n  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.\n  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.\n\nScheduled the first 7 days of Month 9 so the prior month's data has settled.",
+      "deliverable_type": "Client Check-in",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-04-01",
+      "due_date": "2027-04-07",
+      "scheduled_month": 9,
+      "ai_assisted": true,
+      "is_monthly_report": true,
+      "is_client_checkin": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "Client Check-in",
+        "covers_month": 8
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "Client Check-in \u2014 Month 10 (covers Month 9 performance)",
+      "description": "Monthly check-in with the client. Three components:\n\n  1. Monthly Report (covering Month 9): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.\n  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.\n  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.\n\nScheduled the first 7 days of Month 10 so the prior month's data has settled.",
+      "deliverable_type": "Client Check-in",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-05-01",
+      "due_date": "2027-05-07",
+      "scheduled_month": 10,
+      "ai_assisted": true,
+      "is_monthly_report": true,
+      "is_client_checkin": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "Client Check-in",
+        "covers_month": 9
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "Client Check-in \u2014 Month 11 (covers Month 10 performance)",
+      "description": "Monthly check-in with the client. Three components:\n\n  1. Monthly Report (covering Month 10): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.\n  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.\n  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.\n\nScheduled the first 7 days of Month 11 so the prior month's data has settled.",
+      "deliverable_type": "Client Check-in",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-06-01",
+      "due_date": "2027-06-07",
+      "scheduled_month": 11,
+      "ai_assisted": true,
+      "is_monthly_report": true,
+      "is_client_checkin": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "Client Check-in",
+        "covers_month": 10
+      }
+    },
+    {
+      "sprint_number": 6,
+      "name": "Client Check-in \u2014 Month 12 (covers Month 11 performance)",
+      "description": "Monthly check-in with the client. Three components:\n\n  1. Monthly Report (covering Month 11): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.\n  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.\n  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.\n\nScheduled the first 7 days of Month 12 so the prior month's data has settled.",
+      "deliverable_type": "Client Check-in",
+      "priority": "P1",
+      "assigned_to_email": "dame@smileandgrow.com.au",
+      "start_date": "2027-07-01",
+      "due_date": "2027-07-07",
+      "scheduled_month": 12,
+      "ai_assisted": true,
+      "is_monthly_report": true,
+      "is_client_checkin": true,
+      "source": {
+        "category": "Reporting",
+        "action_type": "Client Check-in",
+        "covers_month": 11
+      }
+    }
+  ],
+  "summary": {
+    "total_deliverables": 43,
+    "by_sprint": {
+      "Sprint 1": 2,
+      "Sprint 2": 2,
+      "Sprint 3": 6,
+      "Sprint 4": 8,
+      "Sprint 5": 11,
+      "Sprint 6": 14
+    },
+    "by_month": {
+      "Month 1": 5,
+      "Month 2": 8,
+      "Month 3": 7,
+      "Month 4": 3,
+      "Month 5": 3,
+      "Month 6": 4,
+      "Month 7": 2,
+      "Month 8": 2,
+      "Month 9": 2,
+      "Month 10": 2,
+      "Month 11": 2,
+      "Month 12": 3
+    },
+    "by_assignee": {
+      "dame@smileandgrow.com.au": 35,
+      "eoliquiano@smileandgrow.com.au": 1,
+      "cassy@smileandgrow.com.au": 7
+    },
+    "ai_assisted_count": 23,
+    "placeholder_count": 0
+  }
+}
