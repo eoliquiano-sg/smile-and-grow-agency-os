@@ -49,5 +49,27 @@
         "url": "https://drive.google.com/drive/folders/1oNcnEvs_foDHZA2wekpYwUm53GNzCPrc"
       }
     ]
+  },
+  {
+    "lead_id": null,
+    "company_name": "Ashfield Family Dental",
+    "contact_name": "Dr Johnson Tang",
+    "email": "ashfieldfamilydental@gmail.com",
+    "website": "https://ashfieldfamilydental.com.au",
+    "service_type": "seo_sprint",
+    "status": "onboarding",
+    "monthly_retainer": null,
+    "contract_start_date": "2022-05-01",
+    "id": "7acdd03d-ea67-4c36-bb7b-6771aa836512",
+    "created_at": "2026-08-19T21:35:57.940Z",
+    "updated_at": "2026-08-19T21:37:50.823Z",
+    "resources": [
+      {
+        "label": "Google Drive Client Folder",
+        "source": "manual",
+        "type": "drive_folder",
+        "url": "https://drive.google.com/drive/u/0/folders/1_cV7VYeUeaSWS9tQTuvLkDYw3eIJnHpb"
+      }
+    ]
   }
 ]
