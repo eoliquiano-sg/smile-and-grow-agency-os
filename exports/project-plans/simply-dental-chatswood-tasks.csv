@@ -1,0 +1,912 @@
+id,sprint,sprint_number,name,description,deliverable_type,priority,assigned_to,assignee_short,start_date,due_date,scheduled_month,status,is_monthly_report,is_heavy_batch,is_strategy,is_placeholder,auto_tracked,content_subtype,link_subtype,tags,category,action_type,urls
+,Sprint 1 (Kickoff),1,WQA — Website Quality Audit,"Strategic audit of the website covering technical SEO, content quality, and link foundation.
+  · Run Screaming Frog crawl + Ahrefs site explorer pull
+  · Classify every page (Keep / Improve / Consolidate / Remove)
+  · Tag specific actions per page (Fix 404 / Rewrite / etc.)
+  · Capture target pages + their backlink gaps
+  · Strategist approval pass on every recommendation
+Two outputs (same work stream):
+  1. {slug}-wqa-data.xlsx — audit spreadsheet (4 tabs)
+  2. {slug}-wqa-report.html — client-facing HTML deck (5 sections)
+Auto-completes when BOTH the approvals JSON + HTML report exist on disk.",Kickoff,P1,dame@smileandgrow.com.au,dame,2026-09-02,2026-09-13,1,pending,False,False,False,False,True,,,"auto-tracked, kickoff, p1",Kickoff,WQA,
+,Sprint 1 (Kickoff),1,Project Plan (12-month engagement),"Build the structured project plan from the WQA approvals + target pages. Generates sprints + monthly deliverable schedule for the full engagement.
+  · Sprints 2-6 (Technical / Local / Content / Links / Reporting)
+  · Monthly batches + client check-ins
+  · Per-deliverable owners, due dates, priorities
+Output: {slug}-project-plan.json (exportable to ClickUp/Asana/Monday via export_project_plan.py). Auto-completed by build_project_plan.py.",Kickoff,P1,eoliquiano@smileandgrow.com.au,eoliquiano,2026-09-13,2026-09-14,1,completed,False,False,False,False,True,,,"auto-tracked, kickoff, p1",Kickoff,Project Plan,
+,Sprint 2 (Technical),2,Fix 404 — 2 URLs,"Technical action: Fix 404
+URLs (2):
+    1. [P2] /404 — Returns a 4xx error. Restore the page or 301 redirect to the closest live equivalent.
+    2. [P3] /acess-noww — Returns a 4xx error. Restore the page or 301 redirect to the closest live equivalent.",Technical,P2,dame@smileandgrow.com.au,dame,2026-09-13,2026-09-20,1,pending,False,False,False,False,False,,,"p2, technical",Technical,Fix 404,https://simplydentalchatswood.com.au/404; https://simplydentalchatswood.com.au/acess-noww
+,Sprint 2 (Technical),2,Indexability fix — 195 URLs,"Technical action: Indexability fix
+URLs (195):
+    1. [P2] /blog/8-tips-to-choose-the-best-chatswood-dental-centre — Marked non-indexable (Yes) but live and structurally part of the site (1019w). Review robots/meta directives and interna
+    2. [P2] /blog/aftercare-tips-after-a-scale-and-clean — Marked non-indexable (Yes) but live and structurally part of the site (1718w). Review robots/meta directives and interna
+    3. [P2] /blog/baby-teeth-eruption-timeline-guide — Marked non-indexable (Yes) but live and structurally part of the site (745w). Review robots/meta directives and internal
+    4. [P2] /blog/baby-teeth-order-milestones-care-tips — Marked non-indexable (Yes) but live and structurally part of the site (1580w). Review robots/meta directives and interna
+    5. [P2] /blog/bad-breath-signs-and-treatments — Marked non-indexable (Yes) but live and structurally part of the site (1269w). Review robots/meta directives and interna
+    6. [P2] /blog/beautiful-teeth-whitening-in-sydney — Marked non-indexable (No) but live and structurally part of the site (661w). Review robots/meta directives and internal 
+    7. [P2] /blog/benefits-of-dental-fillings — Marked non-indexable (Yes) but live and structurally part of the site (1330w). Review robots/meta directives and interna
+    8. [P2] /blog/benefits-of-dental-x-rays — Marked non-indexable (Yes) but live and structurally part of the site (1433w). Review robots/meta directives and interna
+    9. [P2] /blog/best-professional-teeth-whitening-kits-take-home-solutions — Marked non-indexable (Yes) but live and structurally part of the site (1881w). Review robots/meta directives and interna
+   10. [P2] /blog/blog/tooth-extraction-step-by-step — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+   11. [P2] /blog/braces-101-a-closer-look-at-orthodontic-treatment — Marked non-indexable (Yes) but live and structurally part of the site (2577w). Review robots/meta directives and interna
+   12. [P2] /blog/call-simply-dentai-chatswood-for-your-dental-emergencies — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+   13. [P2] /blog/call-simply-dental-chatswood-for-your-dental-emergencies — Marked non-indexable (Yes) but live and structurally part of the site (815w). Review robots/meta directives and internal
+   14. [P2] /blog/can-crowns-get-cavities-prevention-and-care-tips — Marked non-indexable (Yes) but live and structurally part of the site (645w). Review robots/meta directives and internal
+   15. [P2] /blog/can-stress-become-a-dangerous-habit — Marked non-indexable (Yes) but live and structurally part of the site (718w). Review robots/meta directives and internal
+   16. [P2] /blog/caring-for-your-new-filling — Marked non-indexable (Yes) but live and structurally part of the site (1209w). Review robots/meta directives and interna
+   17. [P2] /blog/childrens-dental-check-up-what-parents-need-to-know — Marked non-indexable (Yes) but live and structurally part of the site (1844w). Review robots/meta directives and interna
+   18. [P2] /blog/choose-the-teeth-whitening-right-method-to-radiant-your-smile — Marked non-indexable (Yes) but live and structurally part of the site (2302w). Review robots/meta directives and interna
+   19. [P2] /blog/choosing-the-right-health-insurance-in-chatswood — Marked non-indexable (Yes) but live and structurally part of the site (1155w). Review robots/meta directives and interna
+   20. [P2] /blog/common-dental-emergencies — Marked non-indexable (Yes) but live and structurally part of the site (2655w). Review robots/meta directives and interna
+   21. [P2] /blog/common-dental-problems-in-kids-and-how-to-prevent-them — Marked non-indexable (Yes) but live and structurally part of the site (1998w). Review robots/meta directives and interna
+   22. [P2] /blog/cracked-tooth-vs-cavity-difference — Marked non-indexable (Yes) but live and structurally part of the site (1811w). Review robots/meta directives and interna
+   23. [P2] /blog/dental-anxiety-causes-signs-and-solutions — Marked non-indexable (Yes) but live and structurally part of the site (2017w). Review robots/meta directives and interna
+   24. [P2] /blog/dental-bridge-procedure-guide — Marked non-indexable (Yes) but live and structurally part of the site (1869w). Review robots/meta directives and interna
+   25. [P2] /blog/dental-bridge-what-it-is-and-when-you-need-one — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+   26. [P2] /blog/dental-crowns-procedure-how-it-restores-teeth-health — Marked non-indexable (Yes) but live and structurally part of the site (3005w). Review robots/meta directives and interna
+   27. [P2] /blog/dental-fillings-procedure-types-and-aftercare — Marked non-indexable (Yes) but live and structurally part of the site (1405w). Review robots/meta directives and interna
+   28. [P2] /blog/dental-fillings-types-and-cost — Marked non-indexable (Yes) but live and structurally part of the site (800w). Review robots/meta directives and internal
+   29. [P2] /blog/dental-health-insurance-guide — Marked non-indexable (Yes) but live and structurally part of the site (1110w). Review robots/meta directives and interna
+   30. [P2] /blog/dental-health-trends-australia — Marked non-indexable (Yes) but live and structurally part of the site (983w). Review robots/meta directives and internal
+   31. [P2] /blog/dental-hygiene-trends-chatswood — Marked non-indexable (Yes) but live and structurally part of the site (829w). Review robots/meta directives and internal
+   32. [P2] /blog/dental-implant-health-tips — Marked non-indexable (Yes) but live and structurally part of the site (656w). Review robots/meta directives and internal
+   33. [P2] /blog/dental-implant-vs-bridge-vs-denture-differences — Marked non-indexable (Yes) but live and structurally part of the site (1298w). Review robots/meta directives and interna
+   34. [P2] /blog/dental-implants-permanent-solution-chatswood — Marked non-indexable (Yes) but live and structurally part of the site (1338w). Review robots/meta directives and interna
+   35. [P2] /blog/dental-implants-procedure-risks-costs-alternatives — Marked non-indexable (Yes) but live and structurally part of the site (924w). Review robots/meta directives and internal
+   36. [P2] /blog/dental-implants-without-health-cover — Marked non-indexable (Yes) but live and structurally part of the site (1960w). Review robots/meta directives and interna
+   37. [P2] /blog/dental-plaque-how-to-prevent — Marked non-indexable (Yes) but live and structurally part of the site (972w). Review robots/meta directives and internal
+   38. [P2] /blog/dental-tips-for-chatswood — Marked non-indexable (No) but live and structurally part of the site (764w). Review robots/meta directives and internal 
+   39. [P2] /blog/detecting-and-treating-tooth-decay — Marked non-indexable (Yes) but live and structurally part of the site (1233w). Review robots/meta directives and interna
+   40. [P2] /blog/encourage-oral-hygiene-kids-chatswood — Marked non-indexable (Yes) but live and structurally part of the site (919w). Review robots/meta directives and internal
+   41. [P2] /blog/everything-you-need-to-know-about-dental-bridges — Marked non-indexable (Yes) but live and structurally part of the site (723w). Review robots/meta directives and internal
+   42. [P2] /blog/exploring-dentures-a-detailed-look-into-your-dental-options — Marked non-indexable (Yes) but live and structurally part of the site (2300w). Review robots/meta directives and interna
+   43. [P2] /blog/find-the-right-emergency-dentist — Marked non-indexable (Yes) but live and structurally part of the site (1177w). Review robots/meta directives and interna
+   44. [P2] /blog/first-visit-to-a-dental-clinic — Marked non-indexable (Yes) but live and structurally part of the site (640w). Review robots/meta directives and internal
+   45. [P2] /blog/fit-dental-appointments-around-a-demanding-work-schedule — Marked non-indexable (Yes) but live and structurally part of the site (1397w). Review robots/meta directives and interna
+   46. [P2] /blog/food-and-drink-that-stain-teeth — Marked non-indexable (Yes) but live and structurally part of the site (687w). Review robots/meta directives and internal
+   47. [P2] /blog/four-healthy-dental-habits-for-children — Marked non-indexable (Yes) but live and structurally part of the site (661w). Review robots/meta directives and internal
+   48. [P2] /blog/guide-different-types-dental-crowns — Marked non-indexable (Yes) but live and structurally part of the site (6342w). Review robots/meta directives and interna
+   49. [P2] /blog/guide-to-dental-cleaning — Marked non-indexable (Yes) but live and structurally part of the site (1137w). Review robots/meta directives and interna
+   50. [P2] /blog/gum-disease-what-you-need-to-know — Marked non-indexable (Yes) but live and structurally part of the site (1822w). Review robots/meta directives and interna
+   51. [P2] /blog/how-dental-bridges-improve-oral-function — Marked non-indexable (Yes) but live and structurally part of the site (1435w). Review robots/meta directives and interna
+   52. [P2] /blog/how-dental-crowns-restore-damaged-teeth — Marked non-indexable (Yes) but live and structurally part of the site (1182w). Review robots/meta directives and interna
+   53. [P2] /blog/how-dental-crowns-restore-teeth-and-procedure — Marked non-indexable (Yes) but live and structurally part of the site (766w). Review robots/meta directives and internal
+   54. [P2] /blog/how-dental-implant-bridges-solve-tooth-loss — Marked non-indexable (Yes) but live and structurally part of the site (1252w). Review robots/meta directives and interna
+   55. [P2] /blog/how-dental-veneers-improve-your-smile — Marked non-indexable (Yes) but live and structurally part of the site (1315w). Review robots/meta directives and interna
+   56. [P2] /blog/how-does-invisalign-work — Marked non-indexable (Yes) but live and structurally part of the site (785w). Review robots/meta directives and internal
+   57. [P2] /blog/how-long-can-you-expect-your-dental-crown-to-last — Marked non-indexable (Yes) but live and structurally part of the site (1658w). Review robots/meta directives and interna
+   58. [P2] /blog/how-long-do-dentures-last — Marked non-indexable (Yes) but live and structurally part of the site (865w). Review robots/meta directives and internal
+   59. [P2] /blog/how-long-does-a-root-canal-last — Marked non-indexable (Yes) but live and structurally part of the site (1912w). Review robots/meta directives and interna
+   60. [P2] /blog/how-much-do-porcelain-veneers-cost-in-australia — Marked non-indexable (Yes) but live and structurally part of the site (775w). Review robots/meta directives and internal
+   61. [P2] /blog/how-often-should-you-schedule-a-dental-cleaning — Marked non-indexable (Yes) but live and structurally part of the site (1218w). Review robots/meta directives and interna
+   62. [P2] /blog/how-often-should-you-schedule-dental-cleanings — Marked non-indexable (Yes) but live and structurally part of the site (1312w). Review robots/meta directives and interna
+   63. [P2] /blog/how-often-should-you-visit-the-dentist — Marked non-indexable (Yes) but live and structurally part of the site (1761w). Review robots/meta directives and interna
+   64. [P2] /blog/how-simply-dental-gordon-can-transform-your-smile-and-health — Marked non-indexable (Yes) but live and structurally part of the site (1534w). Review robots/meta directives and interna
+   65. [P2] /blog/how-simply-dental-roseville-can-help-in-oral-health — Marked non-indexable (No) but live and structurally part of the site (1122w). Review robots/meta directives and internal
+   66. [P2] /blog/how-stress-impacts-oral-health — Marked non-indexable (Yes) but live and structurally part of the site (657w). Review robots/meta directives and internal
+   67. [P2] /blog/how-sugary-drinks-affect-childrens-teeth-and-health — Marked non-indexable (Yes) but live and structurally part of the site (1314w). Review robots/meta directives and interna
+   68. [P2] /blog/how-temporary-veneers-can-enhance-your-smile — Marked non-indexable (Yes) but live and structurally part of the site (881w). Review robots/meta directives and internal
+   69. [P2] /blog/how-to-clean-dental-retainers — Marked non-indexable (Yes) but live and structurally part of the site (1505w). Review robots/meta directives and interna
+   70. [P2] /blog/how-to-find-a-good-dentist-in-sydney — Marked non-indexable (Yes) but live and structurally part of the site (814w). Review robots/meta directives and internal
+   71. [P2] /blog/how-to-find-the-best-dentist-in-your-city — Marked non-indexable (Yes) but live and structurally part of the site (1155w). Review robots/meta directives and interna
+   72. [P2] /blog/how-to-fix-a-cracked-tooth — Marked non-indexable (Yes) but live and structurally part of the site (1459w). Review robots/meta directives and interna
+   73. [P2] /blog/how-to-keep-your-kids-calm-during-their-dental-visit — Marked non-indexable (Yes) but live and structurally part of the site (1655w). Review robots/meta directives and interna
+   74. [P2] /blog/how-to-know-if-wisdom-teeth-need-removal — Marked non-indexable (Yes) but live and structurally part of the site (1447w). Review robots/meta directives and interna
+   75. [P2] /blog/how-to-manage-pain-after-dental-implant — Marked non-indexable (Yes) but live and structurally part of the site (629w). Review robots/meta directives and internal
+   76. [P2] /blog/how-to-prepare-for-your-dental-check-up — Marked non-indexable (Yes) but live and structurally part of the site (1676w). Review robots/meta directives and interna
+   77. [P2] /blog/how-to-remove-black-stains-from-your-teeth — Marked non-indexable (Yes) but live and structurally part of the site (639w). Review robots/meta directives and internal
+   78. [P2] /blog/how-to-remove-plaque-from-dentures — Marked non-indexable (Yes) but live and structurally part of the site (623w). Review robots/meta directives and internal
+   79. [P2] /blog/how-to-stop-bleeding-gums — Marked non-indexable (No) but live and structurally part of the site (1952w). Review robots/meta directives and internal
+   80. [P2] /blog/how-to-take-care-of-veneers — Marked non-indexable (Yes) but live and structurally part of the site (809w). Review robots/meta directives and internal
+   81. [P2] /blog/how-to-whiten-dentures — Marked non-indexable (Yes) but live and structurally part of the site (713w). Review robots/meta directives and internal
+   82. [P2] /blog/how-veneers-restore-your-beautiful-smile — Marked non-indexable (Yes) but live and structurally part of the site (1616w). Review robots/meta directives and interna
+   83. [P2] /blog/how-your-weight-causes-sleep-apnea — Marked non-indexable (Yes) but live and structurally part of the site (1182w). Review robots/meta directives and interna
+   84. [P2] /blog/importance-of-paediatric-dentists-for-childrens-oral-health — Marked non-indexable (Yes) but live and structurally part of the site (1163w). Review robots/meta directives and interna
+   85. [P2] /blog/importance-of-regular-dental-checkups — Marked non-indexable (Yes) but live and structurally part of the site (1104w). Review robots/meta directives and interna
+   86. [P2] /blog/importance-of-saliva-in-oral-health — Marked non-indexable (Yes) but live and structurally part of the site (1033w). Review robots/meta directives and interna
+   87. [P2] /blog/interesting-facts-about-dental-implants — Marked non-indexable (Yes) but live and structurally part of the site (868w). Review robots/meta directives and internal
+   88. [P2] /blog/is-whitening-bad-for-my-teeth — Marked non-indexable (Yes) but live and structurally part of the site (1078w). Review robots/meta directives and interna
+   89. [P2] /blog/keeping-kids-teeth-healthy-through-childrens-dentistry — Marked non-indexable (Yes) but live and structurally part of the site (681w). Review robots/meta directives and internal
+   90. [P2] /blog/keeping-your-teeth-clean-with-braces — Marked non-indexable (Yes) but live and structurally part of the site (832w). Review robots/meta directives and internal
+   91. [P2] /blog/knocked-out-tooth-emergency-chatswood — Marked non-indexable (Yes) but live and structurally part of the site (1195w). Review robots/meta directives and interna
+   92. [P2] /blog/laser-teeth-whitening-process — Marked non-indexable (Yes) but live and structurally part of the site (2104w). Review robots/meta directives and interna
+   93. [P2] /blog/long-lasting-dental-crowns-chatswood — Marked non-indexable (Yes) but live and structurally part of the site (816w). Review robots/meta directives and internal
+   94. [P2] /blog/maintain-white-teeth-after-whitening — Marked non-indexable (Yes) but live and structurally part of the site (2018w). Review robots/meta directives and interna
+   95. [P2] /blog/oral-health-and-your-immune-system — Marked non-indexable (Yes) but live and structurally part of the site (708w). Review robots/meta directives and internal
+   96. [P2] /blog/porcelain-veneers-vs-dental-crowns — Marked non-indexable (Yes) but live and structurally part of the site (1185w). Review robots/meta directives and interna
+   97. [P2] /blog/preparing-a-child-who-is-afraid-of-the-dentist — Marked non-indexable (Yes) but live and structurally part of the site (645w). Review robots/meta directives and internal
+   98. [P2] /blog/private-health-insurance-benefits-explained — Marked non-indexable (Yes) but live and structurally part of the site (820w). Review robots/meta directives and internal
+   99. [P2] /blog/process-of-tooth-decay — Marked non-indexable (Yes) but live and structurally part of the site (684w). Review robots/meta directives and internal
+  100. [P2] /blog/professional-teeth-whitening-at-home-guide — Marked non-indexable (Yes) but live and structurally part of the site (2139w). Review robots/meta directives and interna
+  101. [P2] /blog/qualities-to-look-for-in-a-dentist — Marked non-indexable (Yes) but live and structurally part of the site (777w). Review robots/meta directives and internal
+  102. [P2] /blog/reasons-for-sensitive-teeth — Marked non-indexable (Yes) but live and structurally part of the site (1820w). Review robots/meta directives and interna
+  103. [P2] /blog/reducing-childs-dental-fear — Marked non-indexable (Yes) but live and structurally part of the site (777w). Review robots/meta directives and internal
+  104. [P2] /blog/root-canal-recovery-time — Marked non-indexable (Yes) but live and structurally part of the site (2429w). Review robots/meta directives and interna
+  105. [P2] /blog/simply-dental-sydney — Marked non-indexable (No) but live and structurally part of the site (1115w). Review robots/meta directives and internal
+  106. [P2] /blog/smile-improvements-without-veneers — Marked non-indexable (Yes) but live and structurally part of the site (1947w). Review robots/meta directives and interna
+  107. [P2] /blog/speedy-recovery-after-tooth-extraction — Marked non-indexable (Yes) but live and structurally part of the site (1709w). Review robots/meta directives and interna
+  108. [P2] /blog/teeth-whitening-aftercare — Marked non-indexable (Yes) but live and structurally part of the site (1517w). Review robots/meta directives and interna
+  109. [P2] /blog/teeth-whitening-facts-you-should-know — Marked non-indexable (Yes) but live and structurally part of the site (1721w). Review robots/meta directives and interna
+  110. [P2] /blog/teeth-whitening-safety-tips — Marked non-indexable (Yes) but live and structurally part of the site (958w). Review robots/meta directives and internal
+  111. [P2] /blog/the-best-and-worst-foods-for-kids-teeth — Marked non-indexable (Yes) but live and structurally part of the site (687w). Review robots/meta directives and internal
+  112. [P2] /blog/tips-to-keep-new-patients-attracted-to-the-dental-practice — Marked non-indexable (Yes) but live and structurally part of the site (623w). Review robots/meta directives and internal
+  113. [P2] /blog/tooth-decay-causes-symptoms-and-treatment-options — Marked non-indexable (Yes) but live and structurally part of the site (844w). Review robots/meta directives and internal
+  114. [P2] /blog/tooth-sensitivity-after-whitening — Marked non-indexable (Yes) but live and structurally part of the site (2048w). Review robots/meta directives and interna
+  115. [P2] /blog/when-to-replace-dental-veneers — Marked non-indexable (Yes) but live and structurally part of the site (1260w). Review robots/meta directives and interna
+  116. [P2] /blog/when-to-seek-emergency-dentist — Marked non-indexable (Yes) but live and structurally part of the site (1241w). Review robots/meta directives and interna
+  117. [P2] /blog/when-you-need-a-dental-filling — Marked non-indexable (Yes) but live and structurally part of the site (666w). Review robots/meta directives and internal
+  118. [P2] /blog/why-dental-implants-are-preferred — Marked non-indexable (Yes) but live and structurally part of the site (1246w). Review robots/meta directives and interna
+  119. [P2] /blog/why-do-gums-bleed-when-gently-brushed — Marked non-indexable (Yes) but live and structurally part of the site (1912w). Review robots/meta directives and interna
+  120. [P2] /blog/why-no-dairy-after-dental-implant — Marked non-indexable (Yes) but live and structurally part of the site (913w). Review robots/meta directives and internal
+  121. [P2] /blog/why-regular-dental-check-ups-are-important — Marked non-indexable (Yes) but live and structurally part of the site (1142w). Review robots/meta directives and interna
+  122. [P2] /blog/why-sleep-apnea-can-become-dangerous — Marked non-indexable (Yes) but live and structurally part of the site (747w). Review robots/meta directives and internal
+  123. [P2] /blog/why-some-dental-implants-fail — Marked non-indexable (Yes) but live and structurally part of the site (2177w). Review robots/meta directives and interna
+  124. [P2] /blog/why-tartar-removal-is-important/ (8,090 impr), /blog/why-periodontal-cleaning-is-important — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  125. [P2] /blog/wisdom-tooth-removal — Marked non-indexable (Yes) but live and structurally part of the site (1326w). Review robots/meta directives and interna
+  126. [P2] /hallstrom-park-willoughby-nsw — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  127. [P2] /how-does-invisalign-work — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  128. [P2] /how-to-find-a-good-dentist-in-sydney — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  129. [P2] /lane-cove-national-park — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  130. [P2] /llms.txt — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  131. [P2] /ms-roheena-khojah — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  132. [P2] /muston-park-chatswood-nsw — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  133. [P2] /new-patient-comprehensive-exam — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  134. [P2] /new-patient-medical-history — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  135. [P2] /online-booking-thank-you — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  136. [P2] /patient-check-in — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  137. [P2] /payment — Marked non-indexable (Yes) but live and structurally part of the site (943w). Review robots/meta directives and internal
+  138. [P3] /blog/invisalign-for-busy-professionals — Marked non-indexable (Yes) but live and structurally part of the site (2060w). Review robots/meta directives and interna
+  139. [P3] /blog/invisalign-or-braces — Marked non-indexable (Yes) but live and structurally part of the site (1428w). Review robots/meta directives and interna
+  140. [P3] /blog/invisalign-vs-braces-vs-veneers-guide — Marked non-indexable (Yes) but live and structurally part of the site (1239w). Review robots/meta directives and interna
+  141. [P3] /blog/invisalign-vs-braces-which-is-faster — Marked non-indexable (Yes) but live and structurally part of the site (938w). Review robots/meta directives and internal
+  142. [P3] /blog/root-canal-vs-tooth-extraction — Marked non-indexable (Yes) but live and structurally part of the site (1782w). Review robots/meta directives and interna
+  143. [P3] /blog/scale-and-clean-vs-deep-clean — Marked non-indexable (Yes) but live and structurally part of the site (1440w). Review robots/meta directives and interna
+  144. [P3] /blog/should-you-ignore-a-toothache — Marked non-indexable (Yes) but live and structurally part of the site (1459w). Review robots/meta directives and interna
+  145. [P3] /blog/signs-and-causes-of-sleep-apnoea — Marked non-indexable (Yes) but live and structurally part of the site (716w). Review robots/meta directives and internal
+  146. [P3] /blog/tooth-extraction-complete-guide — Marked non-indexable (Yes) but live and structurally part of the site (1843w). Review robots/meta directives and interna
+  147. [P3] /blog/tooth-extraction-timeline-and-process — Marked non-indexable (Yes) but live and structurally part of the site (1578w). Review robots/meta directives and interna
+  148. [P3] /blog/types-of-dentures-how-to-choose — Marked non-indexable (Yes) but live and structurally part of the site (1370w). Review robots/meta directives and interna
+  149. [P3] /blog/types-of-toothache — Marked non-indexable (Yes) but live and structurally part of the site (637w). Review robots/meta directives and internal
+  150. [P3] /blog/types-of-veneers-guide — Marked non-indexable (Yes) but live and structurally part of the site (1770w). Review robots/meta directives and interna
+  151. [P3] /blog/understanding-common-dental-services — Marked non-indexable (Yes) but live and structurally part of the site (3483w). Review robots/meta directives and interna
+  152. [P3] /blog/understanding-shimmer-teeth-whitening — Marked non-indexable (Yes) but live and structurally part of the site (784w). Review robots/meta directives and internal
+  153. [P3] /blog/what-are-composite-veneers — Marked non-indexable (Yes) but live and structurally part of the site (1672w). Review robots/meta directives and interna
+  154. [P3] /blog/what-are-fluoride-treatments — Marked non-indexable (Yes) but live and structurally part of the site (733w). Review robots/meta directives and internal
+  155. [P3] /blog/what-are-the-causes-of-dry-mouth — Marked non-indexable (Yes) but live and structurally part of the site (1347w). Review robots/meta directives and interna
+  156. [P3] /blog/what-are-veneers-smile-makeover — Marked non-indexable (Yes) but live and structurally part of the site (2057w). Review robots/meta directives and interna
+  157. [P3] /blog/what-causes-gum-recession-and-how-it-is-treated — Marked non-indexable (Yes) but live and structurally part of the site (1927w). Review robots/meta directives and interna
+  158. [P3] /blog/what-dentists-wish-patients-knew — Marked non-indexable (Yes) but live and structurally part of the site (1990w). Review robots/meta directives and interna
+  159. [P3] /blog/what-every-patient-should-know-about-root-canal-symptoms — Marked non-indexable (Yes) but live and structurally part of the site (779w). Review robots/meta directives and internal
+  160. [P3] /blog/what-happens-during-a-scale-and-clean — Marked non-indexable (Yes) but live and structurally part of the site (1615w). Review robots/meta directives and interna
+  161. [P3] /blog/what-happens-if-you-skip-your-dental-clean — Marked non-indexable (Yes) but live and structurally part of the site (1483w). Review robots/meta directives and interna
+  162. [P3] /blog/what-is-a-dental-emergency — Marked non-indexable (Yes) but live and structurally part of the site (2169w). Review robots/meta directives and interna
+  163. [P3] /blog/what-is-dental-bonding — Marked non-indexable (Yes) but live and structurally part of the site (2718w). Review robots/meta directives and interna
+  164. [P3] /blog/what-is-dental-bridge — Marked non-indexable (Yes) but live and structurally part of the site (2204w). Review robots/meta directives and interna
+  165. [P3] /blog/what-to-do-during-dental-emergency — Marked non-indexable (Yes) but live and structurally part of the site (1604w). Review robots/meta directives and interna
+  166. [P3] /blog/what-to-eat-after-root-canal-treatment-2 — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  167. [P3] /blog/what-to-eat-after-tooth-extraction-chatswood — Marked non-indexable (Yes) but live and structurally part of the site (1699w). Review robots/meta directives and interna
+  168. [P3] /blog/what-to-expect-during-dental-checkup-in-chatswood — Marked non-indexable (Yes) but live and structurally part of the site (1132w). Review robots/meta directives and interna
+  169. [P3] /blog/what-to-expect-from-temporary-veneers — Marked non-indexable (Yes) but live and structurally part of the site (1077w). Review robots/meta directives and interna
+  170. [P3] /blog/what-to-know-before-getting-dental-veneers — Marked non-indexable (Yes) but live and structurally part of the site (1438w). Review robots/meta directives and interna
+  171. [P3] /find-the-right-emergency-dentist — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  172. [P3] /general-dentistry/dental-check-up-and-clean — Marked non-indexable (No) but live and structurally part of the site (1015w). Review robots/meta directives and internal
+  173. [P3] /general-dentistry/gum-disease-treatment — Marked non-indexable (Yes) but live and structurally part of the site (805w). Review robots/meta directives and internal
+  174. [P3] /general-dentistry/pediatric-dentist — Marked non-indexable (Yes) but live and structurally part of the site (968w). Review robots/meta directives and internal
+  175. [P3] /general-dentistry/sleep-disorder-centre — Marked non-indexable (Yes) but live and structurally part of the site (922w). Review robots/meta directives and internal
+  176. [P3] /general-dentistry/tooth-extraction — Marked non-indexable (Yes) but live and structurally part of the site (960w). Review robots/meta directives and internal
+  177. [P3] /orthodontics/braces — Marked non-indexable (Yes) but live and structurally part of the site (694w). Review robots/meta directives and internal
+  178. [P3] /orthodontics/invisalign — Marked non-indexable (No) but live and structurally part of the site (939w). Review robots/meta directives and internal 
+  179. [P3] /our-team/dr-denise-hsueh — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  180. [P3] /our-team/dr-henrietta-wu — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  181. [P3] /our-team/dr-jim-williamson — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  182. [P3] /preventing-bone-loss-after-tooth-extraction-treatment — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  183. [P3] /priceless-private-health-insurance-cover — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  184. [P3] /queen-victoria-b…ess-history-shop — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  185. [P3] /restorative-dentistry/dental-crowns-prosthodontist — Marked non-indexable (Yes) but live and structurally part of the site (892w). Review robots/meta directives and internal
+  186. [P3] /restorative-dentistry/dental-fillings — Marked non-indexable (No) but live and structurally part of the site (796w). Review robots/meta directives and internal 
+  187. [P3] /restorative-dentistry/dental-implants — Marked non-indexable (No) but live and structurally part of the site (1649w). Review robots/meta directives and internal
+  188. [P3] /restorative-dentistry/denture-care-centre — Marked non-indexable (Yes) but live and structurally part of the site (766w). Review robots/meta directives and internal
+  189. [P3] /restorative-dentistry/root-canal-treatment — Marked non-indexable (No) but live and structurally part of the site (815w). Review robots/meta directives and internal 
+  190. [P3] /royal-north-shore-hospital — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  191. [P3] /service/check-up-clean — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  192. [P3] /service/restorative-dentistry — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  193. [P3] /stringybark-creek-reserve — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  194. [P3] /sydney-botanic-gardens-peaceful-retreat — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking
+  195. [P3] /visiting-your-dental-hygienist-regularly — Marked non-indexable (no) but live and structurally part of the site. Review robots/meta directives and internal linking",Technical,P2,dame@smileandgrow.com.au,dame,2026-09-13,2026-09-20,1,pending,False,False,False,False,False,,,"p2, technical",Technical,Indexability fix,"https://simplydentalchatswood.com.au/blog/8-tips-to-choose-the-best-chatswood-dental-centre; https://simplydentalchatswood.com.au/blog/aftercare-tips-after-a-scale-and-clean; https://simplydentalchatswood.com.au/blog/baby-teeth-eruption-timeline-guide; https://simplydentalchatswood.com.au/blog/baby-teeth-order-milestones-care-tips; https://simplydentalchatswood.com.au/blog/bad-breath-signs-and-treatments; https://simplydentalchatswood.com.au/blog/beautiful-teeth-whitening-in-sydney; https://simplydentalchatswood.com.au/blog/benefits-of-dental-fillings; https://simplydentalchatswood.com.au/blog/benefits-of-dental-x-rays; https://simplydentalchatswood.com.au/blog/best-professional-teeth-whitening-kits-take-home-solutions; https://simplydentalchatswood.com.au/blog/blog/tooth-extraction-step-by-step; https://simplydentalchatswood.com.au/blog/braces-101-a-closer-look-at-orthodontic-treatment; https://simplydentalchatswood.com.au/blog/call-simply-dentai-chatswood-for-your-dental-emergencies; https://simplydentalchatswood.com.au/blog/call-simply-dental-chatswood-for-your-dental-emergencies; https://simplydentalchatswood.com.au/blog/can-crowns-get-cavities-prevention-and-care-tips; https://simplydentalchatswood.com.au/blog/can-stress-become-a-dangerous-habit; https://simplydentalchatswood.com.au/blog/caring-for-your-new-filling; https://simplydentalchatswood.com.au/blog/childrens-dental-check-up-what-parents-need-to-know; https://simplydentalchatswood.com.au/blog/choose-the-teeth-whitening-right-method-to-radiant-your-smile; https://simplydentalchatswood.com.au/blog/choosing-the-right-health-insurance-in-chatswood; https://simplydentalchatswood.com.au/blog/common-dental-emergencies; https://simplydentalchatswood.com.au/blog/common-dental-problems-in-kids-and-how-to-prevent-them; https://simplydentalchatswood.com.au/blog/cracked-tooth-vs-cavity-difference; https://simplydentalchatswood.com.au/blog/dental-anxiety-causes-signs-and-solutions; https://simplydentalchatswood.com.au/blog/dental-bridge-procedure-guide; https://simplydentalchatswood.com.au/blog/dental-bridge-what-it-is-and-when-you-need-one; https://simplydentalchatswood.com.au/blog/dental-crowns-procedure-how-it-restores-teeth-health; https://simplydentalchatswood.com.au/blog/dental-fillings-procedure-types-and-aftercare; https://simplydentalchatswood.com.au/blog/dental-fillings-types-and-cost; https://simplydentalchatswood.com.au/blog/dental-health-insurance-guide; https://simplydentalchatswood.com.au/blog/dental-health-trends-australia; https://simplydentalchatswood.com.au/blog/dental-hygiene-trends-chatswood; https://simplydentalchatswood.com.au/blog/dental-implant-health-tips; https://simplydentalchatswood.com.au/blog/dental-implant-vs-bridge-vs-denture-differences; https://simplydentalchatswood.com.au/blog/dental-implants-permanent-solution-chatswood; https://simplydentalchatswood.com.au/blog/dental-implants-procedure-risks-costs-alternatives; https://simplydentalchatswood.com.au/blog/dental-implants-without-health-cover; https://simplydentalchatswood.com.au/blog/dental-plaque-how-to-prevent; https://simplydentalchatswood.com.au/blog/dental-tips-for-chatswood; https://simplydentalchatswood.com.au/blog/detecting-and-treating-tooth-decay; https://simplydentalchatswood.com.au/blog/encourage-oral-hygiene-kids-chatswood; https://simplydentalchatswood.com.au/blog/everything-you-need-to-know-about-dental-bridges; https://simplydentalchatswood.com.au/blog/exploring-dentures-a-detailed-look-into-your-dental-options; https://simplydentalchatswood.com.au/blog/find-the-right-emergency-dentist; https://simplydentalchatswood.com.au/blog/first-visit-to-a-dental-clinic; https://simplydentalchatswood.com.au/blog/fit-dental-appointments-around-a-demanding-work-schedule; https://simplydentalchatswood.com.au/blog/food-and-drink-that-stain-teeth; https://simplydentalchatswood.com.au/blog/four-healthy-dental-habits-for-children; https://simplydentalchatswood.com.au/blog/guide-different-types-dental-crowns; https://simplydentalchatswood.com.au/blog/guide-to-dental-cleaning; https://simplydentalchatswood.com.au/blog/gum-disease-what-you-need-to-know; https://simplydentalchatswood.com.au/blog/how-dental-bridges-improve-oral-function; https://simplydentalchatswood.com.au/blog/how-dental-crowns-restore-damaged-teeth; https://simplydentalchatswood.com.au/blog/how-dental-crowns-restore-teeth-and-procedure; https://simplydentalchatswood.com.au/blog/how-dental-implant-bridges-solve-tooth-loss; https://simplydentalchatswood.com.au/blog/how-dental-veneers-improve-your-smile; https://simplydentalchatswood.com.au/blog/how-does-invisalign-work; https://simplydentalchatswood.com.au/blog/how-long-can-you-expect-your-dental-crown-to-last; https://simplydentalchatswood.com.au/blog/how-long-do-dentures-last; https://simplydentalchatswood.com.au/blog/how-long-does-a-root-canal-last; https://simplydentalchatswood.com.au/blog/how-much-do-porcelain-veneers-cost-in-australia; https://simplydentalchatswood.com.au/blog/how-often-should-you-schedule-a-dental-cleaning; https://simplydentalchatswood.com.au/blog/how-often-should-you-schedule-dental-cleanings; https://simplydentalchatswood.com.au/blog/how-often-should-you-visit-the-dentist; https://simplydentalchatswood.com.au/blog/how-simply-dental-gordon-can-transform-your-smile-and-health; https://simplydentalchatswood.com.au/blog/how-simply-dental-roseville-can-help-in-oral-health; https://simplydentalchatswood.com.au/blog/how-stress-impacts-oral-health; https://simplydentalchatswood.com.au/blog/how-sugary-drinks-affect-childrens-teeth-and-health; https://simplydentalchatswood.com.au/blog/how-temporary-veneers-can-enhance-your-smile; https://simplydentalchatswood.com.au/blog/how-to-clean-dental-retainers; https://simplydentalchatswood.com.au/blog/how-to-find-a-good-dentist-in-sydney; https://simplydentalchatswood.com.au/blog/how-to-find-the-best-dentist-in-your-city; https://simplydentalchatswood.com.au/blog/how-to-fix-a-cracked-tooth; https://simplydentalchatswood.com.au/blog/how-to-keep-your-kids-calm-during-their-dental-visit; https://simplydentalchatswood.com.au/blog/how-to-know-if-wisdom-teeth-need-removal; https://simplydentalchatswood.com.au/blog/how-to-manage-pain-after-dental-implant; https://simplydentalchatswood.com.au/blog/how-to-prepare-for-your-dental-check-up; https://simplydentalchatswood.com.au/blog/how-to-remove-black-stains-from-your-teeth; https://simplydentalchatswood.com.au/blog/how-to-remove-plaque-from-dentures; https://simplydentalchatswood.com.au/blog/how-to-stop-bleeding-gums; https://simplydentalchatswood.com.au/blog/how-to-take-care-of-veneers; https://simplydentalchatswood.com.au/blog/how-to-whiten-dentures; https://simplydentalchatswood.com.au/blog/how-veneers-restore-your-beautiful-smile; https://simplydentalchatswood.com.au/blog/how-your-weight-causes-sleep-apnea; https://simplydentalchatswood.com.au/blog/importance-of-paediatric-dentists-for-childrens-oral-health; https://simplydentalchatswood.com.au/blog/importance-of-regular-dental-checkups; https://simplydentalchatswood.com.au/blog/importance-of-saliva-in-oral-health; https://simplydentalchatswood.com.au/blog/interesting-facts-about-dental-implants; https://simplydentalchatswood.com.au/blog/is-whitening-bad-for-my-teeth; https://simplydentalchatswood.com.au/blog/keeping-kids-teeth-healthy-through-childrens-dentistry; https://simplydentalchatswood.com.au/blog/keeping-your-teeth-clean-with-braces; https://simplydentalchatswood.com.au/blog/knocked-out-tooth-emergency-chatswood; https://simplydentalchatswood.com.au/blog/laser-teeth-whitening-process; https://simplydentalchatswood.com.au/blog/long-lasting-dental-crowns-chatswood; https://simplydentalchatswood.com.au/blog/maintain-white-teeth-after-whitening; https://simplydentalchatswood.com.au/blog/oral-health-and-your-immune-system; https://simplydentalchatswood.com.au/blog/porcelain-veneers-vs-dental-crowns; https://simplydentalchatswood.com.au/blog/preparing-a-child-who-is-afraid-of-the-dentist; https://simplydentalchatswood.com.au/blog/private-health-insurance-benefits-explained; https://simplydentalchatswood.com.au/blog/process-of-tooth-decay; https://simplydentalchatswood.com.au/blog/professional-teeth-whitening-at-home-guide; https://simplydentalchatswood.com.au/blog/qualities-to-look-for-in-a-dentist; https://simplydentalchatswood.com.au/blog/reasons-for-sensitive-teeth; https://simplydentalchatswood.com.au/blog/reducing-childs-dental-fear; https://simplydentalchatswood.com.au/blog/root-canal-recovery-time; https://simplydentalchatswood.com.au/blog/simply-dental-sydney; https://simplydentalchatswood.com.au/blog/smile-improvements-without-veneers; https://simplydentalchatswood.com.au/blog/speedy-recovery-after-tooth-extraction; https://simplydentalchatswood.com.au/blog/teeth-whitening-aftercare; https://simplydentalchatswood.com.au/blog/teeth-whitening-facts-you-should-know; https://simplydentalchatswood.com.au/blog/teeth-whitening-safety-tips; https://simplydentalchatswood.com.au/blog/the-best-and-worst-foods-for-kids-teeth; https://simplydentalchatswood.com.au/blog/tips-to-keep-new-patients-attracted-to-the-dental-practice; https://simplydentalchatswood.com.au/blog/tooth-decay-causes-symptoms-and-treatment-options; https://simplydentalchatswood.com.au/blog/tooth-sensitivity-after-whitening; https://simplydentalchatswood.com.au/blog/when-to-replace-dental-veneers; https://simplydentalchatswood.com.au/blog/when-to-seek-emergency-dentist; https://simplydentalchatswood.com.au/blog/when-you-need-a-dental-filling; https://simplydentalchatswood.com.au/blog/why-dental-implants-are-preferred; https://simplydentalchatswood.com.au/blog/why-do-gums-bleed-when-gently-brushed; https://simplydentalchatswood.com.au/blog/why-no-dairy-after-dental-implant; https://simplydentalchatswood.com.au/blog/why-regular-dental-check-ups-are-important; https://simplydentalchatswood.com.au/blog/why-sleep-apnea-can-become-dangerous; https://simplydentalchatswood.com.au/blog/why-some-dental-implants-fail; https://simplydentalchatswood.com.au/blog/why-tartar-removal-is-important/ (8,090 impr), /blog/why-periodontal-cleaning-is-important; https://simplydentalchatswood.com.au/blog/wisdom-tooth-removal; https://simplydentalchatswood.com.au/hallstrom-park-willoughby-nsw; https://simplydentalchatswood.com.au/how-does-invisalign-work; https://simplydentalchatswood.com.au/how-to-find-a-good-dentist-in-sydney; https://simplydentalchatswood.com.au/lane-cove-national-park; https://simplydentalchatswood.com.au/llms.txt; https://simplydentalchatswood.com.au/ms-roheena-khojah; https://simplydentalchatswood.com.au/muston-park-chatswood-nsw; https://simplydentalchatswood.com.au/new-patient-comprehensive-exam; https://simplydentalchatswood.com.au/new-patient-medical-history; https://simplydentalchatswood.com.au/online-booking-thank-you; https://simplydentalchatswood.com.au/patient-check-in; https://simplydentalchatswood.com.au/payment; https://simplydentalchatswood.com.au/blog/invisalign-for-busy-professionals; https://simplydentalchatswood.com.au/blog/invisalign-or-braces; https://simplydentalchatswood.com.au/blog/invisalign-vs-braces-vs-veneers-guide; https://simplydentalchatswood.com.au/blog/invisalign-vs-braces-which-is-faster; https://simplydentalchatswood.com.au/blog/root-canal-vs-tooth-extraction; https://simplydentalchatswood.com.au/blog/scale-and-clean-vs-deep-clean; https://simplydentalchatswood.com.au/blog/should-you-ignore-a-toothache; https://simplydentalchatswood.com.au/blog/signs-and-causes-of-sleep-apnoea; https://simplydentalchatswood.com.au/blog/tooth-extraction-complete-guide; https://simplydentalchatswood.com.au/blog/tooth-extraction-timeline-and-process; https://simplydentalchatswood.com.au/blog/types-of-dentures-how-to-choose; https://simplydentalchatswood.com.au/blog/types-of-toothache; https://simplydentalchatswood.com.au/blog/types-of-veneers-guide; https://simplydentalchatswood.com.au/blog/understanding-common-dental-services; https://simplydentalchatswood.com.au/blog/understanding-shimmer-teeth-whitening; https://simplydentalchatswood.com.au/blog/what-are-composite-veneers; https://simplydentalchatswood.com.au/blog/what-are-fluoride-treatments; https://simplydentalchatswood.com.au/blog/what-are-the-causes-of-dry-mouth; https://simplydentalchatswood.com.au/blog/what-are-veneers-smile-makeover; https://simplydentalchatswood.com.au/blog/what-causes-gum-recession-and-how-it-is-treated; https://simplydentalchatswood.com.au/blog/what-dentists-wish-patients-knew; https://simplydentalchatswood.com.au/blog/what-every-patient-should-know-about-root-canal-symptoms; https://simplydentalchatswood.com.au/blog/what-happens-during-a-scale-and-clean; https://simplydentalchatswood.com.au/blog/what-happens-if-you-skip-your-dental-clean; https://simplydentalchatswood.com.au/blog/what-is-a-dental-emergency; https://simplydentalchatswood.com.au/blog/what-is-dental-bonding; https://simplydentalchatswood.com.au/blog/what-is-dental-bridge; https://simplydentalchatswood.com.au/blog/what-to-do-during-dental-emergency; https://simplydentalchatswood.com.au/blog/what-to-eat-after-root-canal-treatment-2; https://simplydentalchatswood.com.au/blog/what-to-eat-after-tooth-extraction-chatswood; https://simplydentalchatswood.com.au/blog/what-to-expect-during-dental-checkup-in-chatswood; https://simplydentalchatswood.com.au/blog/what-to-expect-from-temporary-veneers; https://simplydentalchatswood.com.au/blog/what-to-know-before-getting-dental-veneers; https://simplydentalchatswood.com.au/find-the-right-emergency-dentist; https://simplydentalchatswood.com.au/general-dentistry/dental-check-up-and-clean; https://simplydentalchatswood.com.au/general-dentistry/gum-disease-treatment; https://simplydentalchatswood.com.au/general-dentistry/pediatric-dentist; https://simplydentalchatswood.com.au/general-dentistry/sleep-disorder-centre; https://simplydentalchatswood.com.au/general-dentistry/tooth-extraction; https://simplydentalchatswood.com.au/orthodontics/braces; https://simplydentalchatswood.com.au/orthodontics/invisalign; https://simplydentalchatswood.com.au/our-team/dr-denise-hsueh; https://simplydentalchatswood.com.au/our-team/dr-henrietta-wu; https://simplydentalchatswood.com.au/our-team/dr-jim-williamson; https://simplydentalchatswood.com.au/preventing-bone-loss-after-tooth-extraction-treatment; https://simplydentalchatswood.com.au/priceless-private-health-insurance-cover; https://simplydentalchatswood.com.au/queen-victoria-b…ess-history-shop; https://simplydentalchatswood.com.au/restorative-dentistry/dental-crowns-prosthodontist; https://simplydentalchatswood.com.au/restorative-dentistry/dental-fillings; https://simplydentalchatswood.com.au/restorative-dentistry/dental-implants; https://simplydentalchatswood.com.au/restorative-dentistry/denture-care-centre; https://simplydentalchatswood.com.au/restorative-dentistry/root-canal-treatment; https://simplydentalchatswood.com.au/royal-north-shore-hospital; https://simplydentalchatswood.com.au/service/check-up-clean; https://simplydentalchatswood.com.au/service/restorative-dentistry; https://simplydentalchatswood.com.au/stringybark-creek-reserve; https://simplydentalchatswood.com.au/sydney-botanic-gardens-peaceful-retreat; https://simplydentalchatswood.com.au/visiting-your-dental-hygienist-regularly"
+,Sprint 2 (Technical),2,Noindex — 15 URLs,"Technical action: Noindex
+URLs (15):
+    1. [P2] /category/cosmetic-dentistry — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+    2. [P2] /category/cosmetic-dentistry/page/2 — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+    3. [P2] /category/cosmetic-dentistry/page/3 — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+    4. [P2] /category/cosmetic-dentistry/page/4 — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+    5. [P2] /category/orthodontics — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+    6. [P2] /category/orthodontics/page/2 — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+    7. [P2] /category/paediatric-dentistry — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+    8. [P2] /category/paediatric-dentistry/page/2 — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+    9. [P2] /category/restorative-dentistry — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+   10. [P2] /category/restorative-dentistry/page/2 — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+   11. [P2] /category/restorative-dentistry/page/3 — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+   12. [P2] /category/restorative-dentistry/page/4 — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+   13. [P2] /category/restorative-dentistry/page/5 — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+   14. [P2] /category/surgical-dentistry — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.
+   15. [P2] /category/surgical-dentistry/page/2 — Low-value or auto-generated page with no meaningful content. Add noindex to remove from crawl waste.",Technical,P2,dame@smileandgrow.com.au,dame,2026-09-13,2026-09-20,1,pending,False,False,False,False,False,,,"p2, technical",Technical,Noindex,https://simplydentalchatswood.com.au/category/cosmetic-dentistry; https://simplydentalchatswood.com.au/category/cosmetic-dentistry/page/2; https://simplydentalchatswood.com.au/category/cosmetic-dentistry/page/3; https://simplydentalchatswood.com.au/category/cosmetic-dentistry/page/4; https://simplydentalchatswood.com.au/category/orthodontics; https://simplydentalchatswood.com.au/category/orthodontics/page/2; https://simplydentalchatswood.com.au/category/paediatric-dentistry; https://simplydentalchatswood.com.au/category/paediatric-dentistry/page/2; https://simplydentalchatswood.com.au/category/restorative-dentistry; https://simplydentalchatswood.com.au/category/restorative-dentistry/page/2; https://simplydentalchatswood.com.au/category/restorative-dentistry/page/3; https://simplydentalchatswood.com.au/category/restorative-dentistry/page/4; https://simplydentalchatswood.com.au/category/restorative-dentistry/page/5; https://simplydentalchatswood.com.au/category/surgical-dentistry; https://simplydentalchatswood.com.au/category/surgical-dentistry/page/2
+,Sprint 2 (Technical),2,301 redirect — 17 URLs,"Technical action: 301 redirect
+URLs (17):
+    1. [P2] /category/check-up-and-clean — WP auto-generated archive/feed page with no meaningful content. Add noindex to remove from crawl waste.
+    2. [P2] /category/dental-clinic/page/3 — WP auto-generated archive/feed page with no meaningful content. Add noindex to remove from crawl waste.
+    3. [P2] /category/dental-crowns — WP auto-generated archive/feed page with no meaningful content. Add noindex to remove from crawl waste.
+    4. [P2] /category/dental-fillings — WP auto-generated archive/feed page with no meaningful content. Add noindex to remove from crawl waste.
+    5. [P2] /category/dental-hygienist — WP auto-generated archive/feed page with no meaningful content. Add noindex to remove from crawl waste.
+    6. [P2] /category/endodontist — WP auto-generated archive/feed page with no meaningful content. Add noindex to remove from crawl waste.
+    7. [P2] /category/oral-health-and-dental-tips — Add a 301 redirect to the correct live equivalent to preserve SEO value and avoid duplicate/thin-content weight.
+    8. [P2] /category/oral-health-and-dental-tips/page/2 — Add a 301 redirect to the correct live equivalent to preserve SEO value and avoid duplicate/thin-content weight.
+    9. [P2] /category/oral-health-and-dental-tips/page/3 — Add a 301 redirect to the correct live equivalent to preserve SEO value and avoid duplicate/thin-content weight.
+   10. [P2] /category/oral-health-and-dental-tips/page/4 — Add a 301 redirect to the correct live equivalent to preserve SEO value and avoid duplicate/thin-content weight.
+   11. [P2] /category/oral-health-and-dental-tips/page/5 — Add a 301 redirect to the correct live equivalent to preserve SEO value and avoid duplicate/thin-content weight.
+   12. [P3] /dental-hygienist — Add a 301 redirect to the correct live equivalent to preserve SEO value and avoid duplicate/thin-content weight.
+   13. [P3] /dental-insurance-2 — Add a 301 redirect to the correct live equivalent to preserve SEO value and avoid duplicate/thin-content weight.
+   14. [P3] /vivid-sydney — Add a 301 redirect to the correct live equivalent to preserve SEO value and avoid duplicate/thin-content weight.
+   15. [P3] /what-are-wisdom-teeth — Add a 301 redirect to the correct live equivalent to preserve SEO value and avoid duplicate/thin-content weight.
+   16. [P3] /what-to-eat-after-root-canal-treatment-2 — Add a 301 redirect to the correct live equivalent to preserve SEO value and avoid duplicate/thin-content weight.
+   17. [P3] /work-at-simply-dental-chatswood — Add a 301 redirect to the correct live equivalent to preserve SEO value and avoid duplicate/thin-content weight.",Technical,P2,dame@smileandgrow.com.au,dame,2026-09-13,2026-09-20,1,pending,False,False,False,False,False,,,"p2, technical",Technical,301 redirect,https://simplydentalchatswood.com.au/category/check-up-and-clean; https://simplydentalchatswood.com.au/category/dental-clinic/page/3; https://simplydentalchatswood.com.au/category/dental-crowns; https://simplydentalchatswood.com.au/category/dental-fillings; https://simplydentalchatswood.com.au/category/dental-hygienist; https://simplydentalchatswood.com.au/category/endodontist; https://simplydentalchatswood.com.au/category/oral-health-and-dental-tips; https://simplydentalchatswood.com.au/category/oral-health-and-dental-tips/page/2; https://simplydentalchatswood.com.au/category/oral-health-and-dental-tips/page/3; https://simplydentalchatswood.com.au/category/oral-health-and-dental-tips/page/4; https://simplydentalchatswood.com.au/category/oral-health-and-dental-tips/page/5; https://simplydentalchatswood.com.au/dental-hygienist; https://simplydentalchatswood.com.au/dental-insurance-2; https://simplydentalchatswood.com.au/vivid-sydney; https://simplydentalchatswood.com.au/what-are-wisdom-teeth; https://simplydentalchatswood.com.au/what-to-eat-after-root-canal-treatment-2; https://simplydentalchatswood.com.au/work-at-simply-dental-chatswood
+,Sprint 3 (Local SEO),3,Local SEO Audit (workbook),"Full Local SEO + GEO audit via /bpt-local-seo-audit — one workbook:
+  · NAP Info (all verified locations)
+  · Competitive research + baseline (Maps pack, competitors)
+  · Keyword Performance (volume + organic + Maps rank)
+  · GBP Optimization change-set + Products + practice-area graphics
+  · Aggregator Optimization set + Citations tracker
+Basis for every execution deliverable below.",Local,P2,dame@smileandgrow.com.au,dame,2026-10-01,2026-10-08,2,pending,False,False,False,False,False,,,"local, p2",Local,Local SEO process step,
+,Sprint 3 (Local SEO),3,Update GBP listings (all locations),"MANUAL — apply the GBP Optimization change-set per office:
+  · Localized keyword+GEO descriptions, primary/secondary categories
+  · Services, attributes, hours, service areas
+  · FIX: true local NAP phone (not CallRail tracking), localized Posts
+Apply in business.google.com from the Local SEO Audit workbook.",Local,P2,dame@smileandgrow.com.au,dame,2026-10-01,2026-10-08,2,pending,False,False,False,False,False,,,"local, p2",Local,Local SEO process step (manual execution),
+,Sprint 3 (Local SEO),3,GBP Products + practice-area graphics,"MANUAL — add GBP Products (one per practice area, full descriptions) and
+upload the branded practice-area graphics + office/team photos per office.
+Source: Products (GBP) tab + gbp-images/ in the Local SEO Audit workbook.",Local,P2,dame@smileandgrow.com.au,dame,2026-10-01,2026-10-08,2,pending,False,False,False,False,False,,,"local, p2",Local,Local SEO process step (manual execution),
+,Sprint 3 (Local SEO),3,Aggregator profile optimization,"MANUAL — claim + build out the niche-aligned aggregator profiles
+(universal core: Apple, Bing, Yelp, BBB, Facebook, LinkedIn, etc. + vertical add-ons).
+Fix any NAP mismatches on live profiles; load description/services/photos/links.
+Source: Aggregator Optimization tab. Recommend Loganix if outsourcing.",Local,P2,dame@smileandgrow.com.au,dame,2026-10-01,2026-10-08,2,pending,False,False,False,False,False,,,"local, p2",Local,Local SEO process step (manual execution),
+,Sprint 3 (Local SEO),3,Citation cleanup + building,"MANUAL — work the full Citations tracker (fix-first → claim Tier-1 free →
+data aggregators (Data Axle/Neustar/Foursquare) → build the rest), NAP identical everywhere.
+Track status per directory. Recommend Loganix / WhiteSpark for the volume.",Local,P2,dame@smileandgrow.com.au,dame,2026-10-01,2026-10-08,2,pending,False,False,False,False,False,,,"local, p2",Local,Local SEO process step (manual execution),
+,Sprint 3 (Local SEO),3,Review generation + response system,"MANUAL — stand up the review engine:
+  · NPS/review automation (happy → public Google review, unhappy → private feedback)
+  · Compliant SMS/messaging registration; human-reviewed response templates
+  · Ongoing weekly review monitoring + responses",Local,P2,dame@smileandgrow.com.au,dame,2026-10-01,2026-10-08,2,pending,False,False,False,False,False,,,"local, p2",Local,Local SEO process step (manual execution),
+,Sprint 4 (Content),4,Content Strategy + gap analysis,"Sprint 4 strategic foundation. Locks in the content roadmap that every subsequent monthly batch consumes:
+  · Review the full list of content actions tagged in the WQA
+  · Categorize by content silo (service pages, blog topics, hub pages)
+  · Identify content gaps (topics we should cover but don't)
+  · Split queue into Refresh/Rewrite (existing) vs Create New (greenfield)
+  · Lock in priority order for batched rewrites + new pages Months 3+
+  · Populate the client's content workbook with the queue
+All subsequent content batches depend on the priority order set here.",Content,P1,cassy@smileandgrow.com.au,cassy,2026-10-01,2026-10-08,2,pending,False,False,True,False,False,strategy,,"content, content-strategy, p1, strategy",Content,Content Strategy,
+,Sprint 4 (Content),4,Rewrite/refresh 22 pages — Month 3,"Rewrite/refresh batch — Month 3 (22 pages, priority order):
+Actions in this batch: Expand content / Refresh content / Rewrite
+
+    1. [P1] /services — Thin money page (458w). Expand to 1,000w+ with conversion content, social proof, FAQs.
+    2. [P1] /services/cosmetic-dentistry — Thin money page (419w). Expand to 1,000w+ with conversion content, social proof, FAQs.
+    3. [P1] /services/general-dentistry — Thin money page (479w). Expand to 1,000w+ with conversion content, social proof, FAQs.
+    4. [P1] /services/orthodontics — Thin money page (372w). Expand to 1,000w+ with conversion content, social proof, FAQs.
+    5. [P1] /services/restorative-dentistry — Thin money page (490w). Expand to 1,000w+ with conversion content, social proof, FAQs.
+    6. [P2] /blog/6-types-of-dentists-specialisations — Targets 800-vol KW 'dentist specialist' but only 1239w. Top-ranking competitors typically run 1,800-2,500w. Expand with 
+    7. [P2] /blog/how-to-improve-teeth-shape-and-alignment — Targets 700-vol KW 'perfect teeth alignment' but only 887w. Top-ranking competitors typically run 1,800-2,500w. Expand w
+    8. [P2] /blog/how-to-know-if-you-have-gum-disease — Targets 1,800-vol KW 'gum infection' but only 937w. Top-ranking competitors typically run 1,800-2,500w. Expand with dept
+    9. [P2] /blog/understanding-bupa-dental-coverage-in-chatswood — Targets 900-vol KW 'bupa dental chatswood' but only 1452w. Top-ranking competitors typically run 1,800-2,500w. Expand wi
+   10. [P2] /blog/when-do-kids-lose-their-baby-teeth — Targets 700-vol KW 'gigi susu anak' but only 1041w. Top-ranking competitors typically run 1,800-2,500w. Expand with dept
+   11. [P2] /blog/why-you-cannot-remove-cavities-at-home — Targets 1,000-vol KW 'how to remove cavity from teeth at home' but only 976w. Top-ranking competitors typically run 1,80
+   12. [P2] //blog/why-tartar-removal-is-important — Refresh content — update with current information, examples, and internal links to lift relevance.
+   13. [P2] /blog/8-tips-to-choose-the-best-chatswood-dental-centre — Refresh content (1019w currently) — update with current information, examples, and internal links to lift relevance.
+   14. [P2] /blog/aftercare-tips-after-a-scale-and-clean — Refresh content (1718w currently) — update with current information, examples, and internal links to lift relevance.
+   15. [P2] /blog/baby-teeth-eruption-timeline-guide — Refresh content (745w currently) — update with current information, examples, and internal links to lift relevance.
+   16. [P2] /blog/baby-teeth-order-milestones-care-tips — Refresh content (1580w currently) — update with current information, examples, and internal links to lift relevance.
+   17. [P2] /blog/bad-breath-signs-and-treatments — Refresh content (1269w currently) — update with current information, examples, and internal links to lift relevance.
+   18. [P2] /blog/beautiful-teeth-whitening-in-sydney — Refresh content (661w currently) — update with current information, examples, and internal links to lift relevance.
+   19. [P2] /blog/benefits-of-dental-fillings — Refresh content (1330w currently) — update with current information, examples, and internal links to lift relevance.
+   20. [P2] /blog/benefits-of-dental-x-rays — Refresh content (1433w currently) — update with current information, examples, and internal links to lift relevance.
+   21. [P2] /blog/best-professional-teeth-whitening-kits-take-home-solutions — Refresh content (1881w currently) — update with current information, examples, and internal links to lift relevance.
+   22. [P2] /blog/blog/tooth-extraction-step-by-step — Refresh content — update with current information, examples, and internal links to lift relevance.
+
+Capacity assumption: ~22 pages/month. Claude drafts → team reviews + publishes. Specific next steps are on each page row in the WQA approvals.",Content,P1,cassy@smileandgrow.com.au,cassy,2026-11-01,2026-11-30,3,pending,False,True,False,False,False,updated,,"content, content-updated, heavy-batch, p1",Content,Content batch,https://simplydentalchatswood.com.au/services; https://simplydentalchatswood.com.au/services/cosmetic-dentistry; https://simplydentalchatswood.com.au/services/general-dentistry; https://simplydentalchatswood.com.au/services/orthodontics; https://simplydentalchatswood.com.au/services/restorative-dentistry; https://simplydentalchatswood.com.au/blog/6-types-of-dentists-specialisations; https://simplydentalchatswood.com.au/blog/how-to-improve-teeth-shape-and-alignment; https://simplydentalchatswood.com.au/blog/how-to-know-if-you-have-gum-disease; https://simplydentalchatswood.com.au/blog/understanding-bupa-dental-coverage-in-chatswood; https://simplydentalchatswood.com.au/blog/when-do-kids-lose-their-baby-teeth; https://simplydentalchatswood.com.au/blog/why-you-cannot-remove-cavities-at-home; https://simplydentalchatswood.com.au//blog/why-tartar-removal-is-important; https://simplydentalchatswood.com.au/blog/8-tips-to-choose-the-best-chatswood-dental-centre; https://simplydentalchatswood.com.au/blog/aftercare-tips-after-a-scale-and-clean; https://simplydentalchatswood.com.au/blog/baby-teeth-eruption-timeline-guide; https://simplydentalchatswood.com.au/blog/baby-teeth-order-milestones-care-tips; https://simplydentalchatswood.com.au/blog/bad-breath-signs-and-treatments; https://simplydentalchatswood.com.au/blog/beautiful-teeth-whitening-in-sydney; https://simplydentalchatswood.com.au/blog/benefits-of-dental-fillings; https://simplydentalchatswood.com.au/blog/benefits-of-dental-x-rays; https://simplydentalchatswood.com.au/blog/best-professional-teeth-whitening-kits-take-home-solutions; https://simplydentalchatswood.com.au/blog/blog/tooth-extraction-step-by-step
+,Sprint 4 (Content),4,Rewrite/refresh 22 pages — Month 4,"Rewrite/refresh batch — Month 4 (22 pages, priority order):
+Actions in this batch: Refresh content
+
+    1. [P2] /blog/braces-101-a-closer-look-at-orthodontic-treatment — Refresh content (2577w currently) — update with current information, examples, and internal links to lift relevance.
+    2. [P2] /blog/call-simply-dentai-chatswood-for-your-dental-emergencies — Refresh content — update with current information, examples, and internal links to lift relevance.
+    3. [P2] /blog/call-simply-dental-chatswood-for-your-dental-emergencies — Refresh content (815w currently) — update with current information, examples, and internal links to lift relevance.
+    4. [P2] /blog/can-crowns-get-cavities-prevention-and-care-tips — Refresh content (645w currently) — update with current information, examples, and internal links to lift relevance.
+    5. [P2] /blog/can-stress-become-a-dangerous-habit — Refresh content (718w currently) — update with current information, examples, and internal links to lift relevance.
+    6. [P2] /blog/caring-for-your-new-filling — Refresh content (1209w currently) — update with current information, examples, and internal links to lift relevance.
+    7. [P2] /blog/childrens-dental-check-up-what-parents-need-to-know — Refresh content (1844w currently) — update with current information, examples, and internal links to lift relevance.
+    8. [P2] /blog/choose-the-teeth-whitening-right-method-to-radiant-your-smile — Refresh content (2302w currently) — update with current information, examples, and internal links to lift relevance.
+    9. [P2] /blog/choosing-the-right-health-insurance-in-chatswood — Refresh content (1155w currently) — update with current information, examples, and internal links to lift relevance.
+   10. [P2] /blog/common-dental-emergencies — Refresh content (2655w currently) — update with current information, examples, and internal links to lift relevance.
+   11. [P2] /blog/common-dental-problems-in-kids-and-how-to-prevent-them — Refresh content (1998w currently) — update with current information, examples, and internal links to lift relevance.
+   12. [P2] /blog/cracked-tooth-vs-cavity-difference — Refresh content (1811w currently) — update with current information, examples, and internal links to lift relevance.
+   13. [P2] /blog/dental-crowns-procedure-how-it-restores-teeth-health — Refresh content (3005w currently) — update with current information, examples, and internal links to lift relevance.
+   14. [P2] /blog/dental-fillings-procedure-types-and-aftercare — Refresh content (1405w currently) — update with current information, examples, and internal links to lift relevance.
+   15. [P2] /blog/dental-fillings-types-and-cost — Refresh content (800w currently) — update with current information, examples, and internal links to lift relevance.
+   16. [P2] /blog/dental-health-insurance-guide — Refresh content (1110w currently) — update with current information, examples, and internal links to lift relevance.
+   17. [P2] /blog/dental-health-trends-australia — Refresh content (983w currently) — update with current information, examples, and internal links to lift relevance.
+   18. [P2] /blog/dental-hygiene-trends-chatswood — Refresh content (829w currently) — update with current information, examples, and internal links to lift relevance.
+   19. [P2] /blog/dental-implant-health-tips — Refresh content (656w currently) — update with current information, examples, and internal links to lift relevance.
+   20. [P2] /blog/dental-implant-vs-bridge-vs-denture-differences — Refresh content (1298w currently) — update with current information, examples, and internal links to lift relevance.
+   21. [P2] /blog/dental-implants-permanent-solution-chatswood — Refresh content (1338w currently) — update with current information, examples, and internal links to lift relevance.
+   22. [P2] /blog/dental-implants-procedure-risks-costs-alternatives — Refresh content (924w currently) — update with current information, examples, and internal links to lift relevance.
+
+Capacity assumption: ~22 pages/month. Claude drafts → team reviews + publishes. Specific next steps are on each page row in the WQA approvals.",Content,P2,cassy@smileandgrow.com.au,cassy,2026-12-01,2026-12-31,4,pending,False,True,False,False,False,updated,,"content, content-updated, heavy-batch, p2",Content,Content batch,https://simplydentalchatswood.com.au/blog/braces-101-a-closer-look-at-orthodontic-treatment; https://simplydentalchatswood.com.au/blog/call-simply-dentai-chatswood-for-your-dental-emergencies; https://simplydentalchatswood.com.au/blog/call-simply-dental-chatswood-for-your-dental-emergencies; https://simplydentalchatswood.com.au/blog/can-crowns-get-cavities-prevention-and-care-tips; https://simplydentalchatswood.com.au/blog/can-stress-become-a-dangerous-habit; https://simplydentalchatswood.com.au/blog/caring-for-your-new-filling; https://simplydentalchatswood.com.au/blog/childrens-dental-check-up-what-parents-need-to-know; https://simplydentalchatswood.com.au/blog/choose-the-teeth-whitening-right-method-to-radiant-your-smile; https://simplydentalchatswood.com.au/blog/choosing-the-right-health-insurance-in-chatswood; https://simplydentalchatswood.com.au/blog/common-dental-emergencies; https://simplydentalchatswood.com.au/blog/common-dental-problems-in-kids-and-how-to-prevent-them; https://simplydentalchatswood.com.au/blog/cracked-tooth-vs-cavity-difference; https://simplydentalchatswood.com.au/blog/dental-crowns-procedure-how-it-restores-teeth-health; https://simplydentalchatswood.com.au/blog/dental-fillings-procedure-types-and-aftercare; https://simplydentalchatswood.com.au/blog/dental-fillings-types-and-cost; https://simplydentalchatswood.com.au/blog/dental-health-insurance-guide; https://simplydentalchatswood.com.au/blog/dental-health-trends-australia; https://simplydentalchatswood.com.au/blog/dental-hygiene-trends-chatswood; https://simplydentalchatswood.com.au/blog/dental-implant-health-tips; https://simplydentalchatswood.com.au/blog/dental-implant-vs-bridge-vs-denture-differences; https://simplydentalchatswood.com.au/blog/dental-implants-permanent-solution-chatswood; https://simplydentalchatswood.com.au/blog/dental-implants-procedure-risks-costs-alternatives
+,Sprint 4 (Content),4,Rewrite/refresh 22 pages — Month 5,"Rewrite/refresh batch — Month 5 (22 pages, priority order):
+Actions in this batch: Refresh content
+
+    1. [P2] /blog/dental-implants-without-health-cover — Refresh content (1960w currently) — update with current information, examples, and internal links to lift relevance.
+    2. [P2] /blog/dental-plaque-how-to-prevent — Refresh content (972w currently) — update with current information, examples, and internal links to lift relevance.
+    3. [P2] /blog/dental-tips-for-chatswood — Refresh content (764w currently) — update with current information, examples, and internal links to lift relevance.
+    4. [P2] /blog/detecting-and-treating-tooth-decay — Refresh content (1233w currently) — update with current information, examples, and internal links to lift relevance.
+    5. [P2] /blog/encourage-oral-hygiene-kids-chatswood — Refresh content (919w currently) — update with current information, examples, and internal links to lift relevance.
+    6. [P2] /blog/everything-you-need-to-know-about-dental-bridges — Refresh content (723w currently) — update with current information, examples, and internal links to lift relevance.
+    7. [P2] /blog/exploring-dentures-a-detailed-look-into-your-dental-options — Refresh content (2300w currently) — update with current information, examples, and internal links to lift relevance.
+    8. [P2] /blog/find-the-right-emergency-dentist — Refresh content (1177w currently) — update with current information, examples, and internal links to lift relevance.
+    9. [P2] /blog/first-visit-to-a-dental-clinic — Refresh content (640w currently) — update with current information, examples, and internal links to lift relevance.
+   10. [P2] /blog/fit-dental-appointments-around-a-demanding-work-schedule — Refresh content (1397w currently) — update with current information, examples, and internal links to lift relevance.
+   11. [P2] /blog/food-and-drink-that-stain-teeth — Refresh content (687w currently) — update with current information, examples, and internal links to lift relevance.
+   12. [P2] /blog/four-healthy-dental-habits-for-children — Refresh content (661w currently) — update with current information, examples, and internal links to lift relevance.
+   13. [P2] /blog/guide-different-types-dental-crowns — Refresh content (6342w currently) — update with current information, examples, and internal links to lift relevance.
+   14. [P2] /blog/guide-to-dental-cleaning — Refresh content (1137w currently) — update with current information, examples, and internal links to lift relevance.
+   15. [P2] /blog/gum-disease-what-you-need-to-know — Refresh content (1822w currently) — update with current information, examples, and internal links to lift relevance.
+   16. [P2] /blog/how-dental-bridges-improve-oral-function — Refresh content (1435w currently) — update with current information, examples, and internal links to lift relevance.
+   17. [P2] /blog/how-dental-crowns-restore-damaged-teeth — Refresh content (1182w currently) — update with current information, examples, and internal links to lift relevance.
+   18. [P2] /blog/how-dental-crowns-restore-teeth-and-procedure — Refresh content (766w currently) — update with current information, examples, and internal links to lift relevance.
+   19. [P2] /blog/how-dental-implant-bridges-solve-tooth-loss — Refresh content (1252w currently) — update with current information, examples, and internal links to lift relevance.
+   20. [P2] /blog/how-dental-veneers-improve-your-smile — Refresh content (1315w currently) — update with current information, examples, and internal links to lift relevance.
+   21. [P2] /blog/how-does-invisalign-work — Refresh content (785w currently) — update with current information, examples, and internal links to lift relevance.
+   22. [P2] /blog/how-long-can-you-expect-your-dental-crown-to-last — Refresh content (1658w currently) — update with current information, examples, and internal links to lift relevance.
+
+Capacity assumption: ~22 pages/month. Claude drafts → team reviews + publishes. Specific next steps are on each page row in the WQA approvals.",Content,P2,cassy@smileandgrow.com.au,cassy,2027-01-01,2027-01-31,5,pending,False,True,False,False,False,updated,,"content, content-updated, heavy-batch, p2",Content,Content batch,https://simplydentalchatswood.com.au/blog/dental-implants-without-health-cover; https://simplydentalchatswood.com.au/blog/dental-plaque-how-to-prevent; https://simplydentalchatswood.com.au/blog/dental-tips-for-chatswood; https://simplydentalchatswood.com.au/blog/detecting-and-treating-tooth-decay; https://simplydentalchatswood.com.au/blog/encourage-oral-hygiene-kids-chatswood; https://simplydentalchatswood.com.au/blog/everything-you-need-to-know-about-dental-bridges; https://simplydentalchatswood.com.au/blog/exploring-dentures-a-detailed-look-into-your-dental-options; https://simplydentalchatswood.com.au/blog/find-the-right-emergency-dentist; https://simplydentalchatswood.com.au/blog/first-visit-to-a-dental-clinic; https://simplydentalchatswood.com.au/blog/fit-dental-appointments-around-a-demanding-work-schedule; https://simplydentalchatswood.com.au/blog/food-and-drink-that-stain-teeth; https://simplydentalchatswood.com.au/blog/four-healthy-dental-habits-for-children; https://simplydentalchatswood.com.au/blog/guide-different-types-dental-crowns; https://simplydentalchatswood.com.au/blog/guide-to-dental-cleaning; https://simplydentalchatswood.com.au/blog/gum-disease-what-you-need-to-know; https://simplydentalchatswood.com.au/blog/how-dental-bridges-improve-oral-function; https://simplydentalchatswood.com.au/blog/how-dental-crowns-restore-damaged-teeth; https://simplydentalchatswood.com.au/blog/how-dental-crowns-restore-teeth-and-procedure; https://simplydentalchatswood.com.au/blog/how-dental-implant-bridges-solve-tooth-loss; https://simplydentalchatswood.com.au/blog/how-dental-veneers-improve-your-smile; https://simplydentalchatswood.com.au/blog/how-does-invisalign-work; https://simplydentalchatswood.com.au/blog/how-long-can-you-expect-your-dental-crown-to-last
+,Sprint 4 (Content),4,Rewrite/refresh 22 pages — Month 6,"Rewrite/refresh batch — Month 6 (22 pages, priority order):
+Actions in this batch: Refresh content
+
+    1. [P2] /blog/how-long-do-dentures-last — Refresh content (865w currently) — update with current information, examples, and internal links to lift relevance.
+    2. [P2] /blog/how-long-does-a-root-canal-last — Refresh content (1912w currently) — update with current information, examples, and internal links to lift relevance.
+    3. [P2] /blog/how-much-do-porcelain-veneers-cost-in-australia — Refresh content (775w currently) — update with current information, examples, and internal links to lift relevance.
+    4. [P2] /blog/how-often-should-you-schedule-a-dental-cleaning — Refresh content (1218w currently) — update with current information, examples, and internal links to lift relevance.
+    5. [P2] /blog/how-often-should-you-schedule-dental-cleanings — Refresh content (1312w currently) — update with current information, examples, and internal links to lift relevance.
+    6. [P2] /blog/how-often-should-you-visit-the-dentist — Refresh content (1761w currently) — update with current information, examples, and internal links to lift relevance.
+    7. [P2] /blog/how-simply-dental-gordon-can-transform-your-smile-and-health — Refresh content (1534w currently) — update with current information, examples, and internal links to lift relevance.
+    8. [P2] /blog/how-simply-dental-roseville-can-help-in-oral-health — Refresh content (1122w currently) — update with current information, examples, and internal links to lift relevance.
+    9. [P2] /blog/how-stress-impacts-oral-health — Refresh content (657w currently) — update with current information, examples, and internal links to lift relevance.
+   10. [P2] /blog/how-sugary-drinks-affect-childrens-teeth-and-health — Refresh content (1314w currently) — update with current information, examples, and internal links to lift relevance.
+   11. [P2] /blog/how-temporary-veneers-can-enhance-your-smile — Refresh content (881w currently) — update with current information, examples, and internal links to lift relevance.
+   12. [P2] /blog/how-to-clean-dental-retainers — Refresh content (1505w currently) — update with current information, examples, and internal links to lift relevance.
+   13. [P2] /blog/how-to-find-a-good-dentist-in-sydney — Refresh content (814w currently) — update with current information, examples, and internal links to lift relevance.
+   14. [P2] /blog/how-to-find-the-best-dentist-in-your-city — Refresh content (1155w currently) — update with current information, examples, and internal links to lift relevance.
+   15. [P2] /blog/how-to-fix-a-cracked-tooth — Refresh content (1459w currently) — update with current information, examples, and internal links to lift relevance.
+   16. [P2] /blog/how-to-keep-your-kids-calm-during-their-dental-visit — Refresh content (1655w currently) — update with current information, examples, and internal links to lift relevance.
+   17. [P2] /blog/how-to-know-if-wisdom-teeth-need-removal — Refresh content (1447w currently) — update with current information, examples, and internal links to lift relevance.
+   18. [P2] /blog/how-to-manage-pain-after-dental-implant — Refresh content (629w currently) — update with current information, examples, and internal links to lift relevance.
+   19. [P2] /blog/how-to-prepare-for-your-dental-check-up — Refresh content (1676w currently) — update with current information, examples, and internal links to lift relevance.
+   20. [P2] /blog/simply-dental-sydney — Refresh content (1115w currently) — update with current information, examples, and internal links to lift relevance.
+   21. [P2] /blog/smile-improvements-without-veneers — Refresh content (1947w currently) — update with current information, examples, and internal links to lift relevance.
+   22. [P2] /blog/speedy-recovery-after-tooth-extraction — Refresh content (1709w currently) — update with current information, examples, and internal links to lift relevance.
+
+Capacity assumption: ~22 pages/month. Claude drafts → team reviews + publishes. Specific next steps are on each page row in the WQA approvals.",Content,P2,cassy@smileandgrow.com.au,cassy,2027-02-01,2027-02-28,6,pending,False,True,False,False,False,updated,,"content, content-updated, heavy-batch, p2",Content,Content batch,https://simplydentalchatswood.com.au/blog/how-long-do-dentures-last; https://simplydentalchatswood.com.au/blog/how-long-does-a-root-canal-last; https://simplydentalchatswood.com.au/blog/how-much-do-porcelain-veneers-cost-in-australia; https://simplydentalchatswood.com.au/blog/how-often-should-you-schedule-a-dental-cleaning; https://simplydentalchatswood.com.au/blog/how-often-should-you-schedule-dental-cleanings; https://simplydentalchatswood.com.au/blog/how-often-should-you-visit-the-dentist; https://simplydentalchatswood.com.au/blog/how-simply-dental-gordon-can-transform-your-smile-and-health; https://simplydentalchatswood.com.au/blog/how-simply-dental-roseville-can-help-in-oral-health; https://simplydentalchatswood.com.au/blog/how-stress-impacts-oral-health; https://simplydentalchatswood.com.au/blog/how-sugary-drinks-affect-childrens-teeth-and-health; https://simplydentalchatswood.com.au/blog/how-temporary-veneers-can-enhance-your-smile; https://simplydentalchatswood.com.au/blog/how-to-clean-dental-retainers; https://simplydentalchatswood.com.au/blog/how-to-find-a-good-dentist-in-sydney; https://simplydentalchatswood.com.au/blog/how-to-find-the-best-dentist-in-your-city; https://simplydentalchatswood.com.au/blog/how-to-fix-a-cracked-tooth; https://simplydentalchatswood.com.au/blog/how-to-keep-your-kids-calm-during-their-dental-visit; https://simplydentalchatswood.com.au/blog/how-to-know-if-wisdom-teeth-need-removal; https://simplydentalchatswood.com.au/blog/how-to-manage-pain-after-dental-implant; https://simplydentalchatswood.com.au/blog/how-to-prepare-for-your-dental-check-up; https://simplydentalchatswood.com.au/blog/simply-dental-sydney; https://simplydentalchatswood.com.au/blog/smile-improvements-without-veneers; https://simplydentalchatswood.com.au/blog/speedy-recovery-after-tooth-extraction
+,Sprint 4 (Content),4,Rewrite/refresh 22 pages — Month 7,"Rewrite/refresh batch — Month 7 (22 pages, priority order):
+Actions in this batch: Refresh content
+
+    1. [P2] /blog/teeth-whitening-aftercare — Refresh content (1517w currently) — update with current information, examples, and internal links to lift relevance.
+    2. [P2] /blog/teeth-whitening-facts-you-should-know — Refresh content (1721w currently) — update with current information, examples, and internal links to lift relevance.
+    3. [P2] /blog/teeth-whitening-safety-tips — Refresh content (958w currently) — update with current information, examples, and internal links to lift relevance.
+    4. [P2] /blog/the-best-and-worst-foods-for-kids-teeth — Refresh content (687w currently) — update with current information, examples, and internal links to lift relevance.
+    5. [P2] /blog/tips-to-keep-new-patients-attracted-to-the-dental-practice — Refresh content (623w currently) — update with current information, examples, and internal links to lift relevance.
+    6. [P2] /blog/tooth-decay-causes-symptoms-and-treatment-options — Refresh content (844w currently) — update with current information, examples, and internal links to lift relevance.
+    7. [P2] /blog/tooth-sensitivity-after-whitening — Refresh content (2048w currently) — update with current information, examples, and internal links to lift relevance.
+    8. [P2] /blog/when-to-replace-dental-veneers — Refresh content (1260w currently) — update with current information, examples, and internal links to lift relevance.
+    9. [P2] /blog/when-to-seek-emergency-dentist — Refresh content (1241w currently) — update with current information, examples, and internal links to lift relevance.
+   10. [P2] /blog/when-you-need-a-dental-filling — Refresh content (666w currently) — update with current information, examples, and internal links to lift relevance.
+   11. [P2] /blog/why-dental-implants-are-preferred — Refresh content (1246w currently) — update with current information, examples, and internal links to lift relevance.
+   12. [P2] /blog/why-do-gums-bleed-when-gently-brushed — Refresh content (1912w currently) — update with current information, examples, and internal links to lift relevance.
+   13. [P2] /blog/why-no-dairy-after-dental-implant — Refresh content (913w currently) — update with current information, examples, and internal links to lift relevance.
+   14. [P2] /blog/why-regular-dental-check-ups-are-important — Refresh content (1142w currently) — update with current information, examples, and internal links to lift relevance.
+   15. [P2] /blog/why-sleep-apnea-can-become-dangerous — Refresh content (747w currently) — update with current information, examples, and internal links to lift relevance.
+   16. [P2] /blog/why-some-dental-implants-fail — Refresh content (2177w currently) — update with current information, examples, and internal links to lift relevance.
+   17. [P2] /blog/why-tartar-removal-is-important/ (8,090 impr), /blog/why-periodontal-cleaning-is-important — Refresh content — update with current information, examples, and internal links to lift relevance.
+   18. [P2] /blog/wisdom-tooth-removal — Refresh content (1326w currently) — update with current information, examples, and internal links to lift relevance.
+   19. [P2] /bupa-dentist-chatswood — Refresh content (730w currently) — update with current information, examples, and internal links to lift relevance.
+   20. [P2] /chatswood-chase-chatswood-nsw — Refresh content — update with current information, examples, and internal links to lift relevance.
+   21. [P2] /chatswood-golf-club-chatswood-nsw — Refresh content — update with current information, examples, and internal links to lift relevance.
+   22. [P2] /chatswood-hosts-nsw-doctors-orchestra-fundraising-concert — Refresh content — update with current information, examples, and internal links to lift relevance.
+
+Capacity assumption: ~22 pages/month. Claude drafts → team reviews + publishes. Specific next steps are on each page row in the WQA approvals.",Content,P2,cassy@smileandgrow.com.au,cassy,2027-03-01,2027-03-31,7,pending,False,True,False,False,False,updated,,"content, content-updated, heavy-batch, p2",Content,Content batch,"https://simplydentalchatswood.com.au/blog/teeth-whitening-aftercare; https://simplydentalchatswood.com.au/blog/teeth-whitening-facts-you-should-know; https://simplydentalchatswood.com.au/blog/teeth-whitening-safety-tips; https://simplydentalchatswood.com.au/blog/the-best-and-worst-foods-for-kids-teeth; https://simplydentalchatswood.com.au/blog/tips-to-keep-new-patients-attracted-to-the-dental-practice; https://simplydentalchatswood.com.au/blog/tooth-decay-causes-symptoms-and-treatment-options; https://simplydentalchatswood.com.au/blog/tooth-sensitivity-after-whitening; https://simplydentalchatswood.com.au/blog/when-to-replace-dental-veneers; https://simplydentalchatswood.com.au/blog/when-to-seek-emergency-dentist; https://simplydentalchatswood.com.au/blog/when-you-need-a-dental-filling; https://simplydentalchatswood.com.au/blog/why-dental-implants-are-preferred; https://simplydentalchatswood.com.au/blog/why-do-gums-bleed-when-gently-brushed; https://simplydentalchatswood.com.au/blog/why-no-dairy-after-dental-implant; https://simplydentalchatswood.com.au/blog/why-regular-dental-check-ups-are-important; https://simplydentalchatswood.com.au/blog/why-sleep-apnea-can-become-dangerous; https://simplydentalchatswood.com.au/blog/why-some-dental-implants-fail; https://simplydentalchatswood.com.au/blog/why-tartar-removal-is-important/ (8,090 impr), /blog/why-periodontal-cleaning-is-important; https://simplydentalchatswood.com.au/blog/wisdom-tooth-removal; https://simplydentalchatswood.com.au/bupa-dentist-chatswood; https://simplydentalchatswood.com.au/chatswood-chase-chatswood-nsw; https://simplydentalchatswood.com.au/chatswood-golf-club-chatswood-nsw; https://simplydentalchatswood.com.au/chatswood-hosts-nsw-doctors-orchestra-fundraising-concert"
+,Sprint 4 (Content),4,Rewrite/refresh 22 pages — Month 8,"Rewrite/refresh batch — Month 8 (22 pages, priority order):
+Actions in this batch: Consolidate / Refresh content / Rewrite
+
+    1. [P2] /chatswood-interchange-chatswood-nsw — Refresh content — update with current information, examples, and internal links to lift relevance.
+    2. [P2] /consent-fixed-prosthodontics — Refresh content — update with current information, examples, and internal links to lift relevance.
+    3. [P2] /hallstrom-park-willoughby-nsw — Refresh content — update with current information, examples, and internal links to lift relevance.
+    4. [P2] /how-does-invisalign-work — Refresh content — update with current information, examples, and internal links to lift relevance.
+    5. [P2] /how-to-find-a-good-dentist-in-sydney — Refresh content — update with current information, examples, and internal links to lift relevance.
+    6. [P2] /lane-cove-national-park — Refresh content — update with current information, examples, and internal links to lift relevance.
+    7. [P2] /llms.txt — Refresh content — update with current information, examples, and internal links to lift relevance.
+    8. [P2] /ms-roheena-khojah — Refresh content — update with current information, examples, and internal links to lift relevance.
+    9. [P2] /muston-park-chatswood-nsw — Refresh content — update with current information, examples, and internal links to lift relevance.
+   10. [P2] /new-patient-comprehensive-exam — Refresh content — update with current information, examples, and internal links to lift relevance.
+   11. [P2] /new-patient-medical-history — Refresh content — update with current information, examples, and internal links to lift relevance.
+   12. [P2] /about-us/our-team — Thin authority page (144w). Expand with credentials, expertise, social proof, schema.
+   13. [P2] /our-team/dr-antonio-najdovski — Thin authority page (207w). Expand with credentials, expertise, social proof, schema.
+   14. [P2] /our-team/dr-geetanjali-mamutil — Thin authority page (259w). Expand with credentials, expertise, social proof, schema.
+   15. [P2] /our-team/dr-sakshi-gupta — Thin authority page (231w). Expand with credentials, expertise, social proof, schema.
+   16. [P2] /our-team/jenni-herman — Thin authority page (191w). Expand with credentials, expertise, social proof, schema.
+   17. [P3] /toothache-pain — Overlaps with another page on the site (thin/duplicate topical coverage). Consolidate into the stronger page and 301 red
+   18. [P3] /top-qualities-dentist-chatswood — Overlaps with another page on the site (thin/duplicate topical coverage). Consolidate into the stronger page and 301 red
+   19. [P3] /visiting-your-dental-hygienist-regularly — Overlaps with another page on the site (thin/duplicate topical coverage). Consolidate into the stronger page and 301 red
+   20. [P3] /vivid-sydney — Overlaps with another page on the site (thin/duplicate topical coverage). Consolidate into the stronger page and 301 red
+   21. [P3] /what-are-wisdom-teeth — Overlaps with another page on the site (thin/duplicate topical coverage). Consolidate into the stronger page and 301 red
+   22. [P3] /what-to-eat-after-root-canal-treatment-2 — Overlaps with another page on the site (thin/duplicate topical coverage). Consolidate into the stronger page and 301 red
+
+Capacity assumption: ~22 pages/month. Claude drafts → team reviews + publishes. Specific next steps are on each page row in the WQA approvals.",Content,P2,cassy@smileandgrow.com.au,cassy,2027-04-01,2027-04-30,8,pending,False,True,False,False,False,updated,,"content, content-updated, heavy-batch, p2",Content,Content batch,https://simplydentalchatswood.com.au/chatswood-interchange-chatswood-nsw; https://simplydentalchatswood.com.au/consent-fixed-prosthodontics; https://simplydentalchatswood.com.au/hallstrom-park-willoughby-nsw; https://simplydentalchatswood.com.au/how-does-invisalign-work; https://simplydentalchatswood.com.au/how-to-find-a-good-dentist-in-sydney; https://simplydentalchatswood.com.au/lane-cove-national-park; https://simplydentalchatswood.com.au/llms.txt; https://simplydentalchatswood.com.au/ms-roheena-khojah; https://simplydentalchatswood.com.au/muston-park-chatswood-nsw; https://simplydentalchatswood.com.au/new-patient-comprehensive-exam; https://simplydentalchatswood.com.au/new-patient-medical-history; https://simplydentalchatswood.com.au/about-us/our-team; https://simplydentalchatswood.com.au/our-team/dr-antonio-najdovski; https://simplydentalchatswood.com.au/our-team/dr-geetanjali-mamutil; https://simplydentalchatswood.com.au/our-team/dr-sakshi-gupta; https://simplydentalchatswood.com.au/our-team/jenni-herman; https://simplydentalchatswood.com.au/toothache-pain; https://simplydentalchatswood.com.au/top-qualities-dentist-chatswood; https://simplydentalchatswood.com.au/visiting-your-dental-hygienist-regularly; https://simplydentalchatswood.com.au/vivid-sydney; https://simplydentalchatswood.com.au/what-are-wisdom-teeth; https://simplydentalchatswood.com.au/what-to-eat-after-root-canal-treatment-2
+,Sprint 4 (Content),4,Rewrite/refresh 22 pages — Month 9,"Rewrite/refresh batch — Month 9 (22 pages, priority order):
+Actions in this batch: Consolidate / Expand content
+
+    1. [P3] /work-at-simply-dental-chatswood — Overlaps with another page on the site (thin/duplicate topical coverage). Consolidate into the stronger page and 301 red
+    2. [P3] /wp-login.php — Overlaps with another page on the site (thin/duplicate topical coverage). Consolidate into the stronger page and 301 red
+    3. [P3] /your-dental-health-insurance-guide-dental-check-up-clean — Overlaps with another page on the site (thin/duplicate topical coverage). Consolidate into the stronger page and 301 red
+    4. [P3] /blog — Thin content (403w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    5. [P3] /blog/benefits-of-regular-dental-care — Thin content (383w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    6. [P3] /blog/can-dental-implants-get-cavities-what-you-need-to-know — Thin content (555w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    7. [P3] /blog/can-porcelain-veneers-become-stained — Thin content (553w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    8. [P3] /blog/chatswood-dental-centre-excels-in-sleep-dentistry-and-implants — Thin content (373w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    9. [P3] /blog/chatswood-dental-clinic-dental-care-options — Thin content (321w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   10. [P3] /blog/choosing-the-right-teeth-whitening-treatment — Thin content (556w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   11. [P3] /blog/comprehensive-planning-to-restore-dental-health — Thin content (617w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   12. [P3] /blog/dental-checkup-frequency — Thin content (442w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   13. [P3] /blog/do-you-need-straight-teeth-for-veneers — Thin content (605w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   14. [P3] /blog/how-acid-attack-on-teeth-can-damage-your-smile — Thin content (524w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   15. [P3] /blog/how-long-does-a-dental-implant-procedure-take — Thin content (567w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   16. [P3] /blog/how-to-prevent-periodontal-disease — Thin content (551w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   17. [P3] /blog/how-to-tell-if-you-grind-your-teeth — Thin content (607w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   18. [P3] /blog/new-fortinet-and-spectralink-system-installed-at-chatswood-private-hospital — Thin content (479w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   19. [P3] /blog/porcelain-veneers-key-considerations — Thin content (552w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   20. [P3] /blog/reasons-for-tooth-loss — Thin content (606w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   21. [P3] /blog/risks-of-skipping-routine-dental-cleanings — Thin content (517w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+   22. [P3] /blog/surprising-dental-implant-facts-you-may-not-know — Thin content (489w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+
+Capacity assumption: ~22 pages/month. Claude drafts → team reviews + publishes. Specific next steps are on each page row in the WQA approvals.",Content,P3,cassy@smileandgrow.com.au,cassy,2027-05-01,2027-05-31,9,pending,False,True,False,False,False,updated,,"content, content-updated, heavy-batch, p3",Content,Content batch,https://simplydentalchatswood.com.au/work-at-simply-dental-chatswood; https://simplydentalchatswood.com.au/wp-login.php; https://simplydentalchatswood.com.au/your-dental-health-insurance-guide-dental-check-up-clean; https://simplydentalchatswood.com.au/blog; https://simplydentalchatswood.com.au/blog/benefits-of-regular-dental-care; https://simplydentalchatswood.com.au/blog/can-dental-implants-get-cavities-what-you-need-to-know; https://simplydentalchatswood.com.au/blog/can-porcelain-veneers-become-stained; https://simplydentalchatswood.com.au/blog/chatswood-dental-centre-excels-in-sleep-dentistry-and-implants; https://simplydentalchatswood.com.au/blog/chatswood-dental-clinic-dental-care-options; https://simplydentalchatswood.com.au/blog/choosing-the-right-teeth-whitening-treatment; https://simplydentalchatswood.com.au/blog/comprehensive-planning-to-restore-dental-health; https://simplydentalchatswood.com.au/blog/dental-checkup-frequency; https://simplydentalchatswood.com.au/blog/do-you-need-straight-teeth-for-veneers; https://simplydentalchatswood.com.au/blog/how-acid-attack-on-teeth-can-damage-your-smile; https://simplydentalchatswood.com.au/blog/how-long-does-a-dental-implant-procedure-take; https://simplydentalchatswood.com.au/blog/how-to-prevent-periodontal-disease; https://simplydentalchatswood.com.au/blog/how-to-tell-if-you-grind-your-teeth; https://simplydentalchatswood.com.au/blog/new-fortinet-and-spectralink-system-installed-at-chatswood-private-hospital; https://simplydentalchatswood.com.au/blog/porcelain-veneers-key-considerations; https://simplydentalchatswood.com.au/blog/reasons-for-tooth-loss; https://simplydentalchatswood.com.au/blog/risks-of-skipping-routine-dental-cleanings; https://simplydentalchatswood.com.au/blog/surprising-dental-implant-facts-you-may-not-know
+,Sprint 4 (Content),4,Rewrite/refresh 9 pages — Month 10,"Rewrite/refresh batch — Month 10 (9 pages, priority order):
+Actions in this batch: Expand content
+
+    1. [P3] /blog/what-to-do-if-your-dislodged-filling-falls-out — Thin content (584w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    2. [P3] /blog/what-to-do-if-your-porcelain-veneers-fall-off — Thin content (571w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    3. [P3] /blog/why-you-need-to-drink-water-for-healthy-teeth — Thin content (563w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    4. [P3] /book-online — Thin content (57w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    5. [P3] /cancellation-policy — Thin content (484w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    6. [P3] /contact-us — Thin content (140w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    7. [P3] /cookie-policy — Thin content (454w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    8. [P3] /privacy-policy — Thin content (467w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+    9. [P3] /terms-and-conditions — Thin content (428w). Expand to 1,000w+ OR consolidate/noindex if low-value.
+
+Capacity assumption: ~22 pages/month. Claude drafts → team reviews + publishes. Specific next steps are on each page row in the WQA approvals.",Content,P3,cassy@smileandgrow.com.au,cassy,2027-06-01,2027-06-30,10,pending,False,True,False,False,False,updated,,"content, content-updated, heavy-batch, p3",Content,Content batch,https://simplydentalchatswood.com.au/blog/what-to-do-if-your-dislodged-filling-falls-out; https://simplydentalchatswood.com.au/blog/what-to-do-if-your-porcelain-veneers-fall-off; https://simplydentalchatswood.com.au/blog/why-you-need-to-drink-water-for-healthy-teeth; https://simplydentalchatswood.com.au/book-online; https://simplydentalchatswood.com.au/cancellation-policy; https://simplydentalchatswood.com.au/contact-us; https://simplydentalchatswood.com.au/cookie-policy; https://simplydentalchatswood.com.au/privacy-policy; https://simplydentalchatswood.com.au/terms-and-conditions
+,Sprint 4 (Content),4,Update titles + metas — 42 URLs,"Bulk metadata work — Rewrite title/meta across 42 URLs.
+Quick wins; batch in Month 3 then sweep the next month for tail items.
+
+    1. [P2] /areas-served/dentist-north-ryde — High impressions (1,055) but low CTR (0.1%) at pos 8.5. Rewrite title/meta to match intent + add a hook.
+    2. [P2] /areas-served/dentist-willoughby-nsw — High impressions (1,528) but low CTR (0.1%) at pos 16.9. Rewrite title/meta to match intent + add a hook.
+    3. [P2] /blog/4-ways-to-prevent-bone-loss-after-tooth-extraction — High impressions (1,477) but low CTR (0.6%) at pos 10.3. Rewrite title/meta to match intent + add a hook.
+    4. [P2] /blog/6-types-of-dentists-specialisations — High impressions (4,107) but low CTR (0.5%) at pos 12.2. Rewrite title/meta to match intent + add a hook.
+    5. [P2] /blog/bad-breath-after-tooth-extraction — High impressions (49,542) but low CTR (0.1%) at pos 9.9. Rewrite title/meta to match intent + add a hook.
+    6. [P2] /blog/bite-splint-vs-night-guard — High impressions (1,908) but low CTR (0.4%) at pos 15.2. Rewrite title/meta to match intent + add a hook.
+    7. [P2] /blog/choosing-the-best-dental-insurance — High impressions (2,588) but low CTR (0.0%) at pos 60.7. Rewrite title/meta to match intent + add a hook.
+    8. [P2] /blog/choosing-tooth-extraction-vs-surgical-tooth-removal — High impressions (1,092) but low CTR (0.1%) at pos 18.2. Rewrite title/meta to match intent + add a hook.
+    9. [P2] /blog/dental-cavity-stages — High impressions (4,923) but low CTR (0.2%) at pos 16.1. Rewrite title/meta to match intent + add a hook.
+   10. [P2] /blog/dental-extraction-tools — High impressions (17,498) but low CTR (0.4%) at pos 8.9. Rewrite title/meta to match intent + add a hook.
+   11. [P2] /blog/dental-screening-essentials — High impressions (4,717) but low CTR (0.0%) at pos 15.2. Rewrite title/meta to match intent + add a hook.
+   12. [P2] /blog/do-kids-lose-all-their-teeth — High impressions (1,306) but low CTR (0.3%) at pos 10.1. Rewrite title/meta to match intent + add a hook.
+   13. [P2] /blog/does-a-scale-and-clean-hurt — High impressions (9,234) but low CTR (0.6%) at pos 8.4. Rewrite title/meta to match intent + add a hook.
+   14. [P2] /blog/gums-bleeding-when-brushing-teeth — High impressions (2,155) but low CTR (0.2%) at pos 17.2. Rewrite title/meta to match intent + add a hook.
+   15. [P2] /blog/how-much-does-teeth-whitening-cost-in-australia — High impressions (2,132) but low CTR (0.0%) at pos 31.6. Rewrite title/meta to match intent + add a hook.
+   16. [P2] /blog/how-to-clean-dentures-naturally-at-home-using-baking-soda — High impressions (53,449) but low CTR (0.6%) at pos 7.3. Rewrite title/meta to match intent + add a hook.
+   17. [P2] /blog/how-to-fix-overbite — High impressions (11,652) but low CTR (0.1%) at pos 33.2. Rewrite title/meta to match intent + add a hook.
+   18. [P2] /blog/how-to-improve-teeth-shape-and-alignment — High impressions (1,359) but low CTR (0.1%) at pos 7.1. Rewrite title/meta to match intent + add a hook.
+   19. [P2] /blog/how-to-know-if-you-have-gum-disease — High impressions (1,812) but low CTR (0.0%) at pos 52.0. Rewrite title/meta to match intent + add a hook.
+   20. [P2] /blog/how-to-treat-sensitive-teeth — High impressions (1,058) but low CTR (0.0%) at pos 50.8. Rewrite title/meta to match intent + add a hook.
+   21. [P2] /blog/is-sleep-apnoea-hereditary — High impressions (2,337) but low CTR (0.0%) at pos 20.1. Rewrite title/meta to match intent + add a hook.
+   22. [P2] /blog/long-term-effects-of-tooth-extraction — High impressions (15,559) but low CTR (0.4%) at pos 12.7. Rewrite title/meta to match intent + add a hook.
+   23. [P2] /blog/overbite-correction-guide — High impressions (5,068) but low CTR (0.1%) at pos 21.4. Rewrite title/meta to match intent + add a hook.
+   24. [P2] /blog/private-health-insurance-cover-in-australia — High impressions (1,232) but low CTR (0.0%) at pos 39.0. Rewrite title/meta to match intent + add a hook.
+   25. [P2] /blog/root-canal-treatment-explained — High impressions (1,717) but low CTR (0.1%) at pos 55.4. Rewrite title/meta to match intent + add a hook.
+   26. [P2] /blog/signs-of-tooth-infection — High impressions (59,846) but low CTR (0.1%) at pos 10.8. Rewrite title/meta to match intent + add a hook.
+   27. [P2] /blog/tooth-eruption-guide-for-parents — High impressions (7,714) but low CTR (0.1%) at pos 5.2. Rewrite title/meta to match intent + add a hook.
+   28. [P2] /blog/tooth-extraction-step-by-step — High impressions (71,871) but low CTR (0.3%) at pos 19.4. Rewrite title/meta to match intent + add a hook.
+   29. [P2] /blog/tooth-loss-age-chart — High impressions (332,652) but low CTR (0.3%) at pos 8.9. Rewrite title/meta to match intent + add a hook.
+   30. [P2] /blog/types-of-dental-fillings — High impressions (4,666) but low CTR (0.2%) at pos 17.5. Rewrite title/meta to match intent + add a hook.
+   31. [P2] /blog/underbite-vs-overbite-differences — High impressions (3,681) but low CTR (0.1%) at pos 20.4. Rewrite title/meta to match intent + add a hook.
+   32. [P2] /blog/understanding-bupa-dental-coverage-in-chatswood — High impressions (6,170) but low CTR (0.2%) at pos 7.0. Rewrite title/meta to match intent + add a hook.
+   33. [P2] /blog/veneers-and-crowns-key-differences — High impressions (1,039) but low CTR (0.0%) at pos 15.7. Rewrite title/meta to match intent + add a hook.
+   34. [P2] /blog/what-to-eat-after-root-canal-treatment — High impressions (4,330) but low CTR (0.1%) at pos 18.2. Rewrite title/meta to match intent + add a hook.
+   35. [P2] /blog/what-to-eat-after-wisdom-tooth-extraction — High impressions (4,143) but low CTR (0.2%) at pos 9.5. Rewrite title/meta to match intent + add a hook.
+   36. [P2] /blog/when-is-wisdom-teeth-removal-needed — High impressions (1,446) but low CTR (0.1%) at pos 34.0. Rewrite title/meta to match intent + add a hook.
+   37. [P2] /blog/why-periodontal-cleaning-is-important — High impressions (3,999) but low CTR (0.2%) at pos 14.4. Rewrite title/meta to match intent + add a hook.
+   38. [P2] /blog/why-tartar-removal-is-important — High impressions (4,981) but low CTR (0.1%) at pos 11.3. Rewrite title/meta to match intent + add a hook.
+   39. [P2] /blog/why-you-cannot-remove-cavities-at-home — High impressions (2,600) but low CTR (0.3%) at pos 12.6. Rewrite title/meta to match intent + add a hook.
+   40. [P2] /book-online — High impressions (1,898) but low CTR (0.8%) at pos 17.3. Rewrite title/meta to match intent + add a hook.
+   41. [P2] /contact-us — High impressions (1,260) but low CTR (0.6%) at pos 4.8. Rewrite title/meta to match intent + add a hook.
+   42. [P2] /services — High impressions (1,870) but low CTR (1.4%) at pos 8.0. Rewrite title/meta to match intent + add a hook.",Content,P2,cassy@smileandgrow.com.au,cassy,2026-11-01,2026-11-08,3,pending,False,False,False,False,False,,,"content, p2",Content,Rewrite title/meta,https://simplydentalchatswood.com.au/areas-served/dentist-north-ryde; https://simplydentalchatswood.com.au/areas-served/dentist-willoughby-nsw; https://simplydentalchatswood.com.au/blog/4-ways-to-prevent-bone-loss-after-tooth-extraction; https://simplydentalchatswood.com.au/blog/6-types-of-dentists-specialisations; https://simplydentalchatswood.com.au/blog/bad-breath-after-tooth-extraction; https://simplydentalchatswood.com.au/blog/bite-splint-vs-night-guard; https://simplydentalchatswood.com.au/blog/choosing-the-best-dental-insurance; https://simplydentalchatswood.com.au/blog/choosing-tooth-extraction-vs-surgical-tooth-removal; https://simplydentalchatswood.com.au/blog/dental-cavity-stages; https://simplydentalchatswood.com.au/blog/dental-extraction-tools; https://simplydentalchatswood.com.au/blog/dental-screening-essentials; https://simplydentalchatswood.com.au/blog/do-kids-lose-all-their-teeth; https://simplydentalchatswood.com.au/blog/does-a-scale-and-clean-hurt; https://simplydentalchatswood.com.au/blog/gums-bleeding-when-brushing-teeth; https://simplydentalchatswood.com.au/blog/how-much-does-teeth-whitening-cost-in-australia; https://simplydentalchatswood.com.au/blog/how-to-clean-dentures-naturally-at-home-using-baking-soda; https://simplydentalchatswood.com.au/blog/how-to-fix-overbite; https://simplydentalchatswood.com.au/blog/how-to-improve-teeth-shape-and-alignment; https://simplydentalchatswood.com.au/blog/how-to-know-if-you-have-gum-disease; https://simplydentalchatswood.com.au/blog/how-to-treat-sensitive-teeth; https://simplydentalchatswood.com.au/blog/is-sleep-apnoea-hereditary; https://simplydentalchatswood.com.au/blog/long-term-effects-of-tooth-extraction; https://simplydentalchatswood.com.au/blog/overbite-correction-guide; https://simplydentalchatswood.com.au/blog/private-health-insurance-cover-in-australia; https://simplydentalchatswood.com.au/blog/root-canal-treatment-explained; https://simplydentalchatswood.com.au/blog/signs-of-tooth-infection; https://simplydentalchatswood.com.au/blog/tooth-eruption-guide-for-parents; https://simplydentalchatswood.com.au/blog/tooth-extraction-step-by-step; https://simplydentalchatswood.com.au/blog/tooth-loss-age-chart; https://simplydentalchatswood.com.au/blog/types-of-dental-fillings; https://simplydentalchatswood.com.au/blog/underbite-vs-overbite-differences; https://simplydentalchatswood.com.au/blog/understanding-bupa-dental-coverage-in-chatswood; https://simplydentalchatswood.com.au/blog/veneers-and-crowns-key-differences; https://simplydentalchatswood.com.au/blog/what-to-eat-after-root-canal-treatment; https://simplydentalchatswood.com.au/blog/what-to-eat-after-wisdom-tooth-extraction; https://simplydentalchatswood.com.au/blog/when-is-wisdom-teeth-removal-needed; https://simplydentalchatswood.com.au/blog/why-periodontal-cleaning-is-important; https://simplydentalchatswood.com.au/blog/why-tartar-removal-is-important; https://simplydentalchatswood.com.au/blog/why-you-cannot-remove-cavities-at-home; https://simplydentalchatswood.com.au/book-online; https://simplydentalchatswood.com.au/contact-us; https://simplydentalchatswood.com.au/services
+,Sprint 4 (Content),4,Update onpage elements — 169 URLs,"Bulk metadata work — Update onpage across 169 URLs.
+Quick wins; batch in Month 3 then sweep the next month for tail items.
+
+    1. [P2] /areas-served/dentist-north-ryde — Striking distance — pos 8.5 with 1,055 imp. Refresh content + add internal links to push into top 5.
+    2. [P2] /blog/4-ways-to-prevent-bone-loss-after-tooth-extraction — Striking distance — pos 10.3 with 1,477 imp. Refresh content + add internal links to push into top 5.
+    3. [P2] /blog/6-types-of-dentists-specialisations — Striking distance — pos 12.2 with 4,107 imp. Refresh content + add internal links to push into top 5.
+    4. [P2] /blog/bad-breath-after-tooth-extraction — Striking distance — pos 9.9 with 49,542 imp. Refresh content + add internal links to push into top 5.
+    5. [P2] /blog/benefits-of-teeth-cleaning — Striking distance — pos 12.3 with 633 imp. Refresh content + add internal links to push into top 5.
+    6. [P2] /blog/can-porcelain-veneers-crack — Striking distance — pos 7.9 with 708 imp. Refresh content + add internal links to push into top 5.
+    7. [P2] /blog/deep-cleaning-and-teeth-whitening-guide — Striking distance — pos 13.8 with 606 imp. Refresh content + add internal links to push into top 5.
+    8. [P2] /blog/dental-anxiety-causes-signs-and-solutions — Update on-page elements (title/H1/meta as needed) — current title: “Dental Anxiety: Causes, Signs & Solutions | Chatswoo
+    9. [P2] /blog/dental-bridge-procedure-guide — Update on-page elements (title/H1/meta as needed) — current title: “Dental Bridge Procedure Guide | Restore Missing Teet
+   10. [P2] /blog/dental-bridge-what-it-is-and-when-you-need-one — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+   11. [P2] /blog/dental-extraction-tools — Striking distance — pos 8.9 with 17,498 imp. Refresh content + add internal links to push into top 5.
+   12. [P2] /blog/do-kids-lose-all-their-teeth — Striking distance — pos 10.1 with 1,306 imp. Refresh content + add internal links to push into top 5.
+   13. [P2] /blog/does-a-scale-and-clean-hurt — Striking distance — pos 8.4 with 9,234 imp. Refresh content + add internal links to push into top 5.
+   14. [P2] /blog/how-to-care-for-your-childs-deciduous-teeth — Striking distance — pos 10.4 with 505 imp. Refresh content + add internal links to push into top 5.
+   15. [P2] /blog/how-to-clean-dentures-naturally-at-home-using-baking-soda — Striking distance — pos 7.3 with 53,449 imp. Refresh content + add internal links to push into top 5.
+   16. [P2] /blog/how-to-improve-teeth-shape-and-alignment — Striking distance — pos 7.1 with 1,359 imp. Refresh content + add internal links to push into top 5.
+   17. [P2] /blog/how-to-remove-black-stains-from-your-teeth — Update on-page elements (title/H1/meta as needed) — current title: “How to Remove Black Stains from Teeth | Chatswood De
+   18. [P2] /blog/how-to-remove-plaque-from-dentures — Update on-page elements (title/H1/meta as needed) — current title: “How to Care for Dental Veneers | Chatswood Cosmetic 
+   19. [P2] /blog/how-to-stop-bleeding-gums — Update on-page elements (title/H1/meta as needed) — current title: “How to Stop Bleeding Gums: Causes and Effective Solu
+   20. [P2] /blog/how-to-take-care-of-veneers — Update on-page elements (title/H1/meta as needed) — current title: “How to Take Care of Veneers? Expert Guide”. Align wi
+   21. [P2] /blog/how-to-whiten-dentures — Update on-page elements (title/H1/meta as needed) — current title: “How to Whiten Dentures Effectively | Chatswood Denta
+   22. [P2] /blog/how-veneers-restore-your-beautiful-smile — Update on-page elements (title/H1/meta as needed) — current title: “Cosmetic Dentistry with Veneers | Restore Your Smile
+   23. [P2] /blog/how-your-weight-causes-sleep-apnea — Update on-page elements (title/H1/meta as needed) — current title: “How Weight Impacts Sleep Apnea | Chatswood Oral Heal
+   24. [P2] /blog/importance-of-paediatric-dentists-for-childrens-oral-health — Update on-page elements (title/H1/meta as needed) — current title: “Importance of Paediatric Dentists | Chatswood NSW”. 
+   25. [P2] /blog/importance-of-regular-dental-checkups — Update on-page elements (title/H1/meta as needed) — current title: “Importance of Regular Dental Checkups | Simply Denta
+   26. [P2] /blog/importance-of-saliva-in-oral-health — Update on-page elements (title/H1/meta as needed) — current title: “Importance of Saliva in Oral Health | Chatswood Dent
+   27. [P2] /blog/interesting-facts-about-dental-implants — Update on-page elements (title/H1/meta as needed) — current title: “Dental Implants | Expert Insights & Facts You Should
+   28. [P2] /blog/invisalign-a-modern-approach-to-orthodontic-treatment — Striking distance — pos 12.2 with 538 imp. Refresh content + add internal links to push into top 5.
+   29. [P2] /blog/is-whitening-bad-for-my-teeth — Update on-page elements (title/H1/meta as needed) — current title: “Is Teeth Whitening Bad for Your Teeth? | Chatswood D
+   30. [P2] /blog/keeping-kids-teeth-healthy-through-childrens-dentistry — Update on-page elements (title/H1/meta as needed) — current title: “Keeping Kids’ Teeth Healthy | Children’s Dentist Cha
+   31. [P2] /blog/keeping-your-teeth-clean-with-braces — Update on-page elements (title/H1/meta as needed) — current title: “How to Keep Teeth Clean with Braces | Chatswood Dent
+   32. [P2] /blog/knocked-out-tooth-emergency-chatswood — Update on-page elements (title/H1/meta as needed) — current title: “Knocked-Out Tooth Emergency | Chatswood Emergency De
+   33. [P2] /blog/laser-teeth-whitening-process — Update on-page elements (title/H1/meta as needed) — current title: “Laser Teeth Whitening Process Explained | Chatswood 
+   34. [P2] /blog/long-lasting-dental-crowns-chatswood — Update on-page elements (title/H1/meta as needed) — current title: “Long-Lasting Dental Crowns | Chatswood Restorative D
+   35. [P2] /blog/long-term-effects-of-tooth-extraction — Striking distance — pos 12.7 with 15,559 imp. Refresh content + add internal links to push into top 5.
+   36. [P2] /blog/maintain-white-teeth-after-whitening — Update on-page elements (title/H1/meta as needed) — current title: “How to Maintain White Teeth After Professional White
+   37. [P2] /blog/oral-health-and-your-immune-system — Update on-page elements (title/H1/meta as needed) — current title: “Oral Health and Your Immune System | Chatswood Denti
+   38. [P2] /blog/porcelain-veneers-vs-dental-crowns — Update on-page elements (title/H1/meta as needed) — current title: “Porcelain Veneers vs Dental Crowns | Chatswood Denti
+   39. [P2] /blog/preparing-a-child-who-is-afraid-of-the-dentist — Update on-page elements (title/H1/meta as needed) — current title: “How To Help Your Child Overcome Fear of the Dentist”
+   40. [P2] /blog/private-health-insurance-benefits-explained — Update on-page elements (title/H1/meta as needed) — current title: “Private Health Insurance Dental Cover Explained | Ch
+   41. [P2] /blog/process-of-tooth-decay — Update on-page elements (title/H1/meta as needed) — current title: “Tooth Decay Process Explained | Chatswood Dentist”. 
+   42. [P2] /blog/professional-teeth-whitening-at-home-guide — Update on-page elements (title/H1/meta as needed) — current title: “Teeth Whitening at Home | Ultimate Guide for a Radia
+   43. [P2] /blog/qualities-to-look-for-in-a-dentist — Update on-page elements (title/H1/meta as needed) — current title: “Top Qualities to Look for in a Dentist in Chatswood”
+   44. [P2] /blog/reasons-for-sensitive-teeth — Update on-page elements (title/H1/meta as needed) — current title: “Reasons for Sensitive Teeth | Chatswood Dentist”. Al
+   45. [P2] /blog/reducing-childs-dental-fear — Update on-page elements (title/H1/meta as needed) — current title: “Reduce Your Child’s Fear of the Dentist | Chatswood 
+   46. [P2] /blog/root-canal-recovery-time — Update on-page elements (title/H1/meta as needed) — current title: “Root Canal Recovery Time Explained | Simply Dental C
+   47. [P2] /blog/signs-of-tooth-infection — Striking distance — pos 10.8 with 59,846 imp. Refresh content + add internal links to push into top 5.
+   48. [P2] /blog/tooth-eruption-guide-for-parents — Striking distance — pos 5.2 with 7,714 imp. Refresh content + add internal links to push into top 5.
+   49. [P2] /blog/tooth-loss-age-chart — Striking distance — pos 8.9 with 332,652 imp. Refresh content + add internal links to push into top 5.
+   50. [P2] /blog/understanding-bupa-dental-coverage-in-chatswood — Striking distance — pos 7.0 with 6,170 imp. Refresh content + add internal links to push into top 5.
+   51. [P2] /blog/what-to-do-if-your-dislodged-filling-falls-out — Striking distance — pos 8.5 with 639 imp. Refresh content + add internal links to push into top 5.
+   52. [P2] /blog/what-to-eat-after-wisdom-tooth-extraction — Striking distance — pos 9.5 with 4,143 imp. Refresh content + add internal links to push into top 5.
+   53. [P2] /blog/why-people-avoid-the-dentist — Striking distance — pos 9.4 with 886 imp. Refresh content + add internal links to push into top 5.
+   54. [P2] /blog/why-periodontal-cleaning-is-important — Striking distance — pos 14.4 with 3,999 imp. Refresh content + add internal links to push into top 5.
+   55. [P2] /blog/why-tartar-removal-is-important — Striking distance — pos 11.3 with 4,981 imp. Refresh content + add internal links to push into top 5.
+   56. [P2] /blog/why-you-cannot-remove-cavities-at-home — Striking distance — pos 12.6 with 2,600 imp. Refresh content + add internal links to push into top 5.
+   57. [P2] /contact-us — Striking distance — pos 4.8 with 1,260 imp. Refresh content + add internal links to push into top 5.
+   58. [P2] /o-h-reid-memorial-park-chatswood-nsw — Striking distance — pos 7.7 with 613 imp. Refresh content + add internal links to push into top 5.
+   59. [P2] /our-team/dr-antonio-najdovski — Striking distance — pos 7.3 with 545 imp. Refresh content + add internal links to push into top 5.
+   60. [P2] /our-team/dr-sakshi-gupta — Striking distance — pos 8.8 with 641 imp. Refresh content + add internal links to push into top 5.
+   61. [P2] /services — Striking distance — pos 8.0 with 1,870 imp. Refresh content + add internal links to push into top 5.
+   62. [P3] /areas-served/dentist-artarmon — Update on-page elements (title/H1/meta as needed) — current title: “Dentist in Artarmon | Simply Dental Chatswood”. Alig
+   63. [P3] /areas-served/dentist-balmain — Update on-page elements (title/H1/meta as needed) — current title: “Dentist in Balmain | Quality Dental Care”. Align wit
+   64. [P3] /areas-served/dentist-castle-cove-nsw — Update on-page elements (title/H1/meta as needed) — current title: “Dentist in Castle Cove | Simply Dental Chatswood”. A
+   65. [P3] /areas-served/dentist-castlecrag-nsw — Update on-page elements (title/H1/meta as needed) — current title: “Dentist in Castlecrag | Simply Dental Chatswood”. Al
+   66. [P3] /areas-served/dentist-east-ryde — Update on-page elements (title/H1/meta as needed) — current title: “Dentist East Ryde | Simply Dental Chatswood”. Align 
+   67. [P3] /areas-served/dentist-lane-cove-nsw — Update on-page elements (title/H1/meta as needed) — current title: “Dentist in Lane Cove | Simply Dental Chatswood”. Ali
+   68. [P3] /areas-served/lindfield-nsw — Update on-page elements (title/H1/meta as needed) — current title: “Dentist in Lindfield NSW | Simply Dental Chatswood”.
+   69. [P3] /artarmon-reserve — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+   70. [P3] /beauchamp-park-chatswood-nsw — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+   71. [P3] /benefits-of-regular-dental-check-ups — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+   72. [P3] /benefits-of-regular-dental-check-ups-2 — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+   73. [P3] /blog/5-key-benefits-of-dental-braces — Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.
+   74. [P3] /blog/are-your-teeth-crooked — Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.
+   75. [P3] /blog/benefits-of-dental-crowns-you-may-not-know — Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.
+   76. [P3] /blog/benefits-of-dental-floss — Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.
+   77. [P3] /blog/best-teeth-whitening-in-sydney — Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.
+   78. [P3] /blog/common-habits-that-damage-teeth — Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.
+   79. [P3] /blog/guide-to-popular-dental-implant-treatments — Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.
+   80. [P3] /blog/gums-bleeding-when-brushing-teeth — Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.
+   81. [P3] /blog/helping-children-enjoy-their-dental-visits — Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.
+   82. [P3] /blog/invisalign-for-busy-professionals — Update on-page elements (title/H1/meta as needed) — current title: “Is Invisalign Worth It For Busy Professionals In Cha
+   83. [P3] /blog/invisalign-or-braces — Update on-page elements (title/H1/meta as needed) — current title: “Invisalign or Braces: Which Works Faster? - Simply D
+   84. [P3] /blog/invisalign-vs-braces-vs-veneers-guide — Update on-page elements (title/H1/meta as needed) — current title: “Invisalign vs Braces vs Veneers | Expert Comparison”
+   85. [P3] /blog/invisalign-vs-braces-which-is-faster — Update on-page elements (title/H1/meta as needed) — current title: “Invisalign vs Braces: Which is Faster? | Chatswood I
+   86. [P3] /blog/root-canal-vs-tooth-extraction — Update on-page elements (title/H1/meta as needed) — current title: “Root Canal vs Tooth Extraction | Chatswood Dentist”.
+   87. [P3] /blog/scale-and-clean-vs-deep-clean — Update on-page elements (title/H1/meta as needed) — current title: “Scale and Clean vs Deep Clean: What's the Difference
+   88. [P3] /blog/should-you-ignore-a-toothache — Update on-page elements (title/H1/meta as needed) — current title: “Toothache Causes Risks and Dental Options”. Align wi
+   89. [P3] /blog/signs-and-causes-of-sleep-apnoea — Update on-page elements (title/H1/meta as needed) — current title: “Signs and Causes of Sleep Apnea | Chatswood Dental C
+   90. [P3] /blog/surprising-dental-implant-facts-you-may-not-know — Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword.
+   91. [P3] /blog/tooth-extraction-complete-guide — Update on-page elements (title/H1/meta as needed) — current title: “Tooth Extraction: A Complete Guide to the Procedure”
+   92. [P3] /blog/tooth-extraction-timeline-and-process — Update on-page elements (title/H1/meta as needed) — current title: “Tooth Extraction Process & Timeline | Expert Dental 
+   93. [P3] /blog/types-of-dentures-how-to-choose — Update on-page elements (title/H1/meta as needed) — current title: “Types of Dentures | Expert Guide to the Right Choice
+   94. [P3] /blog/types-of-toothache — Update on-page elements (title/H1/meta as needed) — current title: “Main Types of Toothache Explained | Chatswood Dentis
+   95. [P3] /blog/types-of-veneers-guide — Update on-page elements (title/H1/meta as needed) — current title: “Types of Dental Veneers Guide | Chatswood NSW”. Alig
+   96. [P3] /blog/understanding-common-dental-services — Update on-page elements (title/H1/meta as needed) — current title: “General Dental Services Guide | Comprehensive Oral C
+   97. [P3] /blog/understanding-shimmer-teeth-whitening — Update on-page elements (title/H1/meta as needed) — current title: “How to Get a Brighter, Whiter Smile with Teeth White
+   98. [P3] /blog/what-are-composite-veneers — Update on-page elements (title/H1/meta as needed) — current title: “Composite Veneers | Affordable Solutions for Natural
+   99. [P3] /blog/what-are-fluoride-treatments — Update on-page elements (title/H1/meta as needed) — current title: “Fluoride Treatments | Proven Protection for Stronger
+  100. [P3] /blog/what-are-the-causes-of-dry-mouth — Update on-page elements (title/H1/meta as needed) — current title: “Causes Dry Mouth and Its Effect To Your Oral Health”
+  101. [P3] /blog/what-are-veneers-smile-makeover — Update on-page elements (title/H1/meta as needed) — current title: “Smile Makeover with Veneers | Chatswood Cosmetic Den
+  102. [P3] /blog/what-causes-gum-recession-and-how-it-is-treated — Update on-page elements (title/H1/meta as needed) — current title: “Gum Recession Treatment | Protect Your Smile”. Align
+  103. [P3] /blog/what-dentists-wish-patients-knew — Update on-page elements (title/H1/meta as needed) — current title: “What Dentists Wish Patients Knew Before Their Appoin
+  104. [P3] /blog/what-every-patient-should-know-about-root-canal-symptoms — Update on-page elements (title/H1/meta as needed) — current title: “Recognising Root Canal Symptoms: A Must-Read Guide”.
+  105. [P3] /blog/what-happens-during-a-scale-and-clean — Update on-page elements (title/H1/meta as needed) — current title: “What Happens During a Professional Scale and Clean? 
+  106. [P3] /blog/what-happens-if-you-skip-your-dental-clean — Update on-page elements (title/H1/meta as needed) — current title: “What Happens If You Skip Your Dental Clean for Years
+  107. [P3] /blog/what-is-a-dental-emergency — Update on-page elements (title/H1/meta as needed) — current title: “Dental Emergency | Expert Guide to Urgent Tooth Prob
+  108. [P3] /blog/what-is-dental-bonding — Update on-page elements (title/H1/meta as needed) — current title: “Dental Bonding: 7 Effective Benefits, Procedure & Af
+  109. [P3] /blog/what-is-dental-bridge — Update on-page elements (title/H1/meta as needed) — current title: “A Complete Guide to Dental Bridges for Missing Teeth
+  110. [P3] /blog/what-to-do-during-dental-emergency — Update on-page elements (title/H1/meta as needed) — current title: “Dental Emergency Chatswood | What to Do in Urgent Si
+  111. [P3] /blog/what-to-eat-after-root-canal-treatment-2 — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  112. [P3] /blog/what-to-eat-after-tooth-extraction-chatswood — Update on-page elements (title/H1/meta as needed) — current title: “What to Eat After Tooth Extraction: Recovery Diet Gu
+  113. [P3] /blog/what-to-expect-during-dental-checkup-in-chatswood — Update on-page elements (title/H1/meta as needed) — current title: “Dental Check-Up & Cleaning in Chatswood | What to Ex
+  114. [P3] /blog/what-to-expect-from-temporary-veneers — Update on-page elements (title/H1/meta as needed) — current title: “Temporary Veneers | Expert Results for a Confident S
+  115. [P3] /blog/what-to-know-before-getting-dental-veneers — Update on-page elements (title/H1/meta as needed) — current title: “Things to Know Before Getting Dental Veneers | Chats
+  116. [P3] /cosmetic-dentistry/composite-bonding — Update on-page elements (title/H1/meta as needed) — current title: “Composite Bonding: Natural Results | Simply Dental C
+  117. [P3] /cosmetic-dentistry/dental-veneers — Update on-page elements (title/H1/meta as needed) — current title: “Dental Veneers: Natural Smile | Simply Dental Chatsw
+  118. [P3] /cosmetic-dentistry/teeth-whitening-service — Update on-page elements (title/H1/meta as needed) — current title: “Teeth Whitening: Brighter Smile | Simply Dental Chat
+  119. [P3] /covid-19-news-and-updates — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  120. [P3] /dental-bridge-procedure-guide — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  121. [P3] /dental-hygienist — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  122. [P3] /dental-insurance-2 — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  123. [P3] /dental-records-request — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  124. [P3] /dentist-artarmon-your-one-stop-dental-care-expert-simply-dental — Update on-page elements (title/H1/meta as needed) — current title: “Dentist in Artarmon | Comprehensive Dental Care”. Al
+  125. [P3] /dr-henrietta-wu — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  126. [P3] /experience-exceptional-dental-care-with-simply-dental-lane-cove — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  127. [P3] /find-the-right-emergency-dentist — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  128. [P3] /general-dentistry/dental-check-up-and-clean — Update on-page elements (title/H1/meta as needed) — current title: “Comprehensive Dental Check-Up & Clean | Simply Denta
+  129. [P3] /general-dentistry/gum-disease-treatment — Update on-page elements (title/H1/meta as needed) — current title: “Gum Disease Treatment: Expert Care | Simply Dental C
+  130. [P3] /general-dentistry/pediatric-dentist — Update on-page elements (title/H1/meta as needed) — current title: “Pediatric Dentistry: Quality Care | Simply Dental Ch
+  131. [P3] /general-dentistry/sleep-disorder-centre — Update on-page elements (title/H1/meta as needed) — current title: “Sleep Disorder Centre: Better Sleep | Simply Dental 
+  132. [P3] /general-dentistry/tooth-extraction — Update on-page elements (title/H1/meta as needed) — current title: “Tooth Extraction: Quick & Painless | Simply Dental C
+  133. [P3] /orthodontics/braces — Update on-page elements (title/H1/meta as needed) — current title: “Braces | Simply Dental Chatswood”. Align with primar
+  134. [P3] /orthodontics/invisalign — Update on-page elements (title/H1/meta as needed) — current title: “Invisalign Chatswood | Simply Dental Chatswood”. Ali
+  135. [P3] /our-team/dr-denise-hsueh — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  136. [P3] /our-team/dr-henrietta-wu — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  137. [P3] /our-team/dr-jim-williamson — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  138. [P3] /preventing-bone-loss-after-tooth-extraction-treatment — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  139. [P3] /priceless-private-health-insurance-cover — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  140. [P3] /queen-victoria-b…ess-history-shop — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  141. [P3] /restorative-dentistry/dental-crowns-prosthodontist — Update on-page elements (title/H1/meta as needed) — current title: “Dental Crowns by a Prosthodontist | Expert Care in C
+  142. [P3] /restorative-dentistry/dental-fillings — Update on-page elements (title/H1/meta as needed) — current title: “Dental Fillings Chatswood | Restore Tooth Function”.
+  143. [P3] /restorative-dentistry/dental-implants — Update on-page elements (title/H1/meta as needed) — current title: “Dental Implants: Restore Function | Simply Dental Ch
+  144. [P3] /restorative-dentistry/denture-care-centre — Update on-page elements (title/H1/meta as needed) — current title: “Dentures Chatswood | Simply Dental Chatswood”. Align
+  145. [P3] /restorative-dentistry/root-canal-treatment — Update on-page elements (title/H1/meta as needed) — current title: “Root Canal Treatment in Chatswood | Expert Root Cana
+  146. [P3] /royal-north-shore-hospital — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  147. [P3] /service/check-up-clean — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  148. [P3] /service/restorative-dentistry — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  149. [P3] /services/cosmetic-dentistry/composite-bonding — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  150. [P3] /services/cosmetic-dentistry/dental-veneers — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  151. [P3] /services/cosmetic-dentistry/teeth-whitening-service — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  152. [P3] /services/general-dentistry/dental-check-up-and-clean — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  153. [P3] /services/general-dentistry/emergency-dental-service — Update on-page elements (title/H1/meta as needed) — current title: “Emergency Dental Service in Chatswood | Fast Care”. 
+  154. [P3] /services/general-dentistry/gum-disease-treatment — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  155. [P3] /services/general-dentistry/pediatric-dentist — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  156. [P3] /services/general-dentistry/sleep-disorder-centre — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  157. [P3] /services/general-dentistry/tooth-extraction — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  158. [P3] /services/general-dentistry/wisdom-tooth-removal — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  159. [P3] /services/orthodontics/braces — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  160. [P3] /services/orthodontics/invisalign — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  161. [P3] /services/restorative-dentistry/dental-crowns-prosthodontist — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  162. [P3] /services/restorative-dentistry/dental-fillings — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  163. [P3] /services/restorative-dentistry/dental-implants — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  164. [P3] /services/restorative-dentistry/dental-implants-periodontist — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  165. [P3] /services/restorative-dentistry/denture-care-centre — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  166. [P3] /services/restorative-dentistry/root-canal-treatment — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  167. [P3] /stringybark-creek-reserve — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  168. [P3] /sydney-botanic-gardens-peaceful-retreat — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.
+  169. [P3] /the-concourse-chatswood-nsw — Update on-page elements (title/H1/meta as needed). Align with primary search intent and target keyword.",Content,P2,cassy@smileandgrow.com.au,cassy,2026-11-01,2026-11-08,3,pending,False,False,False,False,False,,,"content, p2",Content,Update onpage,https://simplydentalchatswood.com.au/areas-served/dentist-north-ryde; https://simplydentalchatswood.com.au/blog/4-ways-to-prevent-bone-loss-after-tooth-extraction; https://simplydentalchatswood.com.au/blog/6-types-of-dentists-specialisations; https://simplydentalchatswood.com.au/blog/bad-breath-after-tooth-extraction; https://simplydentalchatswood.com.au/blog/benefits-of-teeth-cleaning; https://simplydentalchatswood.com.au/blog/can-porcelain-veneers-crack; https://simplydentalchatswood.com.au/blog/deep-cleaning-and-teeth-whitening-guide; https://simplydentalchatswood.com.au/blog/dental-anxiety-causes-signs-and-solutions; https://simplydentalchatswood.com.au/blog/dental-bridge-procedure-guide; https://simplydentalchatswood.com.au/blog/dental-bridge-what-it-is-and-when-you-need-one; https://simplydentalchatswood.com.au/blog/dental-extraction-tools; https://simplydentalchatswood.com.au/blog/do-kids-lose-all-their-teeth; https://simplydentalchatswood.com.au/blog/does-a-scale-and-clean-hurt; https://simplydentalchatswood.com.au/blog/how-to-care-for-your-childs-deciduous-teeth; https://simplydentalchatswood.com.au/blog/how-to-clean-dentures-naturally-at-home-using-baking-soda; https://simplydentalchatswood.com.au/blog/how-to-improve-teeth-shape-and-alignment; https://simplydentalchatswood.com.au/blog/how-to-remove-black-stains-from-your-teeth; https://simplydentalchatswood.com.au/blog/how-to-remove-plaque-from-dentures; https://simplydentalchatswood.com.au/blog/how-to-stop-bleeding-gums; https://simplydentalchatswood.com.au/blog/how-to-take-care-of-veneers; https://simplydentalchatswood.com.au/blog/how-to-whiten-dentures; https://simplydentalchatswood.com.au/blog/how-veneers-restore-your-beautiful-smile; https://simplydentalchatswood.com.au/blog/how-your-weight-causes-sleep-apnea; https://simplydentalchatswood.com.au/blog/importance-of-paediatric-dentists-for-childrens-oral-health; https://simplydentalchatswood.com.au/blog/importance-of-regular-dental-checkups; https://simplydentalchatswood.com.au/blog/importance-of-saliva-in-oral-health; https://simplydentalchatswood.com.au/blog/interesting-facts-about-dental-implants; https://simplydentalchatswood.com.au/blog/invisalign-a-modern-approach-to-orthodontic-treatment; https://simplydentalchatswood.com.au/blog/is-whitening-bad-for-my-teeth; https://simplydentalchatswood.com.au/blog/keeping-kids-teeth-healthy-through-childrens-dentistry; https://simplydentalchatswood.com.au/blog/keeping-your-teeth-clean-with-braces; https://simplydentalchatswood.com.au/blog/knocked-out-tooth-emergency-chatswood; https://simplydentalchatswood.com.au/blog/laser-teeth-whitening-process; https://simplydentalchatswood.com.au/blog/long-lasting-dental-crowns-chatswood; https://simplydentalchatswood.com.au/blog/long-term-effects-of-tooth-extraction; https://simplydentalchatswood.com.au/blog/maintain-white-teeth-after-whitening; https://simplydentalchatswood.com.au/blog/oral-health-and-your-immune-system; https://simplydentalchatswood.com.au/blog/porcelain-veneers-vs-dental-crowns; https://simplydentalchatswood.com.au/blog/preparing-a-child-who-is-afraid-of-the-dentist; https://simplydentalchatswood.com.au/blog/private-health-insurance-benefits-explained; https://simplydentalchatswood.com.au/blog/process-of-tooth-decay; https://simplydentalchatswood.com.au/blog/professional-teeth-whitening-at-home-guide; https://simplydentalchatswood.com.au/blog/qualities-to-look-for-in-a-dentist; https://simplydentalchatswood.com.au/blog/reasons-for-sensitive-teeth; https://simplydentalchatswood.com.au/blog/reducing-childs-dental-fear; https://simplydentalchatswood.com.au/blog/root-canal-recovery-time; https://simplydentalchatswood.com.au/blog/signs-of-tooth-infection; https://simplydentalchatswood.com.au/blog/tooth-eruption-guide-for-parents; https://simplydentalchatswood.com.au/blog/tooth-loss-age-chart; https://simplydentalchatswood.com.au/blog/understanding-bupa-dental-coverage-in-chatswood; https://simplydentalchatswood.com.au/blog/what-to-do-if-your-dislodged-filling-falls-out; https://simplydentalchatswood.com.au/blog/what-to-eat-after-wisdom-tooth-extraction; https://simplydentalchatswood.com.au/blog/why-people-avoid-the-dentist; https://simplydentalchatswood.com.au/blog/why-periodontal-cleaning-is-important; https://simplydentalchatswood.com.au/blog/why-tartar-removal-is-important; https://simplydentalchatswood.com.au/blog/why-you-cannot-remove-cavities-at-home; https://simplydentalchatswood.com.au/contact-us; https://simplydentalchatswood.com.au/o-h-reid-memorial-park-chatswood-nsw; https://simplydentalchatswood.com.au/our-team/dr-antonio-najdovski; https://simplydentalchatswood.com.au/our-team/dr-sakshi-gupta; https://simplydentalchatswood.com.au/services; https://simplydentalchatswood.com.au/areas-served/dentist-artarmon; https://simplydentalchatswood.com.au/areas-served/dentist-balmain; https://simplydentalchatswood.com.au/areas-served/dentist-castle-cove-nsw; https://simplydentalchatswood.com.au/areas-served/dentist-castlecrag-nsw; https://simplydentalchatswood.com.au/areas-served/dentist-east-ryde; https://simplydentalchatswood.com.au/areas-served/dentist-lane-cove-nsw; https://simplydentalchatswood.com.au/areas-served/lindfield-nsw; https://simplydentalchatswood.com.au/artarmon-reserve; https://simplydentalchatswood.com.au/beauchamp-park-chatswood-nsw; https://simplydentalchatswood.com.au/benefits-of-regular-dental-check-ups; https://simplydentalchatswood.com.au/benefits-of-regular-dental-check-ups-2; https://simplydentalchatswood.com.au/blog/5-key-benefits-of-dental-braces; https://simplydentalchatswood.com.au/blog/are-your-teeth-crooked; https://simplydentalchatswood.com.au/blog/benefits-of-dental-crowns-you-may-not-know; https://simplydentalchatswood.com.au/blog/benefits-of-dental-floss; https://simplydentalchatswood.com.au/blog/best-teeth-whitening-in-sydney; https://simplydentalchatswood.com.au/blog/common-habits-that-damage-teeth; https://simplydentalchatswood.com.au/blog/guide-to-popular-dental-implant-treatments; https://simplydentalchatswood.com.au/blog/gums-bleeding-when-brushing-teeth; https://simplydentalchatswood.com.au/blog/helping-children-enjoy-their-dental-visits; https://simplydentalchatswood.com.au/blog/invisalign-for-busy-professionals; https://simplydentalchatswood.com.au/blog/invisalign-or-braces; https://simplydentalchatswood.com.au/blog/invisalign-vs-braces-vs-veneers-guide; https://simplydentalchatswood.com.au/blog/invisalign-vs-braces-which-is-faster; https://simplydentalchatswood.com.au/blog/root-canal-vs-tooth-extraction; https://simplydentalchatswood.com.au/blog/scale-and-clean-vs-deep-clean; https://simplydentalchatswood.com.au/blog/should-you-ignore-a-toothache; https://simplydentalchatswood.com.au/blog/signs-and-causes-of-sleep-apnoea; https://simplydentalchatswood.com.au/blog/surprising-dental-implant-facts-you-may-not-know; https://simplydentalchatswood.com.au/blog/tooth-extraction-complete-guide; https://simplydentalchatswood.com.au/blog/tooth-extraction-timeline-and-process; https://simplydentalchatswood.com.au/blog/types-of-dentures-how-to-choose; https://simplydentalchatswood.com.au/blog/types-of-toothache; https://simplydentalchatswood.com.au/blog/types-of-veneers-guide; https://simplydentalchatswood.com.au/blog/understanding-common-dental-services; https://simplydentalchatswood.com.au/blog/understanding-shimmer-teeth-whitening; https://simplydentalchatswood.com.au/blog/what-are-composite-veneers; https://simplydentalchatswood.com.au/blog/what-are-fluoride-treatments; https://simplydentalchatswood.com.au/blog/what-are-the-causes-of-dry-mouth; https://simplydentalchatswood.com.au/blog/what-are-veneers-smile-makeover; https://simplydentalchatswood.com.au/blog/what-causes-gum-recession-and-how-it-is-treated; https://simplydentalchatswood.com.au/blog/what-dentists-wish-patients-knew; https://simplydentalchatswood.com.au/blog/what-every-patient-should-know-about-root-canal-symptoms; https://simplydentalchatswood.com.au/blog/what-happens-during-a-scale-and-clean; https://simplydentalchatswood.com.au/blog/what-happens-if-you-skip-your-dental-clean; https://simplydentalchatswood.com.au/blog/what-is-a-dental-emergency; https://simplydentalchatswood.com.au/blog/what-is-dental-bonding; https://simplydentalchatswood.com.au/blog/what-is-dental-bridge; https://simplydentalchatswood.com.au/blog/what-to-do-during-dental-emergency; https://simplydentalchatswood.com.au/blog/what-to-eat-after-root-canal-treatment-2; https://simplydentalchatswood.com.au/blog/what-to-eat-after-tooth-extraction-chatswood; https://simplydentalchatswood.com.au/blog/what-to-expect-during-dental-checkup-in-chatswood; https://simplydentalchatswood.com.au/blog/what-to-expect-from-temporary-veneers; https://simplydentalchatswood.com.au/blog/what-to-know-before-getting-dental-veneers; https://simplydentalchatswood.com.au/cosmetic-dentistry/composite-bonding; https://simplydentalchatswood.com.au/cosmetic-dentistry/dental-veneers; https://simplydentalchatswood.com.au/cosmetic-dentistry/teeth-whitening-service; https://simplydentalchatswood.com.au/covid-19-news-and-updates; https://simplydentalchatswood.com.au/dental-bridge-procedure-guide; https://simplydentalchatswood.com.au/dental-hygienist; https://simplydentalchatswood.com.au/dental-insurance-2; https://simplydentalchatswood.com.au/dental-records-request; https://simplydentalchatswood.com.au/dentist-artarmon-your-one-stop-dental-care-expert-simply-dental; https://simplydentalchatswood.com.au/dr-henrietta-wu; https://simplydentalchatswood.com.au/experience-exceptional-dental-care-with-simply-dental-lane-cove; https://simplydentalchatswood.com.au/find-the-right-emergency-dentist; https://simplydentalchatswood.com.au/general-dentistry/dental-check-up-and-clean; https://simplydentalchatswood.com.au/general-dentistry/gum-disease-treatment; https://simplydentalchatswood.com.au/general-dentistry/pediatric-dentist; https://simplydentalchatswood.com.au/general-dentistry/sleep-disorder-centre; https://simplydentalchatswood.com.au/general-dentistry/tooth-extraction; https://simplydentalchatswood.com.au/orthodontics/braces; https://simplydentalchatswood.com.au/orthodontics/invisalign; https://simplydentalchatswood.com.au/our-team/dr-denise-hsueh; https://simplydentalchatswood.com.au/our-team/dr-henrietta-wu; https://simplydentalchatswood.com.au/our-team/dr-jim-williamson; https://simplydentalchatswood.com.au/preventing-bone-loss-after-tooth-extraction-treatment; https://simplydentalchatswood.com.au/priceless-private-health-insurance-cover; https://simplydentalchatswood.com.au/queen-victoria-b…ess-history-shop; https://simplydentalchatswood.com.au/restorative-dentistry/dental-crowns-prosthodontist; https://simplydentalchatswood.com.au/restorative-dentistry/dental-fillings; https://simplydentalchatswood.com.au/restorative-dentistry/dental-implants; https://simplydentalchatswood.com.au/restorative-dentistry/denture-care-centre; https://simplydentalchatswood.com.au/restorative-dentistry/root-canal-treatment; https://simplydentalchatswood.com.au/royal-north-shore-hospital; https://simplydentalchatswood.com.au/service/check-up-clean; https://simplydentalchatswood.com.au/service/restorative-dentistry; https://simplydentalchatswood.com.au/services/cosmetic-dentistry/composite-bonding; https://simplydentalchatswood.com.au/services/cosmetic-dentistry/dental-veneers; https://simplydentalchatswood.com.au/services/cosmetic-dentistry/teeth-whitening-service; https://simplydentalchatswood.com.au/services/general-dentistry/dental-check-up-and-clean; https://simplydentalchatswood.com.au/services/general-dentistry/emergency-dental-service; https://simplydentalchatswood.com.au/services/general-dentistry/gum-disease-treatment; https://simplydentalchatswood.com.au/services/general-dentistry/pediatric-dentist; https://simplydentalchatswood.com.au/services/general-dentistry/sleep-disorder-centre; https://simplydentalchatswood.com.au/services/general-dentistry/tooth-extraction; https://simplydentalchatswood.com.au/services/general-dentistry/wisdom-tooth-removal; https://simplydentalchatswood.com.au/services/orthodontics/braces; https://simplydentalchatswood.com.au/services/orthodontics/invisalign; https://simplydentalchatswood.com.au/services/restorative-dentistry/dental-crowns-prosthodontist; https://simplydentalchatswood.com.au/services/restorative-dentistry/dental-fillings; https://simplydentalchatswood.com.au/services/restorative-dentistry/dental-implants; https://simplydentalchatswood.com.au/services/restorative-dentistry/dental-implants-periodontist; https://simplydentalchatswood.com.au/services/restorative-dentistry/denture-care-centre; https://simplydentalchatswood.com.au/services/restorative-dentistry/root-canal-treatment; https://simplydentalchatswood.com.au/stringybark-creek-reserve; https://simplydentalchatswood.com.au/sydney-botanic-gardens-peaceful-retreat; https://simplydentalchatswood.com.au/the-concourse-chatswood-nsw
+,Sprint 5 (Links),5,Link Strategy,"Sprint 5 strategic foundation. Locks in how we acquire links:
+  · Target DR range for prospect domains
+  · Mix of link types (guest post / sponsored / NOBS / resource / relationship / podcast)
+  · Monthly velocity assumption
+  · Niche relevance bar
+  · Outreach platform (email, LinkedIn, partnerships)
+  · Budget per link tier",Link,P1,dame@smileandgrow.com.au,dame,2026-11-01,2026-11-08,3,pending,False,False,True,False,False,,strategy,"link, link-strategy, p1, strategy",Link,Link Strategy,
+,Sprint 5 (Links),5,Link plan + initial prospecting,"Translate strategy into an initial target list.
+  · Seed 30-50 prospect domains aligned with strategy
+  · Score by DR, relevance, traffic, ease-of-acquisition
+  · Distribute target pages across the prospects
+  · Populate the central link DB with initial 'Reply Pending' rows
+  · Hand off to Months 4+ for outreach + acquisition",Link,P1,dame@smileandgrow.com.au,dame,2026-11-01,2026-11-08,3,pending,False,False,True,False,False,,prospecting,"link, link-prospecting, p1, strategy",Link,Link Strategy,
+,Sprint 5 (Links),5,Build 6 links — Month 4,"Acquire 6 links this month, distributed across target pages:
+
+  1. /  ·  'dentist chatswood' (pos ?, 0 ref domains)
+  2. /  ·  'dentist chatswood' (pos ?, 0 ref domains)
+  3. /  ·  'dentist chatswood' (pos ?, 0 ref domains)
+  4. /areas-served/dentist-castlecrag-nsw  ·  'dentist castlecrag ' (pos 11, 0 ref domains)
+  5. /areas-served/dentist-castlecrag-nsw  ·  'dentist castlecrag ' (pos 11, 0 ref domains)
+  6. /areas-served/dentist-castlecrag-nsw  ·  'dentist castlecrag ' (pos 11, 0 ref domains)
+
+Tactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",Link,P2,dame@smileandgrow.com.au,dame,2026-12-01,2026-12-31,4,pending,False,True,False,False,False,,,"heavy-batch, link, p2",Link,Link batch,
+,Sprint 5 (Links),5,Build 6 links — Month 5,"Acquire 6 links this month, distributed across target pages:
+
+  1. /areas-served/dentist-north-ryde  ·  'dentist north ryde' (pos 8.5384, 0 ref domains)
+  2. /areas-served/dentist-north-ryde  ·  'dentist north ryde' (pos 8.5384, 0 ref domains)
+  3. /areas-served/dentist-north-ryde  ·  'dentist north ryde' (pos 8.5384, 0 ref domains)
+  4. /cosmetic-dentistry/composite-bonding  ·  'composite bonding' (pos 8.8175, 0 ref domains)
+  5. /cosmetic-dentistry/composite-bonding  ·  'composite bonding' (pos 8.8175, 0 ref domains)
+  6. /cosmetic-dentistry/composite-bonding  ·  'composite bonding' (pos 8.8175, 0 ref domains)
+
+Tactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",Link,P2,dame@smileandgrow.com.au,dame,2027-01-01,2027-01-31,5,pending,False,True,False,False,False,,,"heavy-batch, link, p2",Link,Link batch,
+,Sprint 5 (Links),5,Build 6 links — Month 6,"Acquire 6 links this month, distributed across target pages:
+
+  1. /dentist-artarmon-your-one-stop-dental-care-expert-simply-dental  ·  'dental care expert' (pos 9.9242, 0 ref domains)
+  2. /dentist-artarmon-your-one-stop-dental-care-expert-simply-dental  ·  'dental care expert' (pos 9.9242, 0 ref domains)
+  3. /dentist-artarmon-your-one-stop-dental-care-expert-simply-dental  ·  'dental care expert' (pos 9.9242, 0 ref domains)
+  4. /services  ·  'dental services' (pos 8.0257, 0 ref domains)
+  5. /services  ·  'dental services' (pos 8.0257, 0 ref domains)
+  6. /services  ·  'dental services' (pos 8.0257, 0 ref domains)
+
+Tactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",Link,P2,dame@smileandgrow.com.au,dame,2027-02-01,2027-02-28,6,pending,False,True,False,False,False,,,"heavy-batch, link, p2",Link,Link batch,
+,Sprint 5 (Links),5,Build 6 links — Month 7,"Acquire 6 links this month, distributed across target pages:
+
+  1. /areas-served/dentist-artarmon  ·  'dentist artarmon' (pos 23.3226, 0 ref domains)
+  2. /areas-served/dentist-artarmon  ·  'dentist artarmon' (pos 23.3226, 0 ref domains)
+  3. /areas-served/dentist-artarmon  ·  'dentist artarmon' (pos 23.3226, 0 ref domains)
+  4. /areas-served/dentist-balmain  ·  'dentist balmain' (pos 17.9328, 0 ref domains)
+  5. /areas-served/dentist-balmain  ·  'dentist balmain' (pos 17.9328, 0 ref domains)
+  6. /areas-served/dentist-balmain  ·  'dentist balmain' (pos 17.9328, 0 ref domains)
+
+Tactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",Link,P2,dame@smileandgrow.com.au,dame,2027-03-01,2027-03-31,7,pending,False,True,False,False,False,,,"heavy-batch, link, p2",Link,Link batch,
+,Sprint 5 (Links),5,Build 6 links — Month 8,"Acquire 6 links this month, distributed across target pages:
+
+  1. /areas-served/dentist-castle-cove-nsw  ·  'dentist castle cove' (pos 14.7464, 0 ref domains)
+  2. /areas-served/dentist-castle-cove-nsw  ·  'dentist castle cove' (pos 14.7464, 0 ref domains)
+  3. /areas-served/dentist-castle-cove-nsw  ·  'dentist castle cove' (pos 14.7464, 0 ref domains)
+  4. /areas-served/dentist-east-ryde  ·  'dentist east ryde' (pos 23.0488, 0 ref domains)
+  5. /areas-served/dentist-east-ryde  ·  'dentist east ryde' (pos 23.0488, 0 ref domains)
+  6. /areas-served/dentist-east-ryde  ·  'dentist east ryde' (pos 23.0488, 0 ref domains)
+
+Tactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",Link,P2,dame@smileandgrow.com.au,dame,2027-04-01,2027-04-30,8,pending,False,True,False,False,False,,,"heavy-batch, link, p2",Link,Link batch,
+,Sprint 5 (Links),5,Build 6 links — Month 9,"Acquire 6 links this month, distributed across target pages:
+
+  1. /areas-served/dentist-willoughby-nsw  ·  'dentist willoughby' (pos 16.877, 0 ref domains)
+  2. /areas-served/dentist-willoughby-nsw  ·  'dentist willoughby' (pos 16.877, 0 ref domains)
+  3. /areas-served/dentist-willoughby-nsw  ·  'dentist willoughby' (pos 16.877, 0 ref domains)
+  4. /areas-served/lindfield-nsw  ·  'dentist lindfield' (pos 20.0111, 0 ref domains)
+  5. /areas-served/lindfield-nsw  ·  'dentist lindfield' (pos 20.0111, 0 ref domains)
+  6. /areas-served/lindfield-nsw  ·  'dentist lindfield' (pos 20.0111, 0 ref domains)
+
+Tactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",Link,P2,dame@smileandgrow.com.au,dame,2027-05-01,2027-05-31,9,pending,False,True,False,False,False,,,"heavy-batch, link, p2",Link,Link batch,
+,Sprint 5 (Links),5,Build 6 links — Month 10,"Acquire 6 links this month, distributed across target pages:
+
+  1. /cosmetic-dentistry/teeth-whitening-service  ·  'teeth whitening service' (pos 21.5068, 0 ref domains)
+  2. /cosmetic-dentistry/teeth-whitening-service  ·  'teeth whitening service' (pos 21.5068, 0 ref domains)
+  3. /general-dentistry/dental-check-up-and-clean  ·  'dental check-up' (pos 20.9677, 0 ref domains)
+  4. /general-dentistry/dental-check-up-and-clean  ·  'dental check-up' (pos 20.9677, 0 ref domains)
+  5. /general-dentistry/gum-disease-treatment  ·  'gum disease tratment' (pos 22.2635, 0 ref domains)
+  6. /general-dentistry/gum-disease-treatment  ·  'gum disease tratment' (pos 22.2635, 0 ref domains)
+
+Tactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",Link,P2,dame@smileandgrow.com.au,dame,2027-06-01,2027-06-30,10,pending,False,True,False,False,False,,,"heavy-batch, link, p2",Link,Link batch,
+,Sprint 5 (Links),5,Build 6 links — Month 11,"Acquire 6 links this month, distributed across target pages:
+
+  1. /general-dentistry/pediatric-dentist  ·  'pediatric dentist' (pos 17.7543, 0 ref domains)
+  2. /general-dentistry/pediatric-dentist  ·  'pediatric dentist' (pos 17.7543, 0 ref domains)
+  3. /general-dentistry/sleep-disorder-centre  ·  'sleep disorder centre' (pos 26.7128, 0 ref domains)
+  4. /general-dentistry/sleep-disorder-centre  ·  'sleep disorder centre' (pos 26.7128, 0 ref domains)
+  5. /general-dentistry/wisdom-tooth-removal  ·  'wisdom tooth removal' (pos 28.0656, 0 ref domains)
+  6. /general-dentistry/wisdom-tooth-removal  ·  'wisdom tooth removal' (pos 28.0656, 0 ref domains)
+
+Tactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",Link,P2,dame@smileandgrow.com.au,dame,2027-07-01,2027-07-31,11,pending,False,True,False,False,False,,,"heavy-batch, link, p2",Link,Link batch,
+,Sprint 5 (Links),5,Build 6 links — Month 12,"Acquire 6 links this month, distributed across target pages:
+
+  1. /restorative-dentistry/dental-crowns-prosthodontist  ·  'dental crowns' (pos 28.3103, 0 ref domains)
+  2. /restorative-dentistry/dental-crowns-prosthodontist  ·  'dental crowns' (pos 28.3103, 0 ref domains)
+  3. /restorative-dentistry/dental-fillings  ·  'dental fillings' (pos 22.0238, 0 ref domains)
+  4. /restorative-dentistry/dental-fillings  ·  'dental fillings' (pos 22.0238, 0 ref domains)
+  5. /restorative-dentistry/denture-care-centre  ·  'dentures' (pos 21.9684, 0 ref domains)
+  6. /restorative-dentistry/denture-care-centre  ·  'dentures' (pos 21.9684, 0 ref domains)
+
+Tactics to mix: digital PR, niche-edit / link insertion outreach, podcast appearances, guest posts, sponsored placements. Track every outcome in the central link DB.",Link,P2,dame@smileandgrow.com.au,dame,2027-08-01,2027-08-31,12,pending,False,True,False,False,False,,,"heavy-batch, link, p2",Link,Link batch,
+,Sprint 6 (Reporting),6,Analytics Audit — conversion tracking + measurement setup,"Foundational analytics audit — verify the measurement layer is trustworthy before any monthly reporting is meaningful. Focus on conversion plumbing:
+  · GA4 conversion events — firing reliably, flagged as conversions
+  · Call-tracking integrations (WhatConverts / CallRail): DNI, attribution, event push-through
+  · Form tracking — submission events, lead source attribution
+  · CRM integration (HubSpot / Salesforce / Pipedrive) — sources tagged correctly
+  · GA4 ↔ GSC link active
+  · Cross-domain / subdomain tracking gaps
+  · GBP Insights accessibility
+  · Note any tracking holes that would invalidate monthly reports.
+
+Output: short Loom + written summary of what's wired, what's broken, and what needs fixing before Month 1 reporting.",Reporting,P1,dame@smileandgrow.com.au,dame,2026-09-13,2026-09-23,1,pending,False,False,False,False,False,,,"p1, reporting",Reporting,Analytics Audit,
+,Sprint 6 (Reporting),6,WQA Refresh — Mid-engagement Audit (Month 6),"Re-run a mini-WQA to recalibrate the plan at Month 6.
+  · Fresh SF crawl + Ahrefs pull
+  · Compare current performance vs the initial WQA baseline
+  · Score what's working (content/links/technical) and what's not
+  · Update the next-6-months roadmap (or close-out report at M12)
+  · Strategist-approval pass on any new recommendations
+Output: WQA Refresh deck + revised plan (mid) or final close-out (end).",Reporting,P1,dame@smileandgrow.com.au,dame,2027-02-01,2027-02-28,6,pending,False,False,False,False,False,,,"p1, reporting",Reporting,WQA Refresh,
+,Sprint 6 (Reporting),6,WQA Refresh — End-of-engagement Audit (Month 12),"Re-run a mini-WQA to recalibrate the plan at Month 12.
+  · Fresh SF crawl + Ahrefs pull
+  · Compare current performance vs the initial WQA baseline
+  · Score what's working (content/links/technical) and what's not
+  · Update the next-6-months roadmap (or close-out report at M12)
+  · Strategist-approval pass on any new recommendations
+Output: WQA Refresh deck + revised plan (mid) or final close-out (end).",Reporting,P1,dame@smileandgrow.com.au,dame,2027-08-01,2027-08-31,12,pending,False,False,False,False,False,,,"p1, reporting",Reporting,WQA Refresh,
+,Sprint 6 (Reporting),6,Client Check-in — Month 2 (covers Month 1 performance),"Monthly check-in with the client. Three components:
+
+  1. Monthly Report (covering Month 1): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.
+  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.
+  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.
+
+Scheduled the first 7 days of Month 2 so the prior month's data has settled.",Client Check-in,P1,dame@smileandgrow.com.au,dame,2026-10-01,2026-10-07,2,pending,True,False,False,False,False,,,"client-check-in, monthly-report, p1",Reporting,Client Check-in,
+,Sprint 6 (Reporting),6,Client Check-in — Month 3 (covers Month 2 performance),"Monthly check-in with the client. Three components:
+
+  1. Monthly Report (covering Month 2): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.
+  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.
+  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.
+
+Scheduled the first 7 days of Month 3 so the prior month's data has settled.",Client Check-in,P1,dame@smileandgrow.com.au,dame,2026-11-01,2026-11-07,3,pending,True,False,False,False,False,,,"client-check-in, monthly-report, p1",Reporting,Client Check-in,
+,Sprint 6 (Reporting),6,Client Check-in — Month 4 (covers Month 3 performance),"Monthly check-in with the client. Three components:
+
+  1. Monthly Report (covering Month 3): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.
+  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.
+  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.
+
+Scheduled the first 7 days of Month 4 so the prior month's data has settled.",Client Check-in,P1,dame@smileandgrow.com.au,dame,2026-12-01,2026-12-07,4,pending,True,False,False,False,False,,,"client-check-in, monthly-report, p1",Reporting,Client Check-in,
+,Sprint 6 (Reporting),6,Client Check-in — Month 5 (covers Month 4 performance),"Monthly check-in with the client. Three components:
+
+  1. Monthly Report (covering Month 4): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.
+  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.
+  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.
+
+Scheduled the first 7 days of Month 5 so the prior month's data has settled.",Client Check-in,P1,dame@smileandgrow.com.au,dame,2027-01-01,2027-01-07,5,pending,True,False,False,False,False,,,"client-check-in, monthly-report, p1",Reporting,Client Check-in,
+,Sprint 6 (Reporting),6,Client Check-in — Month 6 (covers Month 5 performance),"Monthly check-in with the client. Three components:
+
+  1. Monthly Report (covering Month 5): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.
+  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.
+  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.
+
+Scheduled the first 7 days of Month 6 so the prior month's data has settled.",Client Check-in,P1,dame@smileandgrow.com.au,dame,2027-02-01,2027-02-07,6,pending,True,False,False,False,False,,,"client-check-in, monthly-report, p1",Reporting,Client Check-in,
+,Sprint 6 (Reporting),6,Client Check-in — Month 7 (covers Month 6 performance),"Monthly check-in with the client. Three components:
+
+  1. Monthly Report (covering Month 6): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.
+  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.
+  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.
+
+Scheduled the first 7 days of Month 7 so the prior month's data has settled.",Client Check-in,P1,dame@smileandgrow.com.au,dame,2027-03-01,2027-03-07,7,pending,True,False,False,False,False,,,"client-check-in, monthly-report, p1",Reporting,Client Check-in,
+,Sprint 6 (Reporting),6,Client Check-in — Month 8 (covers Month 7 performance),"Monthly check-in with the client. Three components:
+
+  1. Monthly Report (covering Month 7): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.
+  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.
+  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.
+
+Scheduled the first 7 days of Month 8 so the prior month's data has settled.",Client Check-in,P1,dame@smileandgrow.com.au,dame,2027-04-01,2027-04-07,8,pending,True,False,False,False,False,,,"client-check-in, monthly-report, p1",Reporting,Client Check-in,
+,Sprint 6 (Reporting),6,Client Check-in — Month 9 (covers Month 8 performance),"Monthly check-in with the client. Three components:
+
+  1. Monthly Report (covering Month 8): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.
+  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.
+  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.
+
+Scheduled the first 7 days of Month 9 so the prior month's data has settled.",Client Check-in,P1,dame@smileandgrow.com.au,dame,2027-05-01,2027-05-07,9,pending,True,False,False,False,False,,,"client-check-in, monthly-report, p1",Reporting,Client Check-in,
+,Sprint 6 (Reporting),6,Client Check-in — Month 10 (covers Month 9 performance),"Monthly check-in with the client. Three components:
+
+  1. Monthly Report (covering Month 9): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.
+  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.
+  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.
+
+Scheduled the first 7 days of Month 10 so the prior month's data has settled.",Client Check-in,P1,dame@smileandgrow.com.au,dame,2027-06-01,2027-06-07,10,pending,True,False,False,False,False,,,"client-check-in, monthly-report, p1",Reporting,Client Check-in,
+,Sprint 6 (Reporting),6,Client Check-in — Month 11 (covers Month 10 performance),"Monthly check-in with the client. Three components:
+
+  1. Monthly Report (covering Month 10): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.
+  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.
+  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.
+
+Scheduled the first 7 days of Month 11 so the prior month's data has settled.",Client Check-in,P1,dame@smileandgrow.com.au,dame,2027-07-01,2027-07-07,11,pending,True,False,False,False,False,,,"client-check-in, monthly-report, p1",Reporting,Client Check-in,
+,Sprint 6 (Reporting),6,Client Check-in — Month 12 (covers Month 11 performance),"Monthly check-in with the client. Three components:
+
+  1. Monthly Report (covering Month 11): GA4 organic + total traffic, GSC clicks/impressions/position deltas, GBP (if local), deliverables completed vs scheduled, live content + links shipped.
+  2. Analysis writeup: what moved and why, what to double down on, recommendations for next month's focus.
+  3. Optional client call: offer a 30-min walkthrough; if declined, send the deck + analysis by email.
+
+Scheduled the first 7 days of Month 12 so the prior month's data has settled.",Client Check-in,P1,dame@smileandgrow.com.au,dame,2027-08-01,2027-08-07,12,pending,True,False,False,False,False,,,"client-check-in, monthly-report, p1",Reporting,Client Check-in,
