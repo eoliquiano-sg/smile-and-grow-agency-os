@@ -11,7 +11,7 @@
     "contract_start_date": "2026-07-01",
     "id": "76b3bb1b-1d7b-4c68-9778-98f3bc9a70d9",
     "created_at": "2026-08-10T22:00:46.737Z",
-    "updated_at": "2026-08-10T22:10:55.454Z",
+    "updated_at": "2026-09-03T06:09:41.650Z",
     "resources": [
       {
         "type": "drive_folder",
@@ -20,7 +20,13 @@
         "source": "manual",
         "created_at": "2026-08-10T22:10:55.453Z"
       }
-    ]
+    ],
+    "ga4_property_id": "545467207",
+    "gsc_property": "sc-domain:beaconcovedental.com.au",
+    "custom_fields": {
+      "windsor_ga4_account_id": "googleanalytics4__545467207",
+      "windsor_gsc_account_id": "searchconsole__sc-domain:beaconcovedental.com.au"
+    }
   },
   {
     "lead_id": null,
